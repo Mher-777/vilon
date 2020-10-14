@@ -1,0 +1,111 @@
+.logo {
+  margin-right: 15px;
+}
+.header {
+  &__inner {
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+  &__icons {
+    margin-top: auto;
+    margin-bottom: 2px;
+    text-align: center;
+    &-link {
+      display: block;
+      font-size: 15px;
+      line-height: 17px;
+      margin-bottom: 8px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__item {
+    &-text {
+      margin-left: 10px;
+      font-size: 15px;
+      line-height: 17px;
+      font-weight: 700;
+    }
+  }
+  &__search {
+    position: relative;
+    max-width: 390px;
+    width: 100%;
+    margin: auto 15px 5px 15px;
+    &-icon {
+      margin-bottom: 0;
+    }
+    &-input {
+      padding-right: 40px;
+      width: 100%;
+    }
+    &-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+      cursor: pointer;
+    }
+  }
+  &__btn {
+    background-color: #d7cf4f;
+    margin-top: 10px;
+    &:hover {
+      background-color: #e3db4f;
+    }
+  }
+  &__request {
+    &-icons {
+      display: flex;
+      align-items: center;
+    }
+    &-link {
+      margin-right: 10px;
+      color: #9d9d9d;
+      &:last-child {
+        margin-right: 0;
+      }
+      &--size {
+        &-small {
+          font-size: 14px;
+          line-height: 14px;
+        }
+      }
+    }
+    &-box {
+      &--number {
+        position: relative;
+        &::after {
+          content: attr(data-count);
+          min-height: 15px;
+          min-width: 15px;
+          border-radius: 50%;
+          background-color: #bd8064;
+          display: inline-block;
+          text-align: center;
+          color: #fff;
+          font-size: 10px;
+          white-space: nowrap;
+          position: absolute;
+          top: 0;
+          right: 0;
+          transform: translate(50%, -7.5px);
+          z-index: 1;
+        }
+      }
+    }
+    &-text {
+      vertical-align: sub;
+      margin-left: 5px;
+    }
+  }
+}
+@import "menu";
+

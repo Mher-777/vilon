@@ -1,0 +1,94 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/sprite";
+//@include sprites($spritesheet-sprites);
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%
+}
+
+h1, h2, h3, h4, h5, h6, li, ol, ul {
+  margin: 0;
+  padding: 0
+}
+
+li, ol, ul {
+  list-style: none
+}
+
+body {
+  font: 16px/1.5 Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%
+}
+
+img {
+  max-width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain
+}
+
+.icon {
+  vertical-align: middle;
+  margin-bottom: 2px
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block
+}
+
+button {
+  background: 0 0;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  padding: 0
+}
+
+a:focus, button:focus, input:focus, textarea:focus {
+  outline: 1px solid #2a804a
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+
+.container {
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto
+}
+
+.input {
+  display: block;
+  font-size: 14px;
+  border: 1px solid #9c9c9c;
+  border-radius: 20px;
+  padding: 8px 15px;
+  &::placeholder {
+    font-size: 14px;
+    line-height: 14px;
+    border-radius: 15px
+  }
+}
+//Модули
+@import "modules/modules";

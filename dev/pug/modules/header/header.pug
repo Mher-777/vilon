@@ -1,0 +1,58 @@
+header.header
+  .header__top
+    .container
+      .header__inner
+        .header__info
+          .logo
+            a(href="#").logo__link
+              img(src="static/images/common/logo.svg" alt="логотип").logo__image
+          .header__icons
+            a(href="mailto:info@vilon.ru").header__icons-link
+              +icon('email', 'header__icon')
+              span.header__item-text info@vilon.ru
+            a(href="tel:+74952239749").header__icons-link
+              +icon('phone', 'header__icon')
+              span.header__item-text +7 (495) 223-97-49
+        form(action="#").header__search
+          input(type="text" placeholder="Поиск" required).header__search-input.input
+          button(type="submit").header__search-btn
+            +icon('search', 'header__search-icon')
+        .header__request
+          .header__request-icons
+            a(href="#").header__request-link
+              span.header__request-box(data-count="2").header__request-box--number
+                +icon('heart', 'header__request-icon')
+            a(href="#" ).header__request-link
+              span.header__request-box(data-count="2").header__request-box--number
+                +icon('basket', 'header__request-icon')
+              span.header__request-text 10,500 р
+            a(href="#").header__request-link.header__request-link--size-small
+              span.header__request-box
+                +icon('user', 'header__request-icon')
+              span.header__request-text Вход
+          a(href="#").btn.btn--color-black.header__btn ОСТАВИТЬ ЗАЯВКУ
+  .header__bottom
+    .container
+      nav.header__menu
+        ul.header__menu-list
+          li.header__menu-item
+            a(href="#").header__menu-link О компании
+          li.header__menu-item
+            a(href="#").header__menu-link Сотрудничество
+          li.header__menu-item
+            a(href="#").header__menu-link Бренды
+            .header__dropdown
+              a(href="#").header__dropdown-link Сытоедов
+              a(href="#").header__dropdown-link Обожамс!
+              a(href="#").header__dropdown-link Чебуречье
+              a(href="#").header__dropdown-link Street Food
+              a(href="#").header__dropdown-link Balansika
+              a(href="#").header__dropdown-link Snack Bomb
+          li.header__menu-item
+            a(href="#").header__menu-link Магазин
+          li.header__menu-item
+            a(href="#").header__menu-link Покупателям
+          li.header__menu-item
+            a(href="#").header__menu-link Vilon Life
+          li.header__menu-item
+            a(href="#").header__menu-link Контакты
