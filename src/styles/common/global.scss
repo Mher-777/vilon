@@ -8,6 +8,7 @@
 
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6, ul, li, ol {
@@ -24,14 +25,18 @@ body {
   padding: 0;
   height: 100%;
   font-size: 16px;
-  line-height: 1.5  ;
+  line-height: 1.5;
+  font-family: 'Arial', sans-serif;
 }
 
 img {
   max-width: 100%;
-  display: block;
+  object-fit: contain;
 }
-
+.icon {
+  vertical-align: middle;
+  margin-bottom: 2px;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -41,13 +46,40 @@ a {
 button {
   background-color: transparent;
   display: inline-block;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 
+a,button, input, textarea {
+  &:focus {
+    outline: 1px solid #2a804a;
+  }
+}
 .wrapper {
   display: table;
   height: 100%;
+  width: 100%;
 }
 .content {
   display: table-row;
   height: 100%;
+}
+
+.container {
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+.input {
+  display: block;
+  font-size: 14px;
+  border: 1px solid #9c9c9c;
+  border-radius: 20px;
+  padding: 8px 15px;
+  &::placeholder {
+    font-size: 14px;
+    border-radius: 15px;
+  }
 }

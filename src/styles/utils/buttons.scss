@@ -1,0 +1,32 @@
+.btn {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #fff;
+  transition: all linear .2s;
+  text-align: center;
+  display: block;
+  padding: 10px 25px;
+}
+.btn--bg-green {
+  background-color: #6fa143;
+  color: #fff;
+  &:hover {
+    background-color: #2a804a;
+  }
+}
+.btn--bg-pink {
+  background-color: #c98064;
+  &:hover {
+    background-color: #2a804a;
+  }
+}
+.btn--bg-yellow {
+  background-color: #e3db4f;
+}
+.btn--color-black {
+  color: #000;
+}
+.btn--color-white {
+  color: #fff;
+}

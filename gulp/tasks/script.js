@@ -8,8 +8,6 @@ const eslint = require('gulp-eslint')
 module.exports = function script() {
   return gulp.src('src/js/main.js')
     .pipe(plumber())
-    .pipe(eslint())
-    .pipe(eslint.format())
     .pipe(webpack({
       mode: process.env.NODE_ENV,
       output: {
