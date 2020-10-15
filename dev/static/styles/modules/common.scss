@@ -58,6 +58,19 @@
   width: 11px;
   height: 11px;
 }
+
+.icon-marker {
+  width: 14px;
+  height: 21px;
+  fill: #6f6f6f;
+}
+
+.icon-clock {
+  width: 18px;
+  height: 17px;
+  fill: #6f6f6f;
+}
+
 .title {
   font-size: 24px;
   font-weight: 700;
@@ -66,6 +79,15 @@
     &-small {
       font-size: 21px;
       font-weight: 700;
+    }
+    &-big {
+      font-size: 45px;
+      line-height: 50px;
+    }
+  }
+  &--wight {
+    &-bold {
+      font-weight: 900;
     }
   }
   &--color {
@@ -139,14 +161,17 @@
 }
 .section-top {
   margin-bottom: 30px;
-  &__title {
-    margin-left: 40px;
-  }
+  padding-left: 40px;
   &__desc {
     margin-top: 5px;
     line-height: 18px;
     color: #6f6f6f;
+    display: block;
   }
+}
+.slick-list,
+.slick-track {
+  height: 100%;
 }
 .slick-slide {
   &:focus, a {

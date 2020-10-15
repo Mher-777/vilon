@@ -30,9 +30,12 @@ $(function () {
             slidesToShow: 4,
             slidesToScroll: 1,
             swipe: false,
+            rows: 0,
             prevArrow: '<button type="button" class="arrow arrow--left"><img class="arrow__icon" src="static/images/common/arrow-left.svg" alt=""></button>',
             nextArrow: '<button type="button" class="arrow arrow--right"><img class="arrow__icon" src="static/images/common/arrow-right.svg" alt=""></button>'
-        })
+        }).on('setPosition', function (event, slick) {
+            slick.$slides.css('height', slick.$slideTrack.height() + 'px');
+        });
     }
     const sliderSpace = () => {
         $('[data-space]').each(function () {

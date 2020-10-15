@@ -1,0 +1,16 @@
+section.application
+  .container
+    .section-top
+      h2.section-top__title.title H2
+      span.section-top__desc Образец текста
+  .application__bg
+    .container
+      h2.title.title--color-white.title--size-big.application__title СПЕШИТЕ ОСТАВИТЬ ЗАЯВКУ!
+      form(action="#").application__form
+        .application__col
+          input(type="text" placeholder="Имя" required).application__input.input.input--size-small
+          input(type="text" placeholder="E-mail" required).application__input.input.input--size-small
+        .application__col.application__col--w-big
+          textarea(placeholder="Сообщение" required).application__textarea.textarea
+        .application__col.application__col--w-tiny
+          button(type="submit").application__btn.btn.btn--bg-yellow.btn--color-black ОТПРАВИТЬ

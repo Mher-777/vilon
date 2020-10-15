@@ -6,4 +6,15 @@
     margin-top: 70px;
     margin-bottom: 15px;
   }
+  .application__form {
+    align-items: flex-end;
+  }
+  .application {
+    &__textarea {
+      height: 95px;
+    }
+  }
+  .socials__content {
+    margin-top: 95px;
+  }
 }

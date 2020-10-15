@@ -1,1 +1,63 @@
 footer { flex: 0 0 auto; }
+.footer {
+  background-color: #eee8db;
+  padding-top: 15px;
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__title {
+    margin-bottom: 10px;
+    font-size: 16px;
+    &--align {
+      &-center {
+        text-align: center;
+      }
+    }
+  }
+  &__col {
+    width: 100%;
+    max-width: 180px;
+    &--brands {
+      max-width: 230px;
+    }
+    &--payments {
+      max-width: 210px;
+    }
+    &--contacts {
+      max-width: 140px;
+    }
+    &-image {
+      margin-left: -5px;
+    }
+  }
+  &__item {
+    font-size: 12px;
+    color: #6f6f6f;
+    display: block;
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &-icon {
+      margin-right: 8px;
+    }
+  }
+  &__image {
+    vertical-align: bottom;
+  }
+  &__link {
+    display: flex;
+    align-items: flex-start;
+  }
+  &__images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &-link {
+      width: calc(50% - 4px);
+      margin-bottom: 8px;
+    }
+  }
+}

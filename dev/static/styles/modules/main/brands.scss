@@ -1,0 +1,20 @@
+.brands {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  &__inner {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    margin-left: -40px;
+  }
+  &__link {
+    display: block;
+    width: calc(33.33333% - 40px);
+    margin-left: 40px;
+    margin-bottom: 45px;
+  }
+  &__image {
+    vertical-align: bottom;
+  }
+}
