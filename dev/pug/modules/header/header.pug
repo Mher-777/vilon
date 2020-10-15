@@ -17,7 +17,7 @@ header.header
           input(type="text" placeholder="Поиск" required).header__search-input.input
           button(type="submit").header__search-btn
             +icon('search', 'header__search-icon')
-        .header__request
+        .header__request(data-da="header__menu, 1, 450")
           .header__request-icons
             a(href="#").header__request-link
               span.header__request-box(data-count="2").header__request-box--number
@@ -30,10 +30,13 @@ header.header
               span.header__request-box
                 +icon('user', 'header__request-icon')
               span.header__request-text Вход
-          a(href="#").btn.btn--color-black.header__btn ОСТАВИТЬ ЗАЯВКУ
+          a(href="#" data-da="header__menu-list, last, 500").btn.btn--color-black.header__btn ОСТАВИТЬ ЗАЯВКУ
   .header__bottom
     .container
       nav.header__menu
+        button(type="button").hamburger.hamburger--spring
+          span.hamburger-box
+            span.hamburger-inner
         ul.header__menu-list
           li.header__menu-item
             a(href="#").header__menu-link О компании

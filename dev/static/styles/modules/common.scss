@@ -182,3 +182,15 @@
   }
 }
 @import "ie";
+@media (max-width: 850px) {
+  .title--size-big {
+    font-size: 35px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .title--size-big {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
