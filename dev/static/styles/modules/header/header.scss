@@ -88,7 +88,9 @@
           min-width: 15px;
           border-radius: 50%;
           background-color: #bd8064;
-          display: inline-block;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           text-align: center;
           color: #fff;
           font-size: 10px;

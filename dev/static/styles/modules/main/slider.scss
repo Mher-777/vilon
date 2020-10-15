@@ -52,26 +52,7 @@
     background-position:  center;
   }
 }
-.pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  li {
-    width: 13px;
-    height: 13px;
-    background-color: #fff;
-    border-radius: 50%;
-    margin: 0 7.5px;
-    cursor: pointer;
-    &.slick-active {
-      background-color: #6fa643;
-    }
-  }
-  button {
-    font-size: 0;
-    outline: none;
-  }
-}
+
 .slider__pagination {
   position: absolute;
   top: 30px;

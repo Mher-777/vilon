@@ -1,33 +1,63 @@
+.icon {
+  transition: all linear .2s;
+}
+
 .icon-email {
   width: 17px;
   height: 14px;
+  fill: #6fa643;
 }
 
 .icon-phone {
   width: 14px;
   height: 17px;
+  fill: #6fa643;
 }
 
 .icon-heart {
   width: 28px;
   height: 25px;
+  fill: transparent;
+  stroke-width: 2px;
+  stroke: #bd8064;
+  &--active {
+    fill: #bd8064;
+  }
 }
 
 .icon-basket {
   width: 29px;
   height: 24px;
+  fill: #bd8064;
 }
 
 .icon-user {
   width: 25px;
   height: 25px;
+  fill: #bd8064;
 }
 
 .icon-search {
   width: 18px;
   height: 17px;
+  stroke-width: 2px;
+  stroke: #a2a2a2;
+  fill: transparent;
 }
-
+.icon-plus {
+  stroke-width: 2px;
+  stroke: #a2a2a2;
+  fill: transparent;
+  width: 11px;
+  height: 11px;
+}
+.icon-minus {
+  stroke-width: 2px;
+  stroke: #a2a2a2;
+  fill: transparent;
+  width: 11px;
+  height: 11px;
+}
 .title {
   font-size: 24px;
   font-weight: 700;
@@ -61,6 +91,69 @@
   }
   &--right {
     right: 0;
+  }
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  li {
+    width: 13px;
+    height: 13px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 7.5px;
+    cursor: pointer;
+    &.slick-active {
+      background-color: #6fa643;
+    }
+  }
+  button {
+    font-size: 0;
+    outline: none;
+  }
+  &--white {
+    li {
+      margin: 0 5px;
+      border: 1px solid #ddd3bd;
+      &.slick-active {
+        background-color: #ddd3bd;
+      }
+    }
+  }
+}
+.counter {
+  width: 75px;
+  display: flex;
+  align-items: center;
+  &__input {
+    border: none;
+    width: 30px;
+    text-align: center;
+  }
+  &__btn {
+    width: 21px;
+    height: 21px;
+    background-color: #f0f0f0;
+  }
+}
+.section-top {
+  margin-bottom: 30px;
+  &__title {
+    margin-left: 40px;
+  }
+  &__desc {
+    margin-top: 5px;
+    line-height: 18px;
+    color: #6f6f6f;
+  }
+}
+.slick-slide {
+  &:focus, a {
+    outline: none;
+  }
+  &:focus {
+    outline: 2px solid #2a804a;
   }
 }
 @import "ie";
