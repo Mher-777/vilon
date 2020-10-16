@@ -1,5 +1,6 @@
 $(function () {
     svg4everybody({});
+
     const mainSliders = () => {
         $('.slider__carousel').slick({
             fade: true,
@@ -9,7 +10,11 @@ $(function () {
             touchThreshold: 40,
             dotsClass: 'pagination slider__pagination',
             cssEase: 'linear'
-        })
+        }).on('afterChange', function(event, slick, currentSlide){
+            lazyLoad()
+        }).on('beforeChange', function(event, slick, currentSlide){
+            lazyLoad()
+        });
         $('.category__slider').slick({
             slidesToShow: 7,
             slidesToScroll: 1,
@@ -54,8 +59,12 @@ $(function () {
                     }
                 },
             ]
-        }).on('breakpoint', function() {
+        }).on('breakpoint', function () {
             sliderSpace()
+        }).on('afterChange', function(event, slick, currentSlide){
+            lazyLoad()
+        }).on('beforeChange', function(event, slick, currentSlide){
+            lazyLoad()
         });
         $('.product__head-slider').slick({
             slidesToShow: 1,
@@ -65,7 +74,11 @@ $(function () {
             dotsClass: 'pagination product__pagination pagination--white',
             infinite: false,
             touchThreshold: 40,
-        })
+        }).on('afterChange', function(event, slick, currentSlide){
+            lazyLoad()
+        }).on('beforeChange', function(event, slick, currentSlide){
+            lazyLoad()
+        });
         $('.recommend__slider').slick({
             slidesToShow: 4,
             slidesToScroll: 1,
@@ -95,9 +108,14 @@ $(function () {
             ]
         }).on('setPosition', function (event, slick) {
             slick.$slides.css('height', slick.$slideTrack.height() + 'px');
-        }).on('breakpoint', function() {
+        }).on('breakpoint', function () {
             sliderSpace()
-        });;
+        }).on('afterChange', function(event, slick, currentSlide){
+            lazyLoad()
+        }).on('beforeChange', function(event, slick, currentSlide){
+            lazyLoad()
+        });
+
     }
     const sliderSpace = () => {
         $('[data-space]').each(function () {
@@ -109,7 +127,7 @@ $(function () {
             });
             $this.find('.slick-list').css({
                 marginLeft: -$space + 'px',
-                marginRight: -$space/2 + 'px'
+                marginRight: -$space / 2 + 'px'
             })
             return false
         });
@@ -140,39 +158,48 @@ $(function () {
             }
         });
     }
+    const counter = () => {
+        const counterPlus = (el, val) => {
+            el.val(+val + 1);
+        };
+
+        const counterMinus = (el, val) => {
+            if (val - 1) {
+                el.val(+val - 1);
+            }
+        };
+        $('.counter__btn').each(function () {
+            let btn = $(this)
+            btn.on('click', function () {
+                if ($(this).attr('data-direction') === 'plus') {
+                    counterPlus(btn.prev(), btn.prev().val())
+                }else {
+                    counterMinus(btn.next(), btn.next().val())
+                }
+            })
+        })
+    }
     toggle('.product__head', '.js-toggle', 'icon-heart--active')
     mainSliders()
     sliderSpace()
     menuToggle()
+
+    counter()
+    const lazyLoad = () => {
+        $('.lazy').Lazy({
+            effect: "fadeIn",
+            effectTime: 777,
+            threshold: 0,
+            visibleOnly: true,
+        });
+    }
+    lazyLoad()
 })
+
 function browser() {
     if ((navigator.userAgent.indexOf("MSIE") !== -1) || (!!document.documentMode === true)) {
         document.querySelector('html').classList.add('browser-ie')
     }
 }
+
 browser()
-const counter = function () {
-    let btns = document.querySelectorAll( '.counter__btn' );
-    Array.prototype.forEach.call(btns, function (item) {
-        item.addEventListener('click', counterState)
-    });
-
-    function counterState() {
-        let dir = this.dataset.direction;
-        if(dir === 'plus') {
-            counterPlus(this.previousSibling, this.previousSibling.value)
-        } else {
-            counterMinus(this.nextSibling, this.nextSibling.value);
-        }
-    }
-
-    const counterPlus = (el, val) => {
-        el.value = +val + 1;
-    };
-
-    const counterMinus = (el, val) => {
-        if (val - 1) el.value = +val - 1;
-    };
-
-};
-counter();
