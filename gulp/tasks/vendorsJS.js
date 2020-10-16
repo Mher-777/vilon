@@ -1,5 +1,7 @@
-const gulp = require('gulp');
-const concat = require('gulp-concat');
+const gulp = require('gulp')
+const concat = require('gulp-concat')
+const gulpif = require('gulp-if')
+const argv = require('yargs').argv
 
 const vendorsScripts = [
   'node_modules/svg4everybody/dist/svg4everybody.min.js',
@@ -7,7 +9,7 @@ const vendorsScripts = [
   'dev/static/js/vendor/responsive.js',
   'node_modules/slick-carousel/slick/slick.min.js',
   'node_modules/svg4everybody/dist/svg4everybody.js',
-];
+]
 
 module.exports = function vendors(cb) {
   return vendorsScripts.length
