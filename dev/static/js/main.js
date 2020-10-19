@@ -10,9 +10,9 @@ $(function () {
             touchThreshold: 40,
             dotsClass: 'pagination slider__pagination',
             cssEase: 'linear'
-        }).on('afterChange', function(event, slick, currentSlide){
+        }).on('afterChange', function (event, slick, currentSlide) {
             lazyLoad()
-        }).on('beforeChange', function(event, slick, currentSlide){
+        }).on('beforeChange', function (event, slick, currentSlide) {
             lazyLoad()
         });
         $('.category__slider').slick({
@@ -43,15 +43,11 @@ $(function () {
                 {
                     breakpoint: 1000,
                     settings: {
-                        slidesToShow: 3,
-                    }
-                },
-                {
-                    breakpoint: 773,
-                    settings: {
+                        rows: 2,
                         slidesToShow: 2,
                     }
                 },
+
                 {
                     breakpoint: 601,
                     settings: {
@@ -61,9 +57,9 @@ $(function () {
             ]
         }).on('breakpoint', function () {
             sliderSpace()
-        }).on('afterChange', function(event, slick, currentSlide){
+        }).on('afterChange', function (event, slick, currentSlide) {
             lazyLoad()
-        }).on('beforeChange', function(event, slick, currentSlide){
+        }).on('beforeChange', function (event, slick, currentSlide) {
             lazyLoad()
         });
         $('.product__head-slider').slick({
@@ -74,9 +70,9 @@ $(function () {
             dotsClass: 'pagination product__pagination pagination--white',
             infinite: false,
             touchThreshold: 40,
-        }).on('afterChange', function(event, slick, currentSlide){
+        }).on('afterChange', function (event, slick, currentSlide) {
             lazyLoad()
-        }).on('beforeChange', function(event, slick, currentSlide){
+        }).on('beforeChange', function (event, slick, currentSlide) {
             lazyLoad()
         });
         $('.recommend__slider').slick({
@@ -86,6 +82,7 @@ $(function () {
             rows: 0,
             prevArrow: '<button type="button" class="arrow arrow--left"><img class="arrow__icon" src="static/images/common/arrow-left.svg" alt=""></button>',
             nextArrow: '<button type="button" class="arrow arrow--right"><img class="arrow__icon" src="static/images/common/arrow-right.svg" alt=""></button>',
+            infinite: false,
             responsive: [
                 {
                     breakpoint: 1171,
@@ -103,17 +100,21 @@ $(function () {
                     breakpoint: 666,
                     settings: {
                         slidesToShow: 1,
+                        swipe: true,
                     }
                 },
             ]
         }).on('setPosition', function (event, slick) {
-            slick.$slides.css('height', slick.$slideTrack.height() + 'px');
+            slick.$slides.css('min-height', slick.$slideTrack.height() + 'px');
+            $('.recommend__slider').css('min-height', slick.$slideTrack.height() + 30 + 'px');
         }).on('breakpoint', function () {
             sliderSpace()
-        }).on('afterChange', function(event, slick, currentSlide){
+        }).on('afterChange', function (event, slick, currentSlide) {
             lazyLoad()
-        }).on('beforeChange', function(event, slick, currentSlide){
+        }).on('beforeChange', function (event, slick, currentSlide) {
             lazyLoad()
+        }).on('init', function (event, slick) {
+            $('.recommend__slider').css('min-height', slick.$slideTrack.height() + 30 + 'px');
         });
 
     }
@@ -173,12 +174,27 @@ $(function () {
             btn.on('click', function () {
                 if ($(this).attr('data-direction') === 'plus') {
                     counterPlus(btn.prev(), btn.prev().val())
-                }else {
+                } else {
                     counterMinus(btn.next(), btn.next().val())
                 }
             })
         })
     }
+    const hoverProducts = () => {
+        const elem = $('.product')
+        elem.hover(function () {
+            $(this).toggleClass('product--hover')
+            if ($(this).hasClass('product--hover')) {
+                $(this).find('.product__list-item').slideDown()
+            }
+        }, function () {
+            $(this).removeClass('product--hover')
+            for (let i = 2; i <= $(this).find('.product__list-item').length; i++) {
+                $(this).find('.product__list-item').eq(i).slideUp()
+            }
+        })
+    }
+    hoverProducts()
     toggle('.product__head', '.js-toggle', 'icon-heart--active')
     mainSliders()
     sliderSpace()

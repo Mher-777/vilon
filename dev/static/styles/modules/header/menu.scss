@@ -9,9 +9,12 @@
     display: flex;
     align-items: center;
   }
+  &-icon {
+    display: none;
+  }
   &-item {
     position: relative;
-    width: 14.2857142857%;
+    flex: 1 1 auto;
     &:hover {
       .header__dropdown {
         transform: scaleY(1);

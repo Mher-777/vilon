@@ -7,9 +7,15 @@
   display: flex;
   flex-direction: column;
   background-color: #fff;
+  margin-bottom: 12px;
+  transition: all linear .2s;
   &:hover {
-    .product__list {
-      transform: translateY(0);
+    box-shadow: 3px 3px 12px 0px rgba(0,0,0, 0.5);
+    .product__head-viewing {
+      transform: translate(-50%, calc(-50% + 135px));
+    }
+    .product__btn {
+      background-color: #2a804a;
     }
   }
   &__head{
@@ -44,12 +50,7 @@
       -webkit-background-size: cover;
       background-size: cover;
       background-position:  center;
-      &:hover {
-        .product__head-viewing {
-          //margin-top: 50%;
-          transform: translate(-50%, calc(-50% + 135px));
-        }
-      }
+
     }
     &-icon {
       position: absolute;
@@ -71,12 +72,15 @@
   }
 
   &__list {
-    transition: all linear .2s;
-    transform: translateY(-40px);
+    padding-bottom: 5px;
     &-item {
       font-size: 12px;
       line-height: 14px;
       color: #6f6f6f;
+      display: none;
+      &:nth-child(-n+2) {
+        display: block;
+      }
     }
   }
   &__main {

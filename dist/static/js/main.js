@@ -41,11 +41,7 @@ $(function () {
       }, {
         breakpoint: 1000,
         settings: {
-          slidesToShow: 3
-        }
-      }, {
-        breakpoint: 773,
-        settings: {
+          rows: 2,
           slidesToShow: 2
         }
       }, {
@@ -81,6 +77,7 @@ $(function () {
       rows: 0,
       prevArrow: '<button type="button" class="arrow arrow--left"><img class="arrow__icon" src="static/images/common/arrow-left.svg" alt=""></button>',
       nextArrow: '<button type="button" class="arrow arrow--right"><img class="arrow__icon" src="static/images/common/arrow-right.svg" alt=""></button>',
+      infinite: false,
       responsive: [{
         breakpoint: 1171,
         settings: {
@@ -94,17 +91,21 @@ $(function () {
       }, {
         breakpoint: 666,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 1,
+          swipe: true
         }
       }]
     }).on('setPosition', function (event, slick) {
-      slick.$slides.css('height', slick.$slideTrack.height() + 'px');
+      slick.$slides.css('min-height', slick.$slideTrack.height() + 'px');
+      $('.recommend__slider').css('min-height', slick.$slideTrack.height() + 30 + 'px');
     }).on('breakpoint', function () {
       sliderSpace();
     }).on('afterChange', function (event, slick, currentSlide) {
       lazyLoad();
     }).on('beforeChange', function (event, slick, currentSlide) {
       lazyLoad();
+    }).on('init', function (event, slick) {
+      $('.recommend__slider').css('min-height', slick.$slideTrack.height() + 30 + 'px');
     });
   };
 
@@ -175,6 +176,24 @@ $(function () {
     });
   };
 
+  var hoverProducts = function hoverProducts() {
+    var elem = $('.product');
+    elem.hover(function () {
+      $(this).toggleClass('product--hover');
+
+      if ($(this).hasClass('product--hover')) {
+        $(this).find('.product__list-item').slideDown();
+      }
+    }, function () {
+      $(this).removeClass('product--hover');
+
+      for (var i = 2; i <= $(this).find('.product__list-item').length; i++) {
+        $(this).find('.product__list-item').eq(i).slideUp();
+      }
+    });
+  };
+
+  hoverProducts();
   toggle('.product__head', '.js-toggle', 'icon-heart--active');
   mainSliders();
   sliderSpace();

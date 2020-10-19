@@ -23,10 +23,12 @@ li, ol, ul {
 }
 
 body {
-  font: 16px/1.1 Arial, sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  height: 100%
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.1;
 }
 
 img {
@@ -55,7 +57,7 @@ button {
 }
 
 a:focus, button:focus, input:focus, textarea:focus {
-  outline: 1px solid #2a804a
+  outline: none;
 }
 
 .wrapper {
@@ -92,14 +94,34 @@ a:focus, button:focus, input:focus, textarea:focus {
   padding: 8px 15px;
   width: 100%;
   &::placeholder {
+    font-family: Arial, sans-serif;
     font-size: 14px;
-    line-height: 14px;
-    border-radius: 15px
+    color: #939494;
+  }
+  &::-webkit-input-placeholder {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #939494;
+  }
+  &::-moz-placeholder {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #939494;
+  }
+  &:-ms-input-placeholder {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #939494;
+  }
+  &:-moz-placeholder {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #939494;
   }
   &--size{
     &-small {
       padding: 11px 20px;
-      box-shadow: 0px 5px 12px -1px rgba(0,0,0,0.36);
+      box-shadow: 0px 5px 12px -1px rgba(0,0,0, 0.36);
     }
   }
 }
@@ -108,15 +130,42 @@ a:focus, button:focus, input:focus, textarea:focus {
   border: none;
   background-color: #fff;
   padding: 15px;
-  border-radius: 20px;
+  border-radius: 15px;
   display: block;
   box-shadow: 0px 5px 12px -1px rgba(0,0,0,0.36);
   resize: none;
+  font-size: 14px;
+  &::placeholder {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #939494;
+  }
+  &::-webkit-input-placeholder {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #939494;
+  }
+  &::-moz-placeholder {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #939494;
+  }
+  &:-ms-input-placeholder {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #939494;
+  }
+  &:-moz-placeholder {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #939494;
+  }
 }
 
 .header__bottom {
   z-index: 100;
   transition: all linear .2s;
 }
+
 //Модули
 @import "modules/modules";

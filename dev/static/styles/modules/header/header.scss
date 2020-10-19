@@ -86,7 +86,7 @@
   &__icons {
     margin-top: auto;
     margin-bottom: 2px;
-    text-align: center;
+
     &-link {
       display: block;
       font-size: 15px;
@@ -127,11 +127,7 @@
     }
   }
   &__btn {
-    background-color: #d7cf4f;
     margin-top: 10px;
-    &:hover {
-      background-color: #e3db4f;
-    }
   }
   &__request {
     &-icons {
