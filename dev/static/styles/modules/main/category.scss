@@ -1,5 +1,5 @@
 .category {
-  padding: 55px 0;
+  padding: 35px 0;
   &__slider {
     padding-left: 60px;
     padding-right: 60px;
@@ -44,11 +44,17 @@
       margin-right: -50%;
       z-index: 1;
     }
+    &__title {
+      
+    }
     &:hover {
       .category__box-top {
         height: 0;
         padding-top: 0;
         padding-bottom: 0;
+      }
+      .category__box-title {
+
       }
       .category__box-btn {
         background: #2a804a;
@@ -59,8 +65,8 @@
     }
   }
   &__slide  {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     box-shadow: 2px 2px 6px 3px rgba(0, 0, 0, 0.2);
   }
 }
