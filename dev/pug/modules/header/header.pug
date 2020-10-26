@@ -40,18 +40,34 @@ header.header
         ul.header__menu-list
           li.header__menu-item
             a(href="#").header__menu-link О компании
-          li.header__menu-item
-            a(href="#").header__menu-link Сотрудничество
           li.header__menu-item.header__menu-item--dropdown
+            a(href="cooperation.html").header__menu-link Сотрудничество
             +icon('arrow-down', 'header__menu-icon')
+            ul.header__dropdown
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Horeca
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Поставщикам
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Дистрибьютерам
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Вендинговые аппараты
+          li.header__menu-item.header__menu-item--dropdown
             a(href="#").header__menu-link Бренды
-            .header__dropdown
-              a(href="#").header__dropdown-link Сытоедов
-              a(href="#").header__dropdown-link Обожамс!
-              a(href="#").header__dropdown-link Чебуречье
-              a(href="#").header__dropdown-link Street Food
-              a(href="#").header__dropdown-link Balansika
-              a(href="#").header__dropdown-link Snack Bomb
+            +icon('arrow-down', 'header__menu-icon')
+            ul.header__dropdown
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Сытоедов
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Обожамс!
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Чебуречье
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Street Food
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Balansika
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Snack Bomb
           li.header__menu-item
             a(href="#").header__menu-link Магазин
           li.header__menu-item

@@ -91,13 +91,16 @@
     }
   }
   &--wight {
-    &-bold {
+    &-black {
       font-weight: 900;
     }
   }
   &--color {
     &-white {
       color: #fff;
+    }
+    &-japonica {
+      color: #D38264;
     }
   }
 }
@@ -186,6 +189,7 @@
     outline: none;
   }
 }
+
 @import "ie";
 @media (max-width: 850px) {
   .title--size-big {

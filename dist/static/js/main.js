@@ -139,14 +139,24 @@ $(function () {
   var menuToggle = function menuToggle() {
     var menu = $('.header__menu-list');
     var button = $('.hamburger');
+    var subButton = $('.header__menu-icon');
+    var dropdown = $('.header__dropdown');
+    var item = $('.header__menu-item');
     button.on('click', function () {
       $(this).toggleClass('is-active');
       menu.slideToggle();
+    });
+    subButton.on('click', function (e) {
+      e.preventDefault();
+      $(this).siblings('.header__dropdown').slideToggle(300);
+      $(this).parent().toggleClass('header__menu-item--open');
     });
     $(window).resize(function () {
       var w = $(window).width();
 
       if (w > 970) {
+        dropdown.removeAttr('style');
+        item.removeClass('header__menu-item--open');
         menu.removeAttr('style');
         button.removeClass('is-active');
       }

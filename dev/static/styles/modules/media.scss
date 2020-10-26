@@ -62,39 +62,62 @@
     width: 100%;
     border-bottom: 1px solid #6f6f6f;
     flex: none;
-
     &:first-child {
       border-top: 1px solid #6f6f6f;
     }
-  }
+    &--dropdown {
+      &:hover {}
+    }
+    &--current {
+      &:hover {
+        .header__dropdown {
+          transform: scaleY(1);
+        }
+      }
+    }
+    &--open {
+      .header__menu-link {
+        background-color: #6fa743;
+        color: #fff;
+      }
 
+      .header__menu-icon {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  .header__submenu {
+    display: none;
+  }
   .header__dropdown {
     position: static;
-    overflow: hidden;
-    height: 0;
+    display: none;
     transform: none;
     transform-origin: initial;
     padding: 0 15px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    transition: none;
   }
   .header__dropdown-link {
     display: inline-block;
 
   }
-  .header__menu-item:hover .header__dropdown {
-    height: auto;
-    padding: 7px 15px;
-    overflow: visible;
-    transform: none;
-  }
-
   .header__menu-list {
     margin-bottom: -10px;
     margin-top: 15px;
+  }
+
+  .header__menu-icon {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 2px;
+    right: 20px;
+    cursor: pointer;
+    padding: 8px;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 0;
   }
 }
 
@@ -148,6 +171,11 @@
   }
   .banner__inner {
     min-height: 300px;
+    &--height {
+      &-small {
+        min-height: 200px;
+      }
+    }
   }
 }
 
@@ -248,34 +276,15 @@
   }
   .advantages {
     margin-bottom: 30px;
+    &--is {
+      &-margin {
+        margin-bottom: 0;
+      }
+    }
   }
   .application__title {
     font-size: 26px;
     line-height: 34px;
-  }
-  .header__menu-item--dropdown {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-
-    .header__menu-link {
-      width: auto;
-      min-width: 85px;
-      margin-right: 10px;
-      padding-left: 5px;
-    }
-  }
-  .header__menu-icon {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    transition: all linear .2s;
-
-    &:hover {
-      transition: all linear .2s;
-      transform: rotate(180deg);
-    }
   }
 }
 

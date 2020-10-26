@@ -1,0 +1,26 @@
+.breadcrumbs {
+  margin-bottom: 30px;
+  &__inner {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+  &__link {
+    font-size: 12px;
+    line-height: 14px;
+    color: #9c9c9c;
+    &:not(:first-child) {
+      &::before {
+        content: ">";
+        margin: 0 10px;
+      }
+    }
+  }
+}
+@media (max-width: 970px) {
+  .breadcrumbs {
+    margin-bottom: 0;
+    padding: 25px 0;
+  }
+}

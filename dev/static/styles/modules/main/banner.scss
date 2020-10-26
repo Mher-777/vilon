@@ -24,6 +24,11 @@
       min-height:inherit;
       font-size:0;
     }
+    &--height {
+      &-small {
+        min-height: 230px;
+      }
+    }
   }
   &__subtitle  {
     font-size: 24px;
@@ -35,5 +40,11 @@
     font-style: italic;
     padding: 11px 62px;
     margin-left: auto;
+  }
+}
+@media (max-width: 500px) {
+  .banner__title {
+    font-size: 24px;
+    line-height: 1.45;
   }
 }

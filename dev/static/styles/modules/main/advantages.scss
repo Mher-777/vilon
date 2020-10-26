@@ -1,8 +1,18 @@
 .advantages {
   margin-bottom: 40px;
+  overflow-x: hidden;
+  &--is {
+    &-margin {
+      margin-bottom: 0;
+    }
+  }
   &__wrapper {
     background-color: #f2ecdf;
     padding-top: 35px;
+    &--margin {
+      margin-left: -40px;
+      margin-right: -40px;
+    }
   }
   &__item {
     max-width: 175px;
@@ -14,7 +24,8 @@
       margin-right: 0;
     }
     &-icon {
-
+      fill: #518E4B;
+      max-width: 120px;
     }
     &-text {
       display: block;
@@ -22,6 +33,11 @@
       line-height: 18px;
       color: #2e804b;
       margin-top: 5px;
+      &--color {
+        &-black {
+          color: #000;
+        }
+      }
     }
   }
   &__items {
@@ -30,5 +46,8 @@
     align-items: baseline;
     padding-left: 40px;
     padding-right: 40px;
+    &--center {
+      justify-content: center;
+    }
   }
 }

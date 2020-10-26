@@ -147,13 +147,24 @@ $(function () {
     const menuToggle = () => {
         const menu = $('.header__menu-list')
         const button = $('.hamburger')
+        const subButton = $('.header__menu-icon')
+        const dropdown = $('.header__dropdown')
+        const item = $('.header__menu-item')
         button.on('click', function () {
             $(this).toggleClass('is-active')
             menu.slideToggle()
         })
+        subButton.on('click', function (e) {
+            e.preventDefault()
+            $(this).siblings('.header__dropdown').slideToggle(300)
+            $(this).parent().toggleClass('header__menu-item--open')
+        })
+
         $(window).resize(function () {
             let w = $(window).width();
             if (w > 970) {
+                dropdown.removeAttr('style');
+                item.removeClass('header__menu-item--open')
                 menu.removeAttr('style');
                 button.removeClass('is-active')
             }
