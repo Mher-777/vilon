@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
-    <link rel="shortcut icon" href="static/images/common/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="static/css/styles.css">
   </head>
   <body>
@@ -16,7 +16,7 @@
           <div class="container">
             <div class="header__inner">
               <div class="header__info">
-                <div class="logo" data-da="header__menu, 1, 500"><a class="logo__link" href="#"><img class="logo__image" src="static/images/common/logo.svg" alt="логотип"></a></div>
+                <div class="logo" data-da="header__menu, 1, 500"><a class="logo__link" href="index.html"><img class="logo__image" src="static/images/common/logo.svg" alt="логотип"></a></div>
                 <div class="header__icons"><a class="header__icons-link" href="tel:+74952239749">
                     <svg class="icon icon-phone header__icon">
                       <use xlink:href="static/images/sprite/symbol/sprite.svg#phone"></use>
@@ -53,7 +53,19 @@
             <nav class="header__menu">
               <button class="hamburger hamburger--spring" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
               <ul class="header__menu-list">
-                <li class="header__menu-item"><a class="header__menu-link" href="#">О компании</a></li>
+                <li class="header__menu-item header__menu-item--dropdown"><a class="header__menu-link" href="about.html">О компании</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">История</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Новости</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Производство</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Качество</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Наши награды</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Вакансии</a></li>
+                  </ul>
+                </li>
                 <li class="header__menu-item header__menu-item--dropdown header__menu-item--current"><a class="header__menu-link" href="cooperation.html">Сотрудничество</a>
                   <svg class="icon icon-arrow-down header__menu-icon">
                     <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
@@ -65,7 +77,7 @@
                     <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Вендинговые аппараты</a></li>
                   </ul>
                 </li>
-                <li class="header__menu-item header__menu-item--dropdown"><a class="header__menu-link" href="#">Бренды</a>
+                <li class="header__menu-item header__menu-item--dropdown"><a class="header__menu-link" href="brands.html">Бренды</a>
                   <svg class="icon icon-arrow-down header__menu-icon">
                     <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
                   </svg>
@@ -78,10 +90,47 @@
                     <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Snack Bomb</a></li>
                   </ul>
                 </li>
-                <li class="header__menu-item"><a class="header__menu-link" href="#">Магазин</a></li>
-                <li class="header__menu-item"><a class="header__menu-link" href="#">Покупателям</a></li>
-                <li class="header__menu-item"><a class="header__menu-link" href="#">Vilon Life</a></li>
-                <li class="header__menu-item"><a class="header__menu-link" href="#">Контакты</a></li>
+                <li class="header__menu-item"><a class="header__menu-link" href="#">Магазин</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Завтраки</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Первые блюда</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Вторые блюда</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Постные блюда</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Жюльены</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Выпечка</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Снеки и чебуреки</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Полуфабрикаты</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Готовые рационы</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item header__menu-item--dropdown"><a class="header__menu-link" href="buyers.html">Покупателям</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Где купить</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Как заказать</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Акции</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Вопрос / ответ</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Доставка / оплата</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Возврат товара</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Образцы документов</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item header__menu-item--dropdown"><a class="header__menu-link" href="vilon-life.html">Vilon Life</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Кулинарная школа</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Интересно про еду</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Правильное питание</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item"><a class="header__menu-link" href="contacts.html">Контакты</a></li>
               </ul>
             </nav>
           </div>
@@ -101,8 +150,10 @@
         <section class="advantages advantages--is-margin">
           <div class="container">
             <div class="advantages__wrapper advantages__wrapper--margin">
-              <div class="section-top">
-                <h2 class="section-top__title title">СЛАГАЕМЫЕ УСПЕХА</h2>
+              <div class="container">
+                <div class="section-top">
+                  <h2 class="section-top__title title">СЛАГАЕМЫЕ УСПЕХА</h2>
+                </div>
               </div>
               <div class="advantages__items advantages__items--center">
                 <div class="advantages__item">
@@ -257,7 +308,7 @@
             <div class="footer__col footer__col--contacts" data-da="footer__row, 2, 650">
               <h3 class="footer__title">КОНТАКТЫ</h3>
               <ul class="footer__list">
-                <li class="footer__item"><a class="footer__link" href="#">
+                <li class="footer__item"><a class="footer__link js-popup-map" href="#map">
                     <svg class="icon icon-marker footer__item-icon">
                       <use xlink:href="static/images/sprite/symbol/sprite.svg#marker"></use>
                     </svg><span>М. О., г Щелково, ул. Поварская, вл. 1</span></a></li>
@@ -281,6 +332,9 @@
           <div class="container">© 1994-2020, ООО ТПК «ВиЛон»</div>
         </div>
       </footer>
+    </div>
+    <div class="mfp-hide zoom-anim-dialog" id="map">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af2568a7384a85fd05fc7f634c7342c63b956305764ab910b3e4eb494d1c2e624&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
     </div>
     <script src="static/js/libs.js"></script>
     <script src="static/js/main.js"></script>

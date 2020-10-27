@@ -1,0 +1,39 @@
+.statistics {
+  padding: 35px 0;
+  text-align: center;
+  &__counter {
+    max-width: 445px;
+    width: 100%;
+    margin: 10px auto;
+    background-color: #f6f5f3;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    &-number {
+      width: 50px;
+      height: 70px;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 68px;
+      box-shadow: 0 2px 21px -5px rgba(0,0,0,0.43);
+      border: 1px solid #7b7973;
+      color: #00894a;
+      background-color: #fff;
+      border-radius: 5px;
+      margin: 0 4px;
+    }
+  }
+}
+@media (max-width: 550px) {
+  .statistics__counter {
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: center;
+  }
+  .statistics__counter-number {
+    margin: 0 2.5px;
+    width: 35px;
+    height: 60px;
+    line-height: 60px;
+  }
+}

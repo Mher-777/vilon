@@ -23,9 +23,16 @@
     &:last-child {
       margin-right: 0;
     }
+    &-title {
+      font-weight: 700;
+      margin-bottom: -5px;
+      font-size: 16px;
+    }
     &-icon {
       fill: #518E4B;
       max-width: 120px;
+      max-height: 115px;
+      margin-bottom: 7px;
     }
     &-text {
       display: block;

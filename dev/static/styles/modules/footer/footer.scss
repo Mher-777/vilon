@@ -54,8 +54,12 @@ footer { flex: 0 0 auto; }
     vertical-align: bottom;
   }
   &__link {
-    display: flex;
-    align-items: flex-start;
+    transition: all linear .2s;
+    &:hover {
+      font-weight: 600;
+      border-bottom: 2px solid #000;
+      color: #000;
+    }
   }
   &__images {
     display: flex;
@@ -64,6 +68,7 @@ footer { flex: 0 0 auto; }
     &-link {
       width: calc(50% - 4px);
       margin-bottom: 8px;
+
     }
   }
   &__copyright {
@@ -101,10 +106,12 @@ footer { flex: 0 0 auto; }
 }
 @media (max-width: 650px) {
   .footer__row {
-    display: block;
+    max-width: 540px;
   }
   .footer__col {
-    max-width: 250px;
+    max-width: 49%;
+    margin-right: 0;
+    padding-right: 10px;
     &--contacts {
       max-width: 180px;
     }
@@ -114,5 +121,13 @@ footer { flex: 0 0 auto; }
   }
   .footer__title--align-center {
     text-align: left;
+  }
+}
+@media (max-width: 450px) {
+  .footer__col--brands {
+    max-width: 260px;
+  }
+  .footer__col--payments {
+    max-width: 260px;
   }
 }

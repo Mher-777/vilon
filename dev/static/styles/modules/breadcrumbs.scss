@@ -1,5 +1,9 @@
 .breadcrumbs {
   margin-bottom: 30px;
+  &--margin {
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
   &__inner {
     display: flex;
     align-items: center;
@@ -22,5 +26,8 @@
   .breadcrumbs {
     margin-bottom: 0;
     padding: 25px 0;
+    &--margin {
+      margin-top: 0;
+    }
   }
 }

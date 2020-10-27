@@ -11,7 +11,7 @@ html(lang="ru-RU")
 		<![endif]-->
 		meta(name="viewport" content="width=device-width,initial-scale=1")
 		meta(name="keywords" content="")
-		link(rel="shortcut icon" href="static/images/common/favicon.ico" type="image/x-icon")
+		link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
 		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
 	body
 		.wrapper
@@ -19,6 +19,7 @@ html(lang="ru-RU")
 			.content
 				block content
 			include ../modules/footer/footer
+		include ../modules/popup/map
 		script(src="static/js/libs.js")
 		script(src="static/js/main.js")
 		block script

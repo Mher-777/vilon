@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Покупателям</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__top">
+          <div class="container">
+            <div class="header__inner">
+              <div class="header__info">
+                <div class="logo" data-da="header__menu, 1, 500"><a class="logo__link" href="index.html"><img class="logo__image" src="static/images/common/logo.svg" alt="логотип"></a></div>
+                <div class="header__icons"><a class="header__icons-link" href="tel:+74952239749">
+                    <svg class="icon icon-phone header__icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#phone"></use>
+                    </svg><span class="header__item-text">+7 (495) 223-97-49</span></a><a class="header__icons-link" href="mailto:info@vilon.ru">
+                    <svg class="icon icon-email header__icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#email"></use>
+                    </svg><span class="header__item-text">info@vilon.ru</span></a></div>
+              </div>
+              <form class="header__search" action="#">
+                <input class="header__search-input input" type="text" placeholder="Поиск" required>
+                <button class="header__search-btn" type="submit">
+                  <svg class="icon icon-search header__search-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+              <div class="header__request" data-da="header__menu, 1, 500">
+                <div class="header__request-icons"><a class="header__request-link" href="#"><span class="header__request-box header__request-box--number" data-count="2">
+                      <svg class="icon icon-heart header__request-icon">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#heart"></use>
+                      </svg></span></a><a class="header__request-link" href="#"><span class="header__request-box header__request-box--number" data-count="2">
+                      <svg class="icon icon-basket header__request-icon">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#basket"></use>
+                      </svg></span><span class="header__request-text">10,500 р</span></a><a class="header__request-link header__request-link--size-small" href="#"><span class="header__request-box">
+                      <svg class="icon icon-user header__request-icon">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#user"></use>
+                      </svg></span><span class="header__request-text">Вход</span></a></div><a class="btn btn--color-black btn--bg-yellow header__btn" href="#" data-da="header__menu-list, last, 500">ОСТАВИТЬ ЗАЯВКУ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom header__bottom--shadow">
+          <div class="container">
+            <nav class="header__menu">
+              <button class="hamburger hamburger--spring" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+              <ul class="header__menu-list">
+                <li class="header__menu-item header__menu-item--dropdown"><a class="header__menu-link" href="about.html">О компании</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">История</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Новости</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Производство</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Качество</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Наши награды</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Вакансии</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item header__menu-item--dropdown"><a class="header__menu-link" href="cooperation.html">Сотрудничество</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Horeca</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Поставщикам</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Дистрибьютерам</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Вендинговые аппараты</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item header__menu-item--dropdown"><a class="header__menu-link" href="brands.html">Бренды</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Сытоедов</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Обожамс!</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Чебуречье</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Street Food</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Balansika</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Snack Bomb</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item"><a class="header__menu-link" href="#">Магазин</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Завтраки</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Первые блюда</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Вторые блюда</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Постные блюда</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Жюльены</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Выпечка</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Снеки и чебуреки</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Полуфабрикаты</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Готовые рационы</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item header__menu-item--dropdown header__menu-item--current"><a class="header__menu-link" href="buyers.html">Покупателям</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Где купить</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Как заказать</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Акции</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Вопрос / ответ</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Доставка / оплата</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Возврат товара</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Образцы документов</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item header__menu-item--dropdown"><a class="header__menu-link" href="vilon-life.html">Vilon Life</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Кулинарная школа</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Интересно про еду</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Правильное питание</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item"><a class="header__menu-link" href="contacts.html">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="header__submenu">
+          <div class="container">
+            <div class="header__submenu-inner"><a class="header__submenu-link" href="#">Где купить</a><a class="header__submenu-link" href="#">Как заказать</a><a class="header__submenu-link" href="#">Акции</a><a class="header__submenu-link" href="#">Вопрос / ответ</a><a class="header__submenu-link" href="#">Доставка / оплата</a><a class="header__submenu-link" href="#">Возврат товара</a><a class="header__submenu-link" href="#">Образцы документов</a></div>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <div class="breadcrumbs">
+          <div class="container">
+            <div class="breadcrumbs__inner"><a class="breadcrumbs__link" href="#">Главная</a><a class="breadcrumbs__link" href="#">Покупателям</a></div>
+          </div>
+        </div>
+        <section class="advantages advantages--is-margin">
+          <div class="container">
+            <div class="advantages__wrapper advantages__wrapper--margin">
+              <div class="container">
+                <div class="section-top">
+                  <h2 class="section-top__title title">ОСОБЕННОСТИ НАШЕЙ ЕДЫ</h2>
+                </div>
+              </div>
+              <div class="advantages__items">
+                <div class="advantages__item advantages__item--grid">
+                  <svg class="icon icon-range advantages__item-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#range"></use>
+                  </svg>
+                  <h3 class="advantages__item-title">ШИРОКИЙ <br> АССОРТИМЕНТ</h3><span class="advantages__item-text">блюда <br> на любой вкус</span>
+                </div>
+                <div class="advantages__item advantages__item--grid">
+                  <svg class="icon icon-quality advantages__item-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#quality"></use>
+                  </svg>
+                  <h3 class="advantages__item-title">ВЫГОДНЫЕ <br> ЦЕНЫ</h3><span class="advantages__item-text">акции и скидки  <br> постоянным клиентам</span>
+                </div>
+                <div class="advantages__item advantages__item--grid">
+                  <svg class="icon icon-pendant advantages__item-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#pendant"></use>
+                  </svg>
+                  <h3 class="advantages__item-title">КАЧЕСТВЕННЫЕ <br> ПРОДУКТЫ</h3><span class="advantages__item-text">сертификат <br> FSSC 22000</span>
+                </div>
+                <div class="advantages__item advantages__item--grid">
+                  <svg class="icon icon-processes advantages__item-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#processes"></use>
+                  </svg>
+                  <h3 class="advantages__item-title">ШОКОВАЯ <br> ЗАМОРОЗКА</h3><span class="advantages__item-text">естественный  <br> консервант</span>
+                </div>
+                <div class="advantages__item advantages__item--grid">
+                  <svg class="icon icon-delivery advantages__item-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#delivery"></use>
+                  </svg>
+                  <h3 class="advantages__item-title">ДОСТАВКА <br> В ОБЛАСТЬ</h3><span class="advantages__item-text">автопарк с  <br> холодильными установками</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="statistics">
+          <div class="container">
+            <h3 class="statistics__title title">В ЭТОМ МЕСЯЦЕ МЫ ПРОДАЛИ</h3>
+            <div class="statistics__counter"><span class="statistics__counter-number">0</span><span class="statistics__counter-number">6</span><span class="statistics__counter-number">0</span><span class="statistics__counter-number">4</span><span class="statistics__counter-number">0</span><span class="statistics__counter-number">0</span><span class="statistics__counter-number">0</span></div>
+            <h3 class="statistics__title title">КГ ПРОДУКЦИИ</h3>
+          </div>
+        </section>
+        <section class="recommend">
+          <div class="container">
+            <div class="section-top">
+              <h2 class="section-top__title title">РЕКОМЕНДУЕМ ПОПРОБОВАТЬ</h2>
+            </div>
+          </div>
+          <div class="recommend__slider">
+            <div class="recommend__slide">
+              <article class="product">
+                <div class="product__head">
+                  <div class="product__head-slider">
+                    <div class="product__head-slide js-parent">
+                      <div class="product__head-image lazy" data-src="static/images/content/category/category-2.jpg"><a class="product__head-viewing" href="#"><span class="product__head-text">Быстрый просмотр</span>
+                          <svg class="icon icon-search product__head-viewing-icon">
+                            <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+                          </svg></a></div>
+                      <svg class="icon icon-heart product__head-icon js-toggle">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
+                    <div class="product__head-slide">
+                      <div class="product__head-image lazy" data-src="static/images/content/category/category-2.jpg"><a class="product__head-viewing" href="#"><span class="product__head-text">Быстрый просмотр</span>
+                          <svg class="icon icon-search product__head-viewing-icon">
+                            <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+                          </svg></a></div>
+                      <svg class="icon icon-heart product__head-icon js-toggle">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div><a class="product__main" href="#">
+                  <h3 class="product__title">БОРЩ ЧЕРНИГОВСКИЙ</h3>
+                  <div class="product__main-box">
+                    <ul class="product__list">
+                      <li class="product__list-item">Вес.........................300 гр</li>
+                      <li class="product__list-item">Калорийность........147 Ккал</li>
+                      <li class="product__list-item">Белки......................3,3 г</li>
+                      <li class="product__list-item">Жиры......................6,6 г</li>
+                      <li class="product__list-item">Углеводы................20,1 г</li>
+                    </ul>
+                  </div></a>
+                <div class="product__footer">
+                  <div class="product__info"><span class="product__price">120 р</span>
+                    <div class="counter">
+                      <button class="counter__btn" data-direction="minus">
+                        <svg class="icon icon-minus counter__icon">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#minus"></use>
+                        </svg>
+                      </button>
+                      <input class="counter__input" value="1" disabled>
+                      <button class="counter__btn" data-direction="plus">
+                        <svg class="icon icon-plus counter__icon">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#plus"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div><a class="product__btn btn btn--bg-green btn--color-white" href="#">В КОРЗИНУ</a>
+                </div>
+              </article>
+            </div>
+            <div class="recommend__slide">
+              <article class="product">
+                <div class="product__head">
+                  <div class="product__head-slider">
+                    <div class="product__head-slide js-parent">
+                      <div class="product__head-image lazy" data-src="static/images/content/category/category-2.jpg"><a class="product__head-viewing" href="#"><span class="product__head-text">Быстрый просмотр</span>
+                          <svg class="icon icon-search product__head-viewing-icon">
+                            <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+                          </svg></a></div>
+                      <svg class="icon icon-heart product__head-icon js-toggle">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
+                    <div class="product__head-slide">
+                      <div class="product__head-image lazy" data-src="static/images/content/category/category-2.jpg"><a class="product__head-viewing" href="#"><span class="product__head-text">Быстрый просмотр</span>
+                          <svg class="icon icon-search product__head-viewing-icon">
+                            <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+                          </svg></a></div>
+                      <svg class="icon icon-heart product__head-icon js-toggle">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div><a class="product__main" href="#">
+                  <h3 class="product__title">ТРЕСКА ОТВАРНАЯ С КАРТОФЕЛЕМ И СОУСОМ ИЗ ШПИНАТА</h3>
+                  <div class="product__main-box">
+                    <ul class="product__list">
+                      <li class="product__list-item">Вес.........................300 гр</li>
+                      <li class="product__list-item">Калорийность........147 Ккал</li>
+                      <li class="product__list-item">Белки......................3,3 г</li>
+                      <li class="product__list-item">Жиры......................6,6 г</li>
+                      <li class="product__list-item">Углеводы................20,1 г</li>
+                    </ul>
+                  </div></a>
+                <div class="product__footer">
+                  <div class="product__info"><span class="product__price">120 р</span>
+                    <div class="counter">
+                      <button class="counter__btn" data-direction="minus">
+                        <svg class="icon icon-minus counter__icon">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#minus"></use>
+                        </svg>
+                      </button>
+                      <input class="counter__input" value="1" disabled>
+                      <button class="counter__btn" data-direction="plus">
+                        <svg class="icon icon-plus counter__icon">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#plus"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div><a class="product__btn btn btn--bg-green btn--color-white" href="#">В КОРЗИНУ</a>
+                </div>
+              </article>
+            </div>
+            <div class="recommend__slide">
+              <article class="product">
+                <div class="product__head">
+                  <div class="product__head-slider">
+                    <div class="product__head-slide js-parent">
+                      <div class="product__head-image lazy" data-src="static/images/content/category/category-2.jpg"><a class="product__head-viewing" href="#"><span class="product__head-text">Быстрый просмотр</span>
+                          <svg class="icon icon-search product__head-viewing-icon">
+                            <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+                          </svg></a></div>
+                      <svg class="icon icon-heart product__head-icon js-toggle">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
+                    <div class="product__head-slide">
+                      <div class="product__head-image lazy" data-src="static/images/content/category/category-2.jpg"><a class="product__head-viewing" href="#"><span class="product__head-text">Быстрый просмотр</span>
+                          <svg class="icon icon-search product__head-viewing-icon">
+                            <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+                          </svg></a></div>
+                      <svg class="icon icon-heart product__head-icon js-toggle">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div><a class="product__main" href="#">
+                  <h3 class="product__title">СУП-ЛАПША ДОМАШНЯЯ С КУРИЦЕЙ</h3>
+                  <div class="product__main-box">
+                    <ul class="product__list">
+                      <li class="product__list-item">Вес.........................300 гр</li>
+                      <li class="product__list-item">Калорийность........147 Ккал</li>
+                      <li class="product__list-item">Белки......................3,3 г</li>
+                      <li class="product__list-item">Жиры......................6,6 г</li>
+                      <li class="product__list-item">Углеводы................20,1 г</li>
+                    </ul>
+                  </div></a>
+                <div class="product__footer">
+                  <div class="product__info"><span class="product__price">120 р</span>
+                    <div class="counter">
+                      <button class="counter__btn" data-direction="minus">
+                        <svg class="icon icon-minus counter__icon">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#minus"></use>
+                        </svg>
+                      </button>
+                      <input class="counter__input" value="1" disabled>
+                      <button class="counter__btn" data-direction="plus">
+                        <svg class="icon icon-plus counter__icon">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#plus"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div><a class="product__btn btn btn--bg-green btn--color-white" href="#">В КОРЗИНУ</a>
+                </div>
+              </article>
+            </div>
+            <div class="recommend__slide">
+              <article class="product">
+                <div class="product__head">
+                  <div class="product__head-slider">
+                    <div class="product__head-slide js-parent">
+                      <div class="product__head-image lazy" data-src="static/images/content/category/category-2.jpg"><a class="product__head-viewing" href="#"><span class="product__head-text">Быстрый просмотр</span>
+                          <svg class="icon icon-search product__head-viewing-icon">
+                            <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+                          </svg></a></div>
+                      <svg class="icon icon-heart product__head-icon js-toggle">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
+                    <div class="product__head-slide">
+                      <div class="product__head-image lazy" data-src="static/images/content/category/category-2.jpg"><a class="product__head-viewing" href="#"><span class="product__head-text">Быстрый просмотр</span>
+                          <svg class="icon icon-search product__head-viewing-icon">
+                            <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+                          </svg></a></div>
+                      <svg class="icon icon-heart product__head-icon js-toggle">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div><a class="product__main" href="#">
+                  <h3 class="product__title">КРЕМ-СУП СЫРНЫЙ</h3>
+                  <div class="product__main-box">
+                    <ul class="product__list">
+                      <li class="product__list-item">Вес.........................300 гр</li>
+                      <li class="product__list-item">Калорийность........147 Ккал</li>
+                      <li class="product__list-item">Белки......................3,3 г</li>
+                      <li class="product__list-item">Жиры......................6,6 г</li>
+                      <li class="product__list-item">Углеводы................20,1 г</li>
+                    </ul>
+                  </div></a>
+                <div class="product__footer">
+                  <div class="product__info"><span class="product__price">120 р</span>
+                    <div class="counter">
+                      <button class="counter__btn" data-direction="minus">
+                        <svg class="icon icon-minus counter__icon">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#minus"></use>
+                        </svg>
+                      </button>
+                      <input class="counter__input" value="1" disabled>
+                      <button class="counter__btn" data-direction="plus">
+                        <svg class="icon icon-plus counter__icon">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#plus"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div><a class="product__btn btn btn--bg-green btn--color-white" href="#">В КОРЗИНУ</a>
+                </div>
+              </article>
+            </div>
+            <div class="recommend__slide">
+              <article class="product">
+                <div class="product__head">
+                  <div class="product__head-slider">
+                    <div class="product__head-slide js-parent">
+                      <div class="product__head-image lazy" data-src="static/images/content/category/category-2.jpg"><a class="product__head-viewing" href="#"><span class="product__head-text">Быстрый просмотр</span>
+                          <svg class="icon icon-search product__head-viewing-icon">
+                            <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+                          </svg></a></div>
+                      <svg class="icon icon-heart product__head-icon js-toggle">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
+                    <div class="product__head-slide">
+                      <div class="product__head-image lazy" data-src="static/images/content/category/category-2.jpg"><a class="product__head-viewing" href="#"><span class="product__head-text">Быстрый просмотр</span>
+                          <svg class="icon icon-search product__head-viewing-icon">
+                            <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+                          </svg></a></div>
+                      <svg class="icon icon-heart product__head-icon js-toggle">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div><a class="product__main" href="#">
+                  <h3 class="product__title">БОРЩ ЧЕРНИГОВСКИЙ</h3>
+                  <div class="product__main-box">
+                    <ul class="product__list">
+                      <li class="product__list-item">Вес.........................300 гр</li>
+                      <li class="product__list-item">Калорийность........147 Ккал</li>
+                      <li class="product__list-item">Белки......................3,3 г</li>
+                      <li class="product__list-item">Жиры......................6,6 г</li>
+                      <li class="product__list-item">Углеводы................20,1 г</li>
+                    </ul>
+                  </div></a>
+                <div class="product__footer">
+                  <div class="product__info"><span class="product__price">120 р</span>
+                    <div class="counter">
+                      <button class="counter__btn" data-direction="minus">
+                        <svg class="icon icon-minus counter__icon">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#minus"></use>
+                        </svg>
+                      </button>
+                      <input class="counter__input" value="1" disabled>
+                      <button class="counter__btn" data-direction="plus">
+                        <svg class="icon icon-plus counter__icon">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#plus"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div><a class="product__btn btn btn--bg-green btn--color-white" href="#">В КОРЗИНУ</a>
+                </div>
+              </article>
+            </div>
+            <div class="recommend__slide">
+              <article class="product">
+                <div class="product__head">
+                  <div class="product__head-slider">
+                    <div class="product__head-slide js-parent">
+                      <div class="product__head-image lazy" data-src="static/images/content/category/category-2.jpg"><a class="product__head-viewing" href="#"><span class="product__head-text">Быстрый просмотр</span>
+                          <svg class="icon icon-search product__head-viewing-icon">
+                            <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+                          </svg></a></div>
+                      <svg class="icon icon-heart product__head-icon js-toggle">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
+                    <div class="product__head-slide">
+                      <div class="product__head-image lazy" data-src="static/images/content/category/category-2.jpg"><a class="product__head-viewing" href="#"><span class="product__head-text">Быстрый просмотр</span>
+                          <svg class="icon icon-search product__head-viewing-icon">
+                            <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+                          </svg></a></div>
+                      <svg class="icon icon-heart product__head-icon js-toggle">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div><a class="product__main" href="#">
+                  <h3 class="product__title">ТРЕСКА ОТВАРНАЯ С КАРТОФЕЛЕМ И СОУСОМ ИЗ ШПИНАТА</h3>
+                  <div class="product__main-box">
+                    <ul class="product__list">
+                      <li class="product__list-item">Вес.........................300 гр</li>
+                      <li class="product__list-item">Калорийность........147 Ккал</li>
+                      <li class="product__list-item">Белки......................3,3 г</li>
+                      <li class="product__list-item">Жиры......................6,6 г</li>
+                      <li class="product__list-item">Углеводы................20,1 г</li>
+                    </ul>
+                  </div></a>
+                <div class="product__footer">
+                  <div class="product__info"><span class="product__price">120 р</span>
+                    <div class="counter">
+                      <button class="counter__btn" data-direction="minus">
+                        <svg class="icon icon-minus counter__icon">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#minus"></use>
+                        </svg>
+                      </button>
+                      <input class="counter__input" value="1" disabled>
+                      <button class="counter__btn" data-direction="plus">
+                        <svg class="icon icon-plus counter__icon">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#plus"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div><a class="product__btn btn btn--bg-green btn--color-white" href="#">В КОРЗИНУ</a>
+                </div>
+              </article>
+            </div>
+            <div class="recommend__slide">
+              <article class="product">
+                <div class="product__head">
+                  <div class="product__head-slider">
+                    <div class="product__head-slide js-parent">
+                      <div class="product__head-image lazy" data-src="static/images/content/category/category-2.jpg"><a class="product__head-viewing" href="#"><span class="product__head-text">Быстрый просмотр</span>
+                          <svg class="icon icon-search product__head-viewing-icon">
+                            <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+                          </svg></a></div>
+                      <svg class="icon icon-heart product__head-icon js-toggle">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
+                    <div class="product__head-slide">
+                      <div class="product__head-image lazy" data-src="static/images/content/category/category-2.jpg"><a class="product__head-viewing" href="#"><span class="product__head-text">Быстрый просмотр</span>
+                          <svg class="icon icon-search product__head-viewing-icon">
+                            <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+                          </svg></a></div>
+                      <svg class="icon icon-heart product__head-icon js-toggle">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div><a class="product__main" href="#">
+                  <h3 class="product__title">СУП-ЛАПША ДОМАШНЯЯ С КУРИЦЕЙ</h3>
+                  <div class="product__main-box">
+                    <ul class="product__list">
+                      <li class="product__list-item">Вес.........................300 гр</li>
+                      <li class="product__list-item">Калорийность........147 Ккал</li>
+                      <li class="product__list-item">Белки......................3,3 г</li>
+                      <li class="product__list-item">Жиры......................6,6 г</li>
+                      <li class="product__list-item">Углеводы................20,1 г</li>
+                    </ul>
+                  </div></a>
+                <div class="product__footer">
+                  <div class="product__info"><span class="product__price">120 р</span>
+                    <div class="counter">
+                      <button class="counter__btn" data-direction="minus">
+                        <svg class="icon icon-minus counter__icon">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#minus"></use>
+                        </svg>
+                      </button>
+                      <input class="counter__input" value="1" disabled>
+                      <button class="counter__btn" data-direction="plus">
+                        <svg class="icon icon-plus counter__icon">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#plus"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div><a class="product__btn btn btn--bg-green btn--color-white" href="#">В КОРЗИНУ</a>
+                </div>
+              </article>
+            </div>
+            <div class="recommend__slide">
+              <article class="product">
+                <div class="product__head">
+                  <div class="product__head-slider">
+                    <div class="product__head-slide js-parent">
+                      <div class="product__head-image lazy" data-src="static/images/content/category/category-2.jpg"><a class="product__head-viewing" href="#"><span class="product__head-text">Быстрый просмотр</span>
+                          <svg class="icon icon-search product__head-viewing-icon">
+                            <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+                          </svg></a></div>
+                      <svg class="icon icon-heart product__head-icon js-toggle">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
+                    <div class="product__head-slide">
+                      <div class="product__head-image lazy" data-src="static/images/content/category/category-2.jpg"><a class="product__head-viewing" href="#"><span class="product__head-text">Быстрый просмотр</span>
+                          <svg class="icon icon-search product__head-viewing-icon">
+                            <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+                          </svg></a></div>
+                      <svg class="icon icon-heart product__head-icon js-toggle">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div><a class="product__main" href="#">
+                  <h3 class="product__title">КРЕМ-СУП СЫРНЫЙ</h3>
+                  <div class="product__main-box">
+                    <ul class="product__list">
+                      <li class="product__list-item">Вес.........................300 гр</li>
+                      <li class="product__list-item">Калорийность........147 Ккал</li>
+                      <li class="product__list-item">Белки......................3,3 г</li>
+                      <li class="product__list-item">Жиры......................6,6 г</li>
+                      <li class="product__list-item">Углеводы................20,1 г</li>
+                    </ul>
+                  </div></a>
+                <div class="product__footer">
+                  <div class="product__info"><span class="product__price">120 р</span>
+                    <div class="counter">
+                      <button class="counter__btn" data-direction="minus">
+                        <svg class="icon icon-minus counter__icon">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#minus"></use>
+                        </svg>
+                      </button>
+                      <input class="counter__input" value="1" disabled>
+                      <button class="counter__btn" data-direction="plus">
+                        <svg class="icon icon-plus counter__icon">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#plus"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div><a class="product__btn btn btn--bg-green btn--color-white" href="#">В КОРЗИНУ</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="info-block">
+          <div class="container">
+            <div class="info-block__title title">МЫ СТАРАЕМСЯ СДЕЛАТЬ МАГАЗИН ЕЩЕ ЛУЧШЕ!</div>
+            <p class="info-block__text">
+              В этом разделе вы можете найти подробную информацию о нашшоварах, особенностях логистики или узнать все о сотрудничестве снами. Мы приглашаем к сотрудничеству с ООО ТПК “Вилон”. С нашими партнерами мы готовы разделить успешные результаты
+              оизводства и реализацию высококачественной продукции замороженных готовых блюд и полуфабрикатов.
+              <br> Если у Вас возникли вопросы, мы с радостью наатветим!
+            </p><a class="info-block__link info-block__link--margin btn btn--bg-yellow btn--color-black" href="#">
+              <svg class="icon icon-spoon btn-icon">
+                <use xlink:href="static/images/sprite/symbol/sprite.svg#spoon"></use>
+              </svg>ХОЧУ ПОЕСТЬ!
+              <svg class="icon icon-fork btn-icon">
+                <use xlink:href="static/images/sprite/symbol/sprite.svg#fork"></use>
+              </svg></a>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__row">
+            <div class="footer__col">
+              <h3 class="footer__title">ГОТОВЫЕ БЛЮДА</h3>
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="#">Завтраки</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Первые блюда</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Вторые блюда</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Постные блюда</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Жульены</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Выпечка</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Снеки и чебуреки</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Полуфабрикаты</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Готовые рационы</a></li>
+              </ul>
+            </div>
+            <div class="footer__col">
+              <h3 class="footer__title">ПОКУПАТЕЛЯМ</h3>
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="#">Сотрудничество</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Как заказать</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Где купить</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Акции</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Вопрос / Ответ</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Доставка и оплата</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Возврат товара</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Образцы документов</a></li>
+              </ul>
+            </div>
+            <div class="footer__col footer__col--brands">
+              <h3 class="footer__title footer__title--align-center">НАШИ БРЕНДЫ</h3>
+              <div class="footer__images"><a class="footer__images-link" href="#"><img class="footer__image lazy" src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-balansika.jpg" alt=""></a><a class="footer__images-link" href="#"><img class="footer__image lazy" src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-cheburechie.jpg" alt=""></a><a class="footer__images-link" href="#"><img class="footer__image lazy" src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-obojams.jpg" alt=""></a><a class="footer__images-link" href="#"><img class="footer__image lazy" src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-sitoedov.jpg" alt=""></a><a class="footer__images-link" href="#"><img class="footer__image lazy" src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-snackbomb.jpg" alt=""></a><a class="footer__images-link" href="#"><img class="footer__image lazy" src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-streetfood.jpg" alt=""></a></div>
+            </div>
+            <div class="footer__col footer__col--payments">
+              <h3 class="footer__title">ПЛАТЕЖНЫЕ СИСТЕМЫ</h3><img class="footer__col-image lazy" src="static/images/common/loader.gif" data-src="static/images/common/payments.png">
+            </div>
+            <div class="footer__col footer__col--contacts" data-da="footer__row, 2, 650">
+              <h3 class="footer__title">КОНТАКТЫ</h3>
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link js-popup-map" href="#map">
+                    <svg class="icon icon-marker footer__item-icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#marker"></use>
+                    </svg><span>М. О., г Щелково, ул. Поварская, вл. 1</span></a></li>
+                <li class="footer__item"><a class="footer__link" href="#">
+                    <svg class="icon icon-email footer__item-icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#email"></use>
+                    </svg><span>info@vilon.ru</span></a></li>
+                <li class="footer__item"><a class="footer__link" href="#">
+                    <svg class="icon icon-phone footer__item-icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#phone"></use>
+                    </svg><span> +7 (495) 223-97-49</span></a></li>
+                <li class="footer__item"><a class="footer__link" href="#">
+                    <svg class="icon icon-clock footer__item-icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#clock"></use>
+                    </svg><span>ПН - ПТ 9:00-18:00</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <div class="container">© 1994-2020, ООО ТПК «ВиЛон»</div>
+        </div>
+      </footer>
+    </div>
+    <div class="mfp-hide zoom-anim-dialog" id="map">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af2568a7384a85fd05fc7f634c7342c63b956305764ab910b3e4eb494d1c2e624&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+    <script src="static/js/libs.js"></script>
+    <script src="static/js/main.js"></script>
+  </body>
+</html>

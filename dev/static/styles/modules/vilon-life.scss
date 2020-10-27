@@ -1,0 +1,26 @@
+.intro {
+  &__bg {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position:  center;
+    padding: 100px 0;
+  }
+  &__slider {
+    max-width: 1020px;
+    margin: 0 auto;
+  }
+  &__pagination {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-right: -50%;
+    position: absolute;
+    li {
+      opacity: 0.45;
+      &.slick-active {
+        opacity:1;
+      }
+    }
+  }
+}

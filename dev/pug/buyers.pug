@@ -1,0 +1,210 @@
+extends layout/main-page
+
+block variables
+    -var title = 'Покупателям'
+
+block header
+  header.header
+    .header__top
+      .container
+        .header__inner
+          .header__info
+            .logo(data-da="header__menu, 1, 500")
+              a(href="index.html").logo__link
+                img(src="static/images/common/logo.svg" alt="логотип").logo__image
+            .header__icons
+              a(href="tel:+74952239749").header__icons-link
+                +icon('phone', 'header__icon')
+                span.header__item-text +7 (495) 223-97-49
+              a(href="mailto:info@vilon.ru").header__icons-link
+                +icon('email', 'header__icon')
+                span.header__item-text info@vilon.ru
+          form(action="#").header__search
+            input(type="text" placeholder="Поиск" required).header__search-input.input
+            button(type="submit").header__search-btn
+              +icon('search', 'header__search-icon')
+          .header__request(data-da="header__menu, 1, 500")
+            .header__request-icons
+              a(href="#").header__request-link
+                span.header__request-box(data-count="2").header__request-box--number
+                  +icon('heart', 'header__request-icon')
+              a(href="#" ).header__request-link
+                span.header__request-box(data-count="2").header__request-box--number
+                  +icon('basket', 'header__request-icon')
+                span.header__request-text 10,500 р
+              a(href="#").header__request-link.header__request-link--size-small
+                span.header__request-box
+                  +icon('user', 'header__request-icon')
+                span.header__request-text Вход
+            a(href="#" data-da="header__menu-list, last, 500").btn.btn--color-black.btn--bg-yellow.header__btn ОСТАВИТЬ ЗАЯВКУ
+    .header__bottom.header__bottom--shadow
+      .container
+        nav.header__menu
+          button(type="button").hamburger.hamburger--spring
+            span.hamburger-box
+              span.hamburger-inner
+          ul.header__menu-list
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="about.html").header__menu-link О компании
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link История
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Новости
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Производство
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Качество
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Наши награды
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Вакансии
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="cooperation.html").header__menu-link Сотрудничество
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Horeca
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Поставщикам
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Дистрибьютерам
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Вендинговые аппараты
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="brands.html").header__menu-link Бренды
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Сытоедов
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Обожамс!
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Чебуречье
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Street Food
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Balansika
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Snack Bomb
+            li.header__menu-item
+              a(href="#").header__menu-link Магазин
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Завтраки
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Первые блюда
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Вторые блюда
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Постные блюда
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Жюльены
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Выпечка
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Снеки и чебуреки
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Полуфабрикаты
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Готовые рационы
+            li.header__menu-item.header__menu-item--dropdown.header__menu-item--current
+              a(href="buyers.html").header__menu-link Покупателям
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Где купить
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Как заказать
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Акции
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Вопрос / ответ
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Доставка / оплата
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Возврат товара
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Образцы документов
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="vilon-life.html").header__menu-link Vilon Life
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Кулинарная школа
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Интересно про еду
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Правильное питание
+            li.header__menu-item
+              a(href="contacts.html").header__menu-link Контакты
+    .header__submenu
+      .container
+        .header__submenu-inner
+          a(href="#").header__submenu-link Где купить
+          a(href="#").header__submenu-link Как заказать
+          a(href="#").header__submenu-link Акции
+          a(href="#").header__submenu-link Вопрос / ответ
+          a(href="#").header__submenu-link Доставка / оплата
+          a(href="#").header__submenu-link Возврат товара
+          a(href="#").header__submenu-link Образцы документов
+block breadcrumbs
+  .breadcrumbs
+    .container
+      .breadcrumbs__inner
+        a(href="#").breadcrumbs__link Главная
+        a(href="#").breadcrumbs__link Покупателям
+block content
+  section.advantages.advantages--is-margin
+    .container
+      .advantages__wrapper.advantages__wrapper--margin
+        .container
+          .section-top
+            h2.section-top__title.title ОСОБЕННОСТИ НАШЕЙ ЕДЫ
+        .advantages__items
+          .advantages__item.advantages__item--grid
+            +icon('range', 'advantages__item-icon')
+            h3.advantages__item-title ШИРОКИЙ <br> АССОРТИМЕНТ
+            span.advantages__item-text блюда <br> на любой вкус
+          .advantages__item.advantages__item--grid
+            +icon('quality', 'advantages__item-icon')
+            h3.advantages__item-title ВЫГОДНЫЕ <br> ЦЕНЫ
+            span.advantages__item-text акции и скидки  <br> постоянным клиентам
+          .advantages__item.advantages__item--grid
+            +icon('pendant', 'advantages__item-icon')
+            h3.advantages__item-title КАЧЕСТВЕННЫЕ <br> ПРОДУКТЫ
+            span.advantages__item-text сертификат <br> FSSC 22000
+          .advantages__item.advantages__item--grid
+            +icon('processes', 'advantages__item-icon')
+            h3.advantages__item-title ШОКОВАЯ <br> ЗАМОРОЗКА
+            span.advantages__item-text естественный  <br> консервант
+          .advantages__item.advantages__item--grid
+            +icon('delivery', 'advantages__item-icon')
+            h3.advantages__item-title ДОСТАВКА <br> В ОБЛАСТЬ
+            span.advantages__item-text автопарк с  <br> холодильными установками
+  section.statistics
+    .container
+      h3.statistics__title.title В ЭТОМ МЕСЯЦЕ МЫ ПРОДАЛИ
+      .statistics__counter
+        span.statistics__counter-number 0
+        span.statistics__counter-number 6
+        span.statistics__counter-number 0
+        span.statistics__counter-number 4
+        span.statistics__counter-number 0
+        span.statistics__counter-number 0
+        span.statistics__counter-number 0
+      h3.statistics__title.title КГ ПРОДУКЦИИ
+  include pages/main/recommend
+  section.info-block
+    .container
+      .info-block__title.title МЫ СТАРАЕМСЯ СДЕЛАТЬ МАГАЗИН ЕЩЕ ЛУЧШЕ!
+      p.info-block__text В этом разделе вы можете найти подробную информацию о нашшоварах, особенностях логистики или узнать все о сотрудничестве с
+       | нами. Мы приглашаем к сотрудничеству с ООО ТПК “Вилон”. С нашими партнерами мы готовы разделить успешные результаты
+       | оизводства и реализацию высококачественной продукции замороженных готовых блюд и полуфабрикатов.
+       | <br> Если у Вас возникли вопросы, мы с радостью наатветим!
+      a(href="#").info-block__link.info-block__link--margin.btn.btn--bg-yellow.btn--color-black
+        +icon('spoon', 'btn-icon')
+        | ХОЧУ ПОЕСТЬ!
+        +icon('fork', 'btn-icon')

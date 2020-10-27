@@ -1,6 +1,9 @@
 .info-block {
   padding: 30px 0;
   &--padding {
+    padding-top: 0;
+  }
+  &--padding {
     &-bottom {
       padding-bottom: 0;
     }
@@ -71,7 +74,14 @@
   &__link {
     max-width: 465px;
     margin: 0 auto;
-    padding: 18px 20px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 55px;
+    &--margin {
+      margin-top: 40px;
+    }
   }
 }
 @media (max-width: 772px) {
@@ -87,6 +97,9 @@
   .info-block__step:not(:first-child)::before {
     display: none;
   }
+  .info-block__title {
+    margin-bottom: 15px;
+  }
   .info-block__step {
     margin-left: auto;
     margin-right: auto;
@@ -97,5 +110,16 @@
   .info-block__steps {
     display: block;
     margin-top: 25px;
+  }
+}
+@media (max-width: 550px) {
+  .info-block__link--margin {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .info-block__text {
+    font-size: 14px;
+    line-height: 20px;
   }
 }

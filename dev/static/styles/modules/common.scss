@@ -76,6 +76,34 @@
   height: 15px;
   stroke: #000;
 }
+.icon-spoon {
+  width: 11px;
+  max-height: 29px;
+}
+.icon-fork {
+  width: 8px;
+  max-height: 29px;
+}
+.icon-eye {
+  width: 20px;
+  height: 10px;
+  fill: #6f6f6f;
+}
+.icon-like {
+  width: 15px;
+  height: 15px;
+  fill: #6f6f6f
+}
+.btn-icon {
+  &:last-child {
+    margin-left: 10px;
+  }
+  &:first-child {
+    margin-right: 10px;
+  }
+  margin: 0 0 auto;
+  flex-shrink: 0;
+}
 .title {
   font-size: 24px;
   font-weight: 700;
@@ -160,6 +188,7 @@
     border: none;
     width: 30px;
     text-align: center;
+    background-color: transparent;
   }
   &__btn {
     width: 21px;
@@ -197,9 +226,15 @@
     line-height: 40px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .title--size-big {
     font-size: 30px;
     line-height: 36px;
+  }
+  .title--size-small {
+    font-size: 18px;
+  }
+  .title {
+    font-size: 22px;
   }
 }

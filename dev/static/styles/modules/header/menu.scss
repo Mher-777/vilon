@@ -5,6 +5,9 @@
   margin-top: 30px;
   &--shadow {
     box-shadow: 0px 6px 12px 3px rgba(0, 0, 0, 0.155);
+    &-light {
+      box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.155);
+    }
   }
 }
 .header__menu {
@@ -83,6 +86,9 @@
     display: flex;
     align-items: center;
     padding: 16px 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
   }
   &-link {
     margin-right: 40px;

@@ -4,7 +4,7 @@ header.header
       .header__inner
         .header__info
           .logo(data-da="header__menu, 1, 500")
-            a(href="#").logo__link
+            a(href="index.html").logo__link
               img(src="static/images/common/logo.svg" alt="логотип").logo__image
           .header__icons
             a(href="tel:+74952239749").header__icons-link
@@ -38,8 +38,22 @@ header.header
           span.hamburger-box
             span.hamburger-inner
         ul.header__menu-list
-          li.header__menu-item
-            a(href="#").header__menu-link О компании
+          li.header__menu-item.header__menu-item--dropdown
+            a(href="about.html").header__menu-link О компании
+            +icon('arrow-down', 'header__menu-icon')
+            ul.header__dropdown
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link История
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Новости
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Производство
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Качество
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Наши награды
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Вакансии
           li.header__menu-item.header__menu-item--dropdown
             a(href="cooperation.html").header__menu-link Сотрудничество
             +icon('arrow-down', 'header__menu-icon')
@@ -53,7 +67,7 @@ header.header
               li.header__dropdown-item
                 a(href="#").header__dropdown-link Вендинговые аппараты
           li.header__menu-item.header__menu-item--dropdown
-            a(href="#").header__menu-link Бренды
+            a(href="brands.html").header__menu-link Бренды
             +icon('arrow-down', 'header__menu-icon')
             ul.header__dropdown
               li.header__dropdown-item
@@ -70,9 +84,53 @@ header.header
                 a(href="#").header__dropdown-link Snack Bomb
           li.header__menu-item
             a(href="#").header__menu-link Магазин
+            +icon('arrow-down', 'header__menu-icon')
+            ul.header__dropdown
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Завтраки
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Первые блюда
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Вторые блюда
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Постные блюда
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Жюльены
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Выпечка
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Снеки и чебуреки
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Полуфабрикаты
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Готовые рационы
+          li.header__menu-item.header__menu-item--dropdown
+            a(href="buyers.html").header__menu-link Покупателям
+            +icon('arrow-down', 'header__menu-icon')
+            ul.header__dropdown
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Где купить
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Как заказать
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Акции
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Вопрос / ответ
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Доставка / оплата
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Возврат товара
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Образцы документов
+          li.header__menu-item.header__menu-item--dropdown
+            a(href="vilon-life.html").header__menu-link Vilon Life
+            +icon('arrow-down', 'header__menu-icon')
+            ul.header__dropdown
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Кулинарная школа
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Интересно про еду
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Правильное питание
           li.header__menu-item
-            a(href="#").header__menu-link Покупателям
-          li.header__menu-item
-            a(href="#").header__menu-link Vilon Life
-          li.header__menu-item
-            a(href="#").header__menu-link Контакты
+            a(href="contacts.html").header__menu-link Контакты
