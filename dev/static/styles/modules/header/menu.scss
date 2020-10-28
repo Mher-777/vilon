@@ -89,6 +89,9 @@
     width: 100%;
     white-space: nowrap;
     overflow-x: auto;
+    &--between{
+      justify-content: space-between;
+    }
   }
   &-link {
     margin-right: 40px;
@@ -97,6 +100,23 @@
     font-weight: 400;
     color: #000;
     transition: all linear .2s;
+    font-size: 13px;
+    &--icon {
+      position: relative;
+      margin-left: 25px;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 22px;
+        height: 20px;
+        background-image: url(../images/common/new.svg);
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position:  center;
+        left: -23px;
+      }
+    }
     &:last-child {
       margin-right: 0;
     }
@@ -104,5 +124,15 @@
       border-color: #6fa143;
       color: #6fa143;
     }
+  }
+}
+@media (max-width: 1120px) {
+  .header__submenu-link {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 1040px) {
+  .header__submenu-link {
+    margin-right: 20px;
   }
 }

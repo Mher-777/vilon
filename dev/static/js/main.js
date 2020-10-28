@@ -297,6 +297,31 @@ $(function () {
             lazyLoad()
         });
     }
+    const rangeSlider = () => {
+        const inputPrice = $('.input-range--price')
+        const inputCalorie = $('.input-range--calorie')
+        inputPrice.ionRangeSlider({
+            skin: "round",
+            type: "double",
+            hide_min_max: true,
+            hide_from_to: true,
+            onChange: function (data) {
+                inputPrice.parent().find('.input-from').val(data.from)
+                inputPrice.parent().find('.input-to').val(data.to)
+            },
+        });
+        inputCalorie.ionRangeSlider({
+            skin: "round",
+            type: "double",
+            hide_min_max: true,
+            hide_from_to: true,
+            onChange: function (data) {
+                inputCalorie.parent().find('.input-from').val(data.from)
+                inputCalorie.parent().find('.input-to').val(data.to)
+            },
+        });
+    }
+    rangeSlider()
     like()
     hoverProducts()
     toggle('.product__head', '.js-toggle', 'icon-heart--active')

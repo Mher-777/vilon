@@ -1,6 +1,7 @@
 @import "../../../../node_modules/normalize.css/normalize";
 @import "../../../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../../../node_modules/magnific-popup/dist/magnific-popup";
+@import "../../../../node_modules/ion-rangeslider/css/ion.rangeSlider";
 .mfp-no-margins img.mfp-img {
   padding: 0;
 }
@@ -155,4 +156,32 @@
 .mfp-close {
   background: rgba(255, 255, 255, .9) !important;
   opacity: 1 !important;
+}
+.irs--round .irs-bar {
+  background-color: #2a804a;
+  height: 3px;
+  top: 17px;
+}
+.irs--round .irs-line {
+  background-color: #2a804a;
+  height: 3px;
+  top: 17px;
+}
+.irs--round {
+  height: 35px;
+}
+.irs--round .irs-handle {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: #2a804a;
+  top: 9px;
+  box-shadow: none;
+  cursor: grab;
+  &:hover {
+    background: #2a804a;
+  }
+}
+.irs--round .irs-handle.state_hover, .irs--round .irs-handle:hover {
+  background: #2a804a;
 }

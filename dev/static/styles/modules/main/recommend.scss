@@ -1,6 +1,11 @@
 .recommend {
   padding: 30px 15px 0;
   background-color: #f2ecdf;
+  &--bg {
+    &-white {
+      background-color: #fff;
+    }
+  }
   &__slider {
     height: 100%;
     max-width: 1280px;

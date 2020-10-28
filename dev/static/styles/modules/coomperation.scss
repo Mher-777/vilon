@@ -14,6 +14,9 @@
   &__text {
     font-size: 16px;
     color: #6f6f6f;
+    &--margin {
+      margin-top: 20px;
+    }
   }
   &__item {
     list-style: inside;
@@ -115,6 +118,9 @@
 @media (max-width: 550px) {
   .info-block__link--margin {
     margin-top: 20px;
+  }
+  .info-block__text {
+    margin-top: 10px;
   }
 }
 @media (max-width: 400px) {

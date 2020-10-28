@@ -127,8 +127,64 @@ a:focus, button:focus, input:focus, textarea:focus {
       box-shadow: 0px 5px 12px -1px rgba(0,0,0, 0.36);
     }
   }
+  &-radio {
+    visibility: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    transform: scale(0);
+    & + label {
+      font-size: 12px;
+      color: #6f6f6f;
+      padding-left: 30px;
+      position: relative;
+      transition: all linear .2s;
+      cursor: pointer;
+      &:hover {
+        color: #000000;
+      }
+      &::before {
+        content: '';
+        width: 16px;
+        height: 16px;
+        box-shadow: 0  0 3px 2px rgba(0, 0, 0, 0.20);
+        position: absolute;
+        left: 0;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        background-color: #2a804a;
+        left: calc(9px / 2);
+        top: 50%;
+        transform: translateY(-50%) scale(0);
+        border-radius: 50%;
+      }
+    }
+    &:checked {
+      & + label {
+        color: #000000;
+        &::after {
+          transform: translateY(-50%) scale(1);
+        }
+      }
+    }
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
+input[type=number] {
+  -moz-appearance:textfield;
+}
 .textarea {
   border: none;
   background-color: #fff;
