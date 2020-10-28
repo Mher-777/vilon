@@ -7,6 +7,15 @@
   text-align: center;
   display: block;
   padding: 10px 25px;
+  &--sectio {
+    max-width: 465px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 55px;
+  }
 }
 .btn--bg-green {
   background-color: #6fa143;

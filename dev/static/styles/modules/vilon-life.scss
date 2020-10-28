@@ -24,3 +24,19 @@
     }
   }
 }
+@media (max-width: 772px) {
+  .intro__bg {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 600px) {
+  .intro__image {
+    min-height: 250px;
+    object-fit: cover;
+  }
+}
+@media (max-width: 550px) {
+  .intro__bg {
+    padding: 30px 0;
+  }
+}

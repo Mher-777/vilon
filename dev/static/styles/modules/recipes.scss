@@ -24,6 +24,7 @@
     }
     &-image {
       width: 70px;
+      max-width: 70px;
       height: 70px;
       flex-shrink: 0;
       background-repeat: no-repeat;
@@ -60,6 +61,7 @@
     &-info {
       display: flex;
       flex-direction: column;
+      margin-right: 5px;
     }
     &-text {
       display: block;
@@ -78,4 +80,95 @@
 }
 .js-like {
   cursor: pointer;
+}
+@media (max-width: 1000px) {
+  .recipes__item {
+    margin-left: 20px;
+    width: calc(50% - 20px);
+  }
+  .recipes__inner {
+    margin-left: -20px;
+  }
+}
+@media (max-width: 900px) {
+  .recipes__inner {
+    margin-left: 0;
+    display: block;
+    margin-top: 30px;
+  }
+  .recipes__item {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 600px;
+  }
+  .recipes__item:nth-last-of-type(-n+2) {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #6f6f6f;
+  }
+  .recipes__item:last-child {
+    border-bottom: none;
+  }
+  .recipes__link {
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .recipes {
+    .section-top__title {
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 550px) {
+  .recipes__link {
+    margin-top: 15px;
+  }
+  .recipes {
+    padding: 30px 0;
+  }
+}
+@media (max-width: 500px) {
+  .recipes__item-image {
+    width: 55px;
+    max-width: 55px;
+    height: 55px;
+    margin-right: 5px;
+  }
+  .recipes__item-statistics {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .recipes__item-link {
+    padding: 6px 14px;
+  }
+  .recipes__item-title {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .recipes__item-text {
+    font-size: 10px;
+  }
+}
+@media (max-width: 390px) {
+  .recipes__item {
+    margin-left: -10px;
+    margin-right: -10px;
+    width: calc(100% + 20px);
+  }
+}
+@media (max-width: 340px) {
+  .recipes__item-title {
+    font-size: 13px;
+  }
+  .recipes__item-statistics {
+    font-size: 12px;
+  }
+  .recipes__item-text {
+    font-size: 9px;
+  }
+  .recipes__item-icon {
+    margin-top: 4px;
+  }
 }
