@@ -12,6 +12,7 @@ $(function () {
         callbacks: {
             open: function() {
                 $('body').addClass('hidden');
+                $('.mfp-content').addClass('mfp-content-width')
             },
             close: function() {
                 $('body').removeClass('hidden');
@@ -321,11 +322,31 @@ $(function () {
             },
         });
     }
+    const popup = () => {
+        $('.js-popup-inline').magnificPopup({
+            type: 'inline',
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in',
+            closeOnBgClick: true,
+            midClick: true,
+            callbacks: {
+                open: function() {
+                    // $('body').addClass('hidden');
+                    lazyLoad()
+                },
+                close: function() {
+                    // $('body').removeClass('hidden');
+                }
+            }
+        })
+    }
+    popup()
     rangeSlider()
     like()
     hoverProducts()
     toggle('.product__head', '.js-toggle', 'icon-heart--active')
     toggle('.news__item', '.js-toggle', 'icon-heart--active')
+    toggle('.blog__bg', '.js-toggle', 'icon-heart--active')
     mainSliders()
     menuToggle()
     counter()

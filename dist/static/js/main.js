@@ -14,6 +14,7 @@ $(function () {
     callbacks: {
       open: function open() {
         $('body').addClass('hidden');
+        $('.mfp-content').addClass('mfp-content-width');
       },
       close: function close() {
         $('body').removeClass('hidden');
@@ -328,11 +329,31 @@ $(function () {
     });
   };
 
+  var popup = function popup() {
+    $('.js-popup-inline').magnificPopup({
+      type: 'inline',
+      removalDelay: 300,
+      mainClass: 'my-mfp-zoom-in',
+      closeOnBgClick: true,
+      midClick: true,
+      callbacks: {
+        open: function open() {
+          // $('body').addClass('hidden');
+          lazyLoad();
+        },
+        close: function close() {// $('body').removeClass('hidden');
+        }
+      }
+    });
+  };
+
+  popup();
   rangeSlider();
   like();
   hoverProducts();
   toggle('.product__head', '.js-toggle', 'icon-heart--active');
   toggle('.news__item', '.js-toggle', 'icon-heart--active');
+  toggle('.blog__bg', '.js-toggle', 'icon-heart--active');
   mainSliders();
   menuToggle();
   counter();
