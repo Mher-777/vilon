@@ -94,16 +94,7 @@
   height: 15px;
   fill: #6f6f6f
 }
-.btn-icon {
-  &:last-child {
-    margin-left: 10px;
-  }
-  &:first-child {
-    margin-right: 10px;
-  }
-  margin: 0 0 auto;
-  flex-shrink: 0;
-}
+
 .title {
   font-size: 24px;
   font-weight: 700;

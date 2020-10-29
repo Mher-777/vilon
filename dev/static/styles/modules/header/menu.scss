@@ -124,6 +124,11 @@
       border-color: #6fa143;
       color: #6fa143;
     }
+    &--current {
+      border-color: #6fa143;
+      color: #6fa143;
+      font-weight: 700;
+    }
   }
 }
 @media (max-width: 1120px) {

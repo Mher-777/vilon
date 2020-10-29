@@ -5,6 +5,7 @@
     box-shadow: 1px 3px 11px 5px rgba(0, 0, 0, 0.18);
     padding-bottom: 20px;
     margin-right: 20px;
+
     &-title {
       display: flex;
       align-items: center;
@@ -15,29 +16,36 @@
       font-weight: 700;
       font-size: 19px;
     }
+
     &-icon {
       width: 13px;
       height: 7px;
       stroke: #fff;
       stroke-width: 2px;
     }
+
     &-content {
       padding: 0 15px;
     }
+
     &-col {
       margin-top: 20px;
     }
+
     &-subtitle {
       margin-bottom: 10px;
       padding-left: 20px;
     }
+
     &-item {
       margin-bottom: 9px;
     }
+
     &-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       input {
         width: 55px;
         text-align: center;
@@ -46,49 +54,59 @@
         border: none;
         color: #a3a3a3;
         font-size: 16px;
+
         &::placeholder {
           color: #a3a3a3;
           font-size: 16px;
         }
       }
+
       .input-to {
 
       }
     }
+
     &-list {
       padding-left: 20px;
     }
   }
+
   //&__products {
   //  display: flex;
   //}
   &__basket {
     margin-left: 40px;
   }
+
   &__product {
     margin-left: 20px;
     max-width: calc(25% - 20px);
     margin-bottom: 45px;
+
     &:hover {
 
     }
   }
+
   &__wrapper {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
   }
+
   &__row {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
     width: calc(100% + 20px);
   }
+
   &__btn {
     width: 100%;
     margin-left: 20px;
   }
 }
+
 @media (max-width: 1800px) {
   .catalog__filter {
     margin-right: 0;
@@ -101,6 +119,7 @@
     width: calc(100% - 10px);
   }
 }
+
 @media (max-width: 1670px) {
   .catalog__row {
     padding-left: 0;
@@ -114,16 +133,19 @@
     width: 100%;
   }
 }
+
 @media (max-width: 1660px) {
   .catalog__product {
     max-width: calc(33.333333333% - 20px);
   }
 }
+
 @media (max-width: 1340px) {
   .catalog__product {
     max-width: calc(50% - 20px);
   }
 }
+
 @media (max-width: 1080px) {
   .catalog__basket {
     display: none;
@@ -132,6 +154,7 @@
     flex-shrink: 0;
   }
 }
+
 @media (max-width: 872px) {
   .catalog__wrapper {
     display: block;
@@ -150,9 +173,11 @@
     max-width: calc(33.3333333% - 20px);
     width: 100%;
     margin-left: 20px;
+
     &:first-child {
       order: -1;
     }
+
     &:last-child {
       order: -1;
     }
@@ -167,23 +192,70 @@
     padding: 0;
   }
 }
+
 @media (max-width: 550px) {
   .catalog__filter-col {
     max-width: calc(50% - 20px);
   }
   .catalog__product {
-    max-width: 100%;
-    margin-left: 0;
-    margin-bottom: 20px;
+    max-width: calc(50% - 15px);
+    margin-left: 10px;
   }
   .catalog__row {
-    margin-left: 0;
-    width: 100%;
+    margin-left: -10px;
   }
   .catalog__btn {
-    margin-top: 35px;
+    margin-top: 5px;
+  }
+  .product__head-image {
+    min-height: 200px;
+  }
+  .catalog__product:hover .product__head-viewing {
+    transform: translate(-50%, calc(-50% + 100px));
   }
 }
+
+@media (max-width: 430px) {
+  .catalog__product {
+    margin-bottom: 25px;
+    .product__title {
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .product__head-image {
+      min-height: 150px;
+    }
+
+    .product__head-icon {
+      top: 10px;
+      left: 10px;
+      width: 23px;
+      height: 20px;
+    }
+    .product__head-viewing {
+      padding: 10px;
+    }
+    .product__list-item {
+      font-size: 10px;
+    }
+    .product__btn {
+      font-size: 14px;
+    }
+    &:hover {
+      .product__head-viewing {
+        transform: translate(-50%, calc(-50% + (150px / 2)));
+      }
+    }
+  }
+  .counter__input {
+    width: 20px;
+  }
+  .counter {
+    width: 60px;
+  }
+}
+
 @media (max-width: 400px) {
   .catalog__filter-title {
     padding: 10px 15px;
@@ -197,8 +269,28 @@
   .catalog__filter-top input {
     width: 50px;
     font-size: 14px;
+
     &::placeholder {
       font-size: 14px;
     }
+  }
+}
+@media (max-width: 360px) {
+  .catalog__product .product__title {
+    font-size: 10px;
+  }
+  .catalog__product .product__list-item {
+    font-size: 9px;
+  }
+  .catalog__product .product__price {
+    font-size: 20px;
+  }
+  .catalog__product .product__main {
+    margin-top: -5px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .catalog__product .product__main {
+    min-height: 90px;
   }
 }

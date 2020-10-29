@@ -16,6 +16,14 @@
     align-items: center;
     min-height: 55px;
   }
+  &--weight {
+    &-normal {
+      font-weight: 400;
+      &:hover {
+        font-weight: 700;
+      }
+    }
+  }
 }
 .btn--bg-green {
   background-color: #6fa143;
@@ -41,4 +49,14 @@
 }
 .btn--color-white {
   color: #fff;
+}
+.btn-icon {
+  &:last-child {
+    margin-left: 10px;
+  }
+  &:first-child {
+    margin-right: 10px;
+  }
+  margin: 0 0 auto;
+  flex-shrink: 0;
 }

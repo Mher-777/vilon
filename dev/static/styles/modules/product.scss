@@ -18,6 +18,11 @@
       background-color: #2a804a;
     }
   }
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+
+  }
   &__head{
     &-slide {
       position: relative;
@@ -179,5 +184,17 @@
         }
       }
     }
+  }
+}
+@media (max-width: 550px) {
+  .product__head-viewing {
+    padding: 15px;
+  }
+  .product__title {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .product__price {
+    font-size: 22px;
   }
 }
