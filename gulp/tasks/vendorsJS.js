@@ -11,6 +11,7 @@ const vendorsScripts = [
   'node_modules/jquery-lazy/jquery.lazy.min.js',
   'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
   'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+  'dev/static/js/vendor/rateyo.js',
   'node_modules/svg4everybody/dist/svg4everybody.js',
 ]
 

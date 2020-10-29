@@ -347,6 +347,27 @@ $(function () {
     });
   };
 
+  var reviewCustom = function reviewCustom() {
+    $('.js-stars').rateYo({
+      starWidth: "18px",
+      normalFill: "#e0e0e0",
+      ratedFill: "#efe74f",
+      spacing: "4px",
+      halfStar: true,
+      starSvg: "\n            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"17\" height=\"18\" viewBox=\"0 0 17 18\">\n                <g>\n                    <g><path d=\"M17.072 8.77a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0z\"/></g>\n                     <g><path class=\"svg-ellipse\" d=\"M8.572 3.457L9.786 7.19h3.926l-3.177 2.307 1.214 3.734-3.177-2.308-3.176 2.308L6.61 9.498 3.433 7.19H7.36z\"/></g>\n                </g>\n            </svg>\n        ",
+      onChange: function onChange(rating, rateYoInstance) {
+        console.log(rateYoInstance);
+      }
+    });
+  };
+
+  var worksAccordion = function worksAccordion() {
+    $('.works__item-top').on('click', function () {
+      $(this).parent().toggleClass('works__item--active');
+      $(this).next().slideToggle();
+    });
+  };
+
   popup();
   rangeSlider();
   like();
@@ -362,6 +383,8 @@ $(function () {
   newsSlider();
   bannerSlider();
   sliderSpace();
+  reviewCustom();
+  worksAccordion();
 });
 
 function browser() {

@@ -2,6 +2,7 @@
 @import "../../../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../../../node_modules/magnific-popup/dist/magnific-popup";
 @import "../../../../node_modules/ion-rangeslider/css/ion.rangeSlider";
+.jq-ry-container{position:relative;padding:0 5px;line-height:0;display:block;cursor:pointer;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;direction:ltr}.jq-ry-container[readonly=readonly]{cursor:default}.jq-ry-container>.jq-ry-group-wrapper{position:relative;width:100%}.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group{position:relative;line-height:0;z-index:10;white-space:nowrap}.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group>svg{display:inline-block}.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-normal-group{width:100%}.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-rated-group{width:0;z-index:11;position:absolute;top:0;left:0;overflow:hidden}
 .mfp-no-margins img.mfp-img {
   padding: 0;
 }
@@ -193,4 +194,10 @@
   &.mfp-content-width {
     width: 100%;
   }
+}
+.jq-ry-container {
+  padding: 0;
+}
+.svg-ellipse {
+  fill: #a9a9a9;
 }

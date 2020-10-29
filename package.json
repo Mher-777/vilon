@@ -57,6 +57,7 @@
     "ion-rangeslider": "^2.3.1",
     "jquery-lazy": "^1.7.11",
     "normalize.css": "^8.0.1",
+    "rateyo": "^3.0.0-alpha.2",
     "slick-carousel": "^1.8.1",
     "svgxuse": "^1.2.6"
   }

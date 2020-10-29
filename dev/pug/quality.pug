@@ -1,7 +1,7 @@
 extends layout/main-page
 
 block variables
-    -var title = 'Новости'
+    -var title = 'Качество'
 
 block header
   header.header
@@ -143,64 +143,58 @@ block header
     .header__submenu
       .container
         .header__submenu-inner
-            a(href="history.html").header__submenu-link История
-            a(href="news.html").header__submenu-link.header__submenu-link--current Новости
-            a(href="production.html").header__submenu-link Производство
-            a(href="quality.html").header__submenu-link Качество
-            a(href="awards.html").header__submenu-link Наши награды
-            a(href="works.html").header__submenu-link Вакансии
+          a(href="history.html").header__submenu-link История
+          a(href="news.html").header__submenu-link Новости
+          a(href="production.html").header__submenu-link Производство
+          a(href="quality.html").header__submenu-link.header__submenu-link--current Качество
+          a(href="awards.html").header__submenu-link Наши награды
+          a(href="works.html").header__submenu-link Вакансии
 block breadcrumbs
   .breadcrumbs
     .container
       .breadcrumbs__inner
         a(href="index.html").breadcrumbs__link Главная
         a(href="about.html").breadcrumbs__link О компании
-        a(href="news.html").breadcrumbs__link Новости
-        a(href="#").breadcrumbs__link Попробуй стройность от “Balansika
+        a(href="news.html").breadcrumbs__link Качество
 block content
-  section.blog
+  section.quality
     .container
-      .blog__wrapper
-        h2.blog__title.title ПОПРОБУЙ СТРОЙНОСТЬ ОТ "BALANSIKA"
-        .blog__bg.lazy(data-src="static/images/content/blog/blog-image-1.jpg")
-          +icon('heart', 'blog__bg-icon js-toggle')
-        .blog__content
-          p.blog__text Готовое питание на работу или домой может быть полезным, вкусным и сбалансированным, если выбирать питание нашей торговой марки "Балансика".
-          blockquote.blog__blockquote Здоровые и вкусные продукты <br> с натуральными ингредиентами
-          p.blog__text Продукция ТМ "Балансика" представляет собой линейку готовых низкокаллорийных блюд. Готовая еда имеет исключительно натуральные компоненты, польза которых сохраняется за счет специальной герметичной упаковки. Полностью сбалансированные блюда по составу жиров, белков и углеводов не оставят равнодушным приверженцев здорового питания. Низкая каллорийность обеспечивает поддержание организма в нужной форме, без набора лишнего веса. Замороженные готовые блюда удобно брать с собой в офис или кушать дома, когда нет времени готовить. Супы и вторые блюда Balansika имеют ярко выраженный и насыщенный вкус, как дома.  Все, что потребуется, — разогреть еду в микроволновке в течение пары минут.
-          .blog__content-col
-            h3.blog__subtitle.title Коллекция блюд для здорового питания:
-            ul.blog__list
-              li.blog__list-item Первые блюда:
-              li.blog__list-item Тыквенный крем-суп
-              li.blog__list-item Крем-суп куриный
-              li.blog__list-item Крем-суп из брокколи
-          .blog__content-col
-            h3.blog__subtitle.title Вторые блюда:
-            ul.blog__list
-              li.blog__list-item Филе кеты на пару с рисом "Босто"
-              li.blog__list-item Треска отварная с картофелем и соусом из шпината
-              li.blog__list-item Кус-кус с курочкой под овощным пуншем
-              li.blog__list-item Курица в сливочном соусе с грибами и рисом "Босто"
-              li.blog__list-item Индейка с овощным ассорти и соусом "Бешамель"
-        .blog__info
-          .blog__info-statistics
-            time(datetime="01.02.2020").blog__info-day 01.02.2020
-            span.blog__info-statistic
-              +icon('eye', 'blog__info-icon')
-              span 1025
-            span.blog__info-statistic.js-like
-              +icon('like', 'blog__info-icon')
-              span 1025
-          .blog__socials
-            span.blog__socials-text Поделиться:
-            a(href="#").blog__socials-link
-              img(data-src="static/images/common/vk.svg").blog__socials-icon.lazy
-            a(href="#").blog__socials-link
-              img(data-src="static/images/common/facebook.svg").blog__socials-icon.lazy
-            a(href="#").blog__socials-link
-              img(data-src="static/images/common/ok.svg").blog__socials-icon.lazy
-            a(href="#").blog__socials-link
-              img(data-src="static/images/common/email.svg").blog__socials-icon.lazy
-            a(href="#").blog__socials-link
-              img(data-src="static/images/common/twitter.svg").blog__socials-icon.lazy
+      .review.quality__review
+        .review__top
+          h2.review__title.title.title--color-white МЫ СТАРАЕМСЯ ДЛЯ ВАС!
+          span.review__subtitle Помогите нам улучшить качество нашей продукции.
+        form(action="#").review__form
+          span.review__desc Оцените каждый вопрос <br> по шкале от 1 (плохо) до 5 (отлично)
+          ul.review__list
+            li.review__item
+              .js-stars.review__item-stars
+              span.review__item-text Доступность организации, каналов связи
+            li.review__item
+              .js-stars.review__item-stars
+              span.review__item-text Компетентность сотрудников
+            li.review__item
+              .js-stars.review__item-stars
+              span.review__item-text Уровень качества нашей продукции
+            li.review__item
+              .js-stars.review__item-stars
+              span.review__item-text Разнообразие ассортимента
+            li.review__item
+              .js-stars.review__item-stars
+              span.review__item-text Уровень цен на продукцию
+            li.review__item
+              .js-stars.review__item-stars
+              span.review__item-text Внешний вид упаковки
+            li.review__item
+              .js-stars.review__item-stars
+              span.review__item-text Соблюдение сроков поставки
+          textarea(placeholder="Напишите ваши пожелания или замечания").textarea.review__textarea
+          button(type="submit").review__btn.btn.btn--bg-yellow.btn--color-black ОТПРАВИТЬ
+      .section-top
+        h2.section-top__title ВИЛОН – КАЧЕСТВО ПРОДУКЦИИ
+        span.section-top__desc При помощи технологии шоковой заморозки наша приготовленная еда сохраняет свои качества и все необходимые витамины и микроэлементы для организма человека. Но не стоит забывать о качестве самих продуктов
+      .quality__document
+        img(data-src="static/images/content/quality/document.png" src="static/images/common/loader.gif" alt="Сертификат").lazy.quality__document-image
+        a(href="#").btn.btn--sectio.btn--color-black.btn--bg-yellow.quality__document-link
+          +icon('spoon', 'btn-icon')
+          | НАДОЕЛО ГОТОВИТЬ? <br> ЖМИ!
+          +icon('fork', 'btn-icon')
