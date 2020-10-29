@@ -1,7 +1,8 @@
 extends layout/main-page
 
 block variables
-    -var title = 'Бренды'
+    -var title = 'Производство'
+
 block header
   header.header
     .header__top
@@ -43,7 +44,7 @@ block header
             span.hamburger-box
               span.hamburger-inner
           ul.header__menu-list
-            li.header__menu-item.header__menu-item--dropdown
+            li.header__menu-item.header__menu-item--dropdown.header__menu-item--current
               a(href="about.html").header__menu-link О компании
               +icon('arrow-down', 'header__menu-icon')
               ul.header__dropdown
@@ -71,7 +72,7 @@ block header
                   a(href="#").header__dropdown-link Дистрибьютерам
                 li.header__dropdown-item
                   a(href="#").header__dropdown-link Вендинговые аппараты
-            li.header__menu-item.header__menu-item--dropdown.header__menu-item--current
+            li.header__menu-item.header__menu-item--dropdown
               a(href="brands.html").header__menu-link Бренды
               +icon('arrow-down', 'header__menu-icon')
               ul.header__dropdown
@@ -142,41 +143,54 @@ block header
     .header__submenu
       .container
         .header__submenu-inner
-          a(href="#").header__submenu-link Сытоедов
-          a(href="#").header__submenu-link Обожамс!
-          a(href="#").header__submenu-link Чебуречье
-          a(href="#").header__submenu-link Street Food
-          a(href="#").header__submenu-link Balansika
-          a(href="#").header__submenu-link Snack Bomb
+          a(href="history.html").header__submenu-link История
+          a(href="news.html").header__submenu-link Новости
+          a(href="production.html").header__submenu-link.header__submenu-link--current Производство
+          a(href="#").header__submenu-link Качество
+          a(href="#").header__submenu-link Наши награды
+          a(href="#").header__submenu-link Вакансии
 block breadcrumbs
   .breadcrumbs
     .container
       .breadcrumbs__inner
         a(href="#").breadcrumbs__link Главная
-        a(href="#").breadcrumbs__link Бренды
+        a(href="#").breadcrumbs__link О компании
+        a(href="#").breadcrumbs__link Производство
 block content
-  section.brands.brands--padding
+  section.production
     .container
-      .brands__inner
-        a(href="#").brands__link
-          img(src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-balansika.jpg" alt="").brands__image.lazy
-        a(href="#").brands__link
-          img(src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-cheburechie.jpg" alt="").brands__image.lazy
-        a(href="#").brands__link
-          img(src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-obojams.jpg" alt="").brands__image.lazy
-        a(href="#").brands__link
-          img(src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-sitoedov.jpg" alt="").brands__image.lazy
-        a(href="#").brands__link
-          img(src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-snackbomb.jpg" alt="").brands__image.lazy
-        a(href="#").brands__link
-          img(src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-streetfood.jpg" alt="").brands__image.lazy
-  section.info-block.info-block--padding
+      .production__bg
+        .section-top
+          h2.section-top__title.title НАШЕ ПРОИЗВОДСТВО
+        .production__row
+          .production__col
+            .production__col-top
+              .production__col-image.lazy(data-src="static/images/content/production/production-image-1.jpg")
+            .production__col-bottom
+              h3.production__col-title ПЛОЩАДКА 1
+              span.production__col-desc МО, г. Щелково, ул. Поварская, вл. 1 производство готовых первых и вторых блюд
+          .production__col
+            .production__col-top
+              .production__col-image.lazy(data-src="static/images/content/production/production-image-2.jpg")
+            .production__col-bottom
+              h3.production__col-title ПЛОЩАДКА 2
+              span.production__col-desc МО, г. Щелково, ул. Фабричная, д. 1 производство чебуреков, снековой продукции, полуфабрикатов
+  section.info-block.info-block--padding-bottom
     .container
-      h2.info-block__title.title БРЕНДЫ ГОТОВОЙ ЕДЫ ОТ “ВИЛОН”
-      p.info-block__text Сегодня существует множество сервисов доставки еды и продуктов питания. Любая кухня мира доступна для доставки своих
-       | кулинарных изысков на дом по самым различным ценам. Бывают моменты, когда хочется кушать настолько сильно, что даже нет сил
-       | ждать курьера целый час. Да и стоимость заказанной еды из кафе или ресторана не всегда доступна для “среднего” кошелька.
+      h2.info-block__title.title ООО ТПК «ВИЛОН» - СОБСТВЕННОЕ ПРОИЗВОДСТВО В Г. ЩЕЛКОВО
+      p.info-block__text Производство ТПК «Вилон» организовано на двух площадках общей площадью 9 911 м2, расположенных в Щелковском районе Московской
+  section.banner
+    .banner__bg.lazy(data-src="static/images/content/bg/banner-bg.jpg")
+      .container
+        .banner__inner.banner__inner--height-small
+          .banner__content
+            h2.title.banner__title.title--wight-black.title--size-big.title--color-white СМОТРИ ПРЕЗЕНТАЦИЮ <br> О КОМПАНИИ
+          a(href="#" download="#").btn.btn--color-black.btn--bg-yellow.banner__link СКАЧАТЬ
+  section.info-block
+    .container
+      h2.info-block__title.title ПРОИЗВОДСТВО ГОТОВЫХ БЛЮД
+      p.info-block__text Производство готовых блюд нашей компаний насчитывает более 400 наименований. Среди них: первые и вторые готовые блюда, чебуреки, снековая продукция, выпечка и другие.
       a(href="#").info-block__link.info-block__link--margin.btn.btn--bg-yellow.btn--color-black
         +icon('spoon', 'btn-icon')
-        | НАДОЕЛО ГОТОВИТЬ? <br> ЖМИ!
+        | ХОЧУ ПОЕСТЬ!
         +icon('fork', 'btn-icon')

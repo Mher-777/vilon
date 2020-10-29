@@ -332,6 +332,7 @@ $(function () {
   like();
   hoverProducts();
   toggle('.product__head', '.js-toggle', 'icon-heart--active');
+  toggle('.news__item', '.js-toggle', 'icon-heart--active');
   mainSliders();
   menuToggle();
   counter();
