@@ -1,7 +1,7 @@
 extends layout/main-page
 
 block variables
-    -var title = 'Производство'
+    -var title = 'Поставщикам'
 
 block header
   header.header
@@ -44,7 +44,7 @@ block header
             span.hamburger-box
               span.hamburger-inner
           ul.header__menu-list
-            li.header__menu-item.header__menu-item--dropdown.header__menu-item--current
+            li.header__menu-item.header__menu-item--dropdown
               a(href="about.html").header__menu-link О компании
               +icon('arrow-down', 'header__menu-icon')
               ul.header__dropdown
@@ -60,7 +60,7 @@ block header
                   a(href="awards.html").header__dropdown-link Наши награды
                 li.header__dropdown-item
                   a(href="works.html").header__dropdown-link Вакансии
-            li.header__menu-item.header__menu-item--dropdown
+            li.header__menu-item.header__menu-item--dropdown.header__menu-item--current
               a(href="cooperation.html").header__menu-link Сотрудничество
               +icon('arrow-down', 'header__menu-icon')
               ul.header__dropdown
@@ -143,54 +143,47 @@ block header
     .header__submenu
       .container
         .header__submenu-inner
-          a(href="history.html").header__submenu-link История
-          a(href="news.html").header__submenu-link Новости
-          a(href="production.html").header__submenu-link.header__submenu-link--current Производство
-          a(href="quality.html").header__submenu-link Качество
-          a(href="awards.html").header__submenu-link Наши награды
-          a(href="works.html").header__submenu-link Вакансии
+          a(href="horeca.html").header__submenu-link Horeca
+          a(href="suppliers.html").header__submenu-link.header__submenu-link--current Поставщикам
+          a(href="distributors.html").header__submenu-link Дистрибьютерам
+          a(href="#").header__submenu-link Вендинговые аппараты
 block breadcrumbs
   .breadcrumbs
     .container
       .breadcrumbs__inner
         a(href="index.html").breadcrumbs__link Главная
-        a(href="about.html").breadcrumbs__link О компании
-        a(href="#").breadcrumbs__link Производство
+        a(href="cooperation.html").breadcrumbs__link Сотрудничество
+        a(href="suppliers.html").breadcrumbs__link Поставщикам
 block content
-  section.production
+  .info-block.info-block--padding-bottom.info-block--padding
     .container
-      .production__bg
-        .section-top
-          h2.section-top__title.title НАШЕ ПРОИЗВОДСТВО
-        .production__row
-          .production__col
-            .production__col-top
-              .production__col-image.lazy(data-src="static/images/content/production/production-image-1.jpg")
-            .production__col-bottom
-              h3.production__col-title ПЛОЩАДКА 1
-              span.production__col-desc МО, г. Щелково, ул. Поварская, вл. 1 производство готовых первых и вторых блюд
-          .production__col
-            .production__col-top
-              .production__col-image.lazy(data-src="static/images/content/production/production-image-2.jpg")
-            .production__col-bottom
-              h3.production__col-title ПЛОЩАДКА 2
-              span.production__col-desc МО, г. Щелково, ул. Фабричная, д. 1 производство чебуреков, снековой продукции, полуфабрикатов
-  section.info-block.info-block--padding-bottom
+      .info-block__steps
+        .info-block__step
+          strong.info-block__number 1
+          h3.info-block__subtitle.title.title--size-small.title--color-japonica.title--wight-black ЗАПОЛНИ <br> ЗАЯВКУ
+        .info-block__step
+          strong.info-block__number 2
+          h3.info-block__subtitle.title.title--size-small.title--color-japonica.title--wight-black ПОЛУЧИ <br> ПРЕДЛОЖЕНИЕ
+        .info-block__step
+          strong.info-block__number 3
+          h3.info-block__subtitle.title.title--size-small.title--color-japonica.title--wight-black ЗАКЛЮЧИ <br> ДОГОВОР
+      a(href="#").info-block__link.btn.btn--bg-yellow.btn--color-black ОСТАВИТЬ ЗАЯВКУ
+  .info-block.info-block--padding-bottom
     .container
-      h2.info-block__title.title ООО ТПК «ВИЛОН» - СОБСТВЕННОЕ ПРОИЗВОДСТВО В Г. ЩЕЛКОВО
-      p.info-block__text Производство ТПК «Вилон» организовано на двух площадках общей площадью 9 911 м2, расположенных в Щелковском районе Московской
+      h2.info-block__title.title ПОСТАВЩИКАМ
+      p.info-block__text Торгово-промышленная компания «Вилон» заинтересована в развитии долгосрочных и выгодных отношений с поставщиками сырья и оборудования, предприятиями торговли и общественного питания. Мы ценим наших партнеров и стараемся создавать оптимальные и комфортные условия совместной работы.
   section.banner
     .banner__bg.lazy(data-src="static/images/content/bg/banner-bg.jpg")
       .container
         .banner__inner.banner__inner--height-small
           .banner__content
-            h2.title.banner__title.title--wight-black.title--size-big.title--color-white СМОТРИ ПРЕЗЕНТАЦИЮ <br> О КОМПАНИИ
+            h2.title.banner__title.title--wight-black.title--size-big.title--color-white СКАЧАЙ НАШ <br> КАТАЛОГ ТОВАРОВ
           a(href="#" download="#").btn.btn--color-black.btn--bg-yellow.banner__link СКАЧАТЬ
-  section.info-block
+  .info-block
     .container
-      h2.info-block__title.title ПРОИЗВОДСТВО ГОТОВЫХ БЛЮД
-      p.info-block__text Производство готовых блюд нашей компаний насчитывает более 400 наименований. Среди них: первые и вторые готовые блюда, чебуреки, снековая продукция, выпечка и другие.
+      h2.info-block__title.title ВОПРОСЫ И ПРЕДЛОЖЕНИЯ
+      p.info-block__text Отдел продаж: <br> доб.тел.: 290, 183, 235, 204 эл. почта: zakaz@vilon.ru
       a(href="#").info-block__link.info-block__link--margin.btn.btn--bg-yellow.btn--color-black
         +icon('spoon', 'btn-icon')
-        | ХОЧУ ПОЕСТЬ!
+        | НАДОЕЛО ГОТОВИТЬ? <br> ЖМИ!
         +icon('fork', 'btn-icon')
