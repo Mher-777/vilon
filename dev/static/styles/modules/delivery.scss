@@ -1,0 +1,54 @@
+.delivery {
+  &--block {
+    box-shadow: 1px 3px 11px 5px rgba(0, 0, 0, 0.18);
+    max-width: 430px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+  }
+  &__head {
+    padding: 22px 15px;
+    text-align: center;
+    background-color: #2e804c;
+    &-close {
+      stroke: #fff;
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+      padding: 0;
+      top: 10px;
+      right: 10px;
+      background: transparent !important;
+    }
+  }
+  &__form {
+    padding: 20px 15px;
+    width: calc(100% - 50px);
+    margin: 0 auto;
+    &-subtitle {
+      display: block;
+      color: #6f6f6f;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    &-input {
+      margin-bottom: 15px;
+      padding: 11.5px 10px;
+      &::placeholder {
+        font-size: 16px;
+      }
+    }
+    &-price {
+      font-size: 21px;
+      font-weight: 700;
+      display: block;
+      text-align: center;
+      &::after {
+        content: attr(data-price);
+        color: #2e804c;
+        margin-right: 20px;
+        white-space: nowrap;
+      }
+    }
+  }
+}

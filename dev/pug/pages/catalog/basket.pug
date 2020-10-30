@@ -1,0 +1,63 @@
+.catalog__basket.basket
+  .basket__head
+    h2.basket__title.title.title--size-small.title--color-white КОРЗИНА
+    +icon('save', 'basket__head-icon')
+  .basket__main
+    ul.basket__list
+      li.basket__item
+        .basket__item-top
+          h3.basket__item-title Суп-лапша домашняя <br> с курицей
+          +icon('close', 'basket__item-icon')
+        .basket__item-bottom
+          .basket__item-info
+            span.basket__item-text 350 гр.
+            span.basket__item-text 150 Ккал
+          .counter.basket__counter
+            button.counter__btn(data-direction="minus")
+              +icon('minus', 'counter__icon')
+            input(value="1" disabled).counter__input
+            button.counter__btn(data-direction="plus")
+              +icon('plus', 'counter__icon')
+          span.basket__price 150 р
+      li.basket__item
+        .basket__item-top
+          h3.basket__item-title Треска отварная с <br> картофелем и соусом <br> из шпината
+          +icon('close', 'basket__item-icon')
+        .basket__item-bottom
+          .basket__item-info
+            span.basket__item-text 350 гр.
+            span.basket__item-text 150 Ккал
+          .counter.basket__counter
+            button.counter__btn(data-direction="minus")
+              +icon('minus', 'counter__icon')
+            input(value="1" disabled).counter__input
+            button.counter__btn(data-direction="plus")
+              +icon('plus', 'counter__icon')
+          span.basket__price 120 р
+      li.basket__item
+        .basket__item-top
+          h3.basket__item-title Суп-лапша домашняя <br> с курицей
+          +icon('close', 'basket__item-icon')
+        .basket__item-bottom
+          .basket__item-info
+            span.basket__item-text 350 гр.
+            span.basket__item-text 150 Ккал
+          .counter.basket__counter
+            button.counter__btn(data-direction="minus")
+              +icon('minus', 'counter__icon')
+            input(value="1" disabled).counter__input
+            button.counter__btn(data-direction="plus")
+              +icon('plus', 'counter__icon')
+          span.basket__price 120 р
+
+    .basket__info
+      span.basket__info-text(data-text="1350 Ккал") Общая калорийность:
+      span.basket__info-text(data-text="5%") Персональная скидка
+      span.basket__info-text Цена без доставки
+    .basket__desc
+      span.basket__desc-text Минимальный заказ 1500р
+      span.basket__desc-text.basket__desc-text--size-small.basket__desc-text--color-green Беслатная доставка от 2500 р
+  .basket__footer
+    .basket__total
+      span.basket__total-price(data-price="390 р") Всего:
+    a(href="#").basket__link.btn.btn--bg-yellow.btn--color-black ОФОРМИТЬ ЗАКАЗ

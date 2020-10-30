@@ -77,9 +77,9 @@ block header
               +icon('arrow-down', 'header__menu-icon')
               ul.header__dropdown
                 li.header__dropdown-item
-                  a(href="#").header__dropdown-link Сытоедов
+                  a(href="brands-view.html").header__dropdown-link Сытоедов
                 li.header__dropdown-item
-                  a(href="#").header__dropdown-link Обожамс!
+                  a(href="brands-view.html").header__dropdown-link Обожамс!
                 li.header__dropdown-item
                   a(href="#").header__dropdown-link Чебуречье
                 li.header__dropdown-item
@@ -93,23 +93,23 @@ block header
               +icon('arrow-down', 'header__menu-icon')
               ul.header__dropdown
                 li.header__dropdown-item
-                  a(href="#").header__dropdown-link Завтраки
+                  a(href="catalog-view.html").header__dropdown-link Завтраки
                 li.header__dropdown-item
-                  a(href="#").header__dropdown-link Первые блюда
+                  a(href="catalog-view.html").header__dropdown-link Первые блюда
                 li.header__dropdown-item
-                  a(href="#").header__dropdown-link Вторые блюда
+                  a(href="catalog-view.html").header__dropdown-link Вторые блюда
                 li.header__dropdown-item
-                  a(href="#").header__dropdown-link Постные блюда
+                  a(href="catalog-view.html").header__dropdown-link Постные блюда
                 li.header__dropdown-item
-                  a(href="#").header__dropdown-link Жюльены
+                  a(href="catalog-view.html").header__dropdown-link Жюльены
                 li.header__dropdown-item
-                  a(href="#").header__dropdown-link Выпечка
+                  a(href="catalog-view.html").header__dropdown-link Выпечка
                 li.header__dropdown-item
-                  a(href="#").header__dropdown-link Снеки и чебуреки
+                  a(href="catalog-view.html").header__dropdown-link Снеки и чебуреки
                 li.header__dropdown-item
-                  a(href="#").header__dropdown-link Полуфабрикаты
+                  a(href="catalog-view.html").header__dropdown-link Полуфабрикаты
                 li.header__dropdown-item
-                  a(href="#").header__dropdown-link Готовые рационы
+                  a(href="catalog-view.html").header__dropdown-link Готовые рационы
             li.header__menu-item.header__menu-item--dropdown
               a(href="buyers.html").header__menu-link Покупателям
               +icon('arrow-down', 'header__menu-icon')
@@ -164,7 +164,6 @@ block content
     .catalog__wrapper
       aside.catalog__filter
         h2.catalog__filter-title ФИЛЬТР
-          +icon('arrow-down', 'catalog__filter-icon')
         form(action="#").catalog__filter-content
           .catalog__filter-col
             h3.catalog__filter-subtitle ЦЕНА
@@ -199,7 +198,7 @@ block content
                 label(for="lean-dishes").catalog__filter-text постные блюда
               li.catalog__filter-item
                 input(type="radio" name="category" id="julienne").catalog__filter-input.input-radio
-                label(for="julienne").catalog__filter-text жульены
+                label(for="julienne").catalog__filter-text жюльены
               li.catalog__filter-item
                 input(type="radio" name="category" id="bakery-products").catalog__filter-input.input-radio
                 label(for="bakery-products").catalog__filter-text выпечка
@@ -255,7 +254,7 @@ block content
                 input(type="radio" name="garnish" id="garnish-vegetables").catalog__filter-input.input-radio
                 label(for="garnish-vegetables").catalog__filter-text овощи
           .catalog__filter-col
-            h3.catalog__filter-subtitle ГАРНИР
+            h3.catalog__filter-subtitle КУХНИ МИРА
             ul.catalog__filter-list
               li.catalog__filter-item
                 input(type="radio" name="kitchen" id="russian").catalog__filter-input.input-radio

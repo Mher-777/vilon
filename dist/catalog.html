@@ -9,7 +9,37 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="static/css/styles.css">
   </head>
-  <body>
+  <body class="hidden--loader"><div class="preloader">
+<div class="loader">
+<div class="box box0">
+<div></div>
+</div>
+<div class="box box1">
+<div></div>
+</div>
+<div class="box box2">
+<div></div>
+</div>
+<div class="box box3">
+<div></div>
+</div>
+<div class="box box4">
+<div></div>
+</div>
+<div class="box box5">
+<div></div>
+</div>
+<div class="box box6">
+<div></div>
+</div>
+<div class="box box7">
+<div></div>
+</div>
+<div class="ground">
+<div></div>
+</div>
+</div>
+</div>
     <div class="wrapper">
       <header class="header">
         <div class="header__top">
@@ -82,8 +112,8 @@
                     <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
                   </svg>
                   <ul class="header__dropdown">
-                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Сытоедов</a></li>
-                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Обожамс!</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="brands-view.html">Сытоедов</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="brands-view.html">Обожамс!</a></li>
                     <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Чебуречье</a></li>
                     <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Street Food</a></li>
                     <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Balansika</a></li>
@@ -95,15 +125,15 @@
                     <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
                   </svg>
                   <ul class="header__dropdown">
-                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Завтраки</a></li>
-                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Первые блюда</a></li>
-                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Вторые блюда</a></li>
-                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Постные блюда</a></li>
-                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Жюльены</a></li>
-                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Выпечка</a></li>
-                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Снеки и чебуреки</a></li>
-                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Полуфабрикаты</a></li>
-                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Готовые рационы</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="catalog-view.html">Завтраки</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="catalog-view.html">Первые блюда</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="catalog-view.html">Вторые блюда</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="catalog-view.html">Постные блюда</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="catalog-view.html">Жюльены</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="catalog-view.html">Выпечка</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="catalog-view.html">Снеки и чебуреки</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="catalog-view.html">Полуфабрикаты</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="catalog-view.html">Готовые рационы</a></li>
                   </ul>
                 </li>
                 <li class="header__menu-item header__menu-item--dropdown"><a class="header__menu-link" href="buyers.html">Покупателям</a>
@@ -150,11 +180,7 @@
         <div class="container-fluid">
           <div class="catalog__wrapper">
             <aside class="catalog__filter">
-              <h2 class="catalog__filter-title">ФИЛЬТР
-                <svg class="icon icon-arrow-down catalog__filter-icon">
-                  <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
-                </svg>
-              </h2>
+              <h2 class="catalog__filter-title">ФИЛЬТР</h2>
               <form class="catalog__filter-content" action="#">
                 <div class="catalog__filter-col">
                   <h3 class="catalog__filter-subtitle">ЦЕНА</h3>
@@ -199,7 +225,7 @@
                     </li>
                     <li class="catalog__filter-item">
                       <input class="catalog__filter-input input-radio" type="radio" name="category" id="julienne">
-                      <label class="catalog__filter-text" for="julienne">жульены</label>
+                      <label class="catalog__filter-text" for="julienne">жюльены</label>
                     </li>
                     <li class="catalog__filter-item">
                       <input class="catalog__filter-input input-radio" type="radio" name="category" id="bakery-products">
@@ -278,7 +304,7 @@
                   </ul>
                 </div>
                 <div class="catalog__filter-col">
-                  <h3 class="catalog__filter-subtitle">ГАРНИР</h3>
+                  <h3 class="catalog__filter-subtitle">КУХНИ МИРА</h3>
                   <ul class="catalog__filter-list">
                     <li class="catalog__filter-item">
                       <input class="catalog__filter-input input-radio" type="radio" name="kitchen" id="russian">
@@ -1941,7 +1967,7 @@
                 <li class="footer__item"><a class="footer__link" href="#">Первые блюда</a></li>
                 <li class="footer__item"><a class="footer__link" href="#">Вторые блюда</a></li>
                 <li class="footer__item"><a class="footer__link" href="#">Постные блюда</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">Жульены</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Жюльены</a></li>
                 <li class="footer__item"><a class="footer__link" href="#">Выпечка</a></li>
                 <li class="footer__item"><a class="footer__link" href="#">Снеки и чебуреки</a></li>
                 <li class="footer__item"><a class="footer__link" href="#">Полуфабрикаты</a></li>
@@ -1992,7 +2018,7 @@
           </div>
         </div>
         <div class="footer__copyright">
-          <div class="container">© 1994-2020, ООО ТПК «ВиЛон»</div>
+          <div class="container">© 1994-2020, ООО ТПК «Вилон»</div>
         </div>
       </footer>
     </div>

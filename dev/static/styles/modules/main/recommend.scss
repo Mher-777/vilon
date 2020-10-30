@@ -13,6 +13,11 @@
     margin-right: auto;
     padding-left: 65px;
     padding-right: 65px;
+    &--disabled {
+      .slick-track {
+        margin: 0;
+      }
+    }
     & > .slick-list {
       margin-left: -10px;
       margin-right: -5px;

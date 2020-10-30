@@ -1,3 +1,32 @@
+$(window).on('load', function () {
+    const body = $('body')
+    // const header = $('.header__inner')
+    body.css('margin-right', calcScroll())
+    // header.css('transform', 'translateX(' + -calcScroll() / 2 + 'px)')
+    setTimeout(function () {
+        $('.preloader').fadeOut(500, function () {
+            $(this).remove()
+            if (body.hasClass('hidden--loader')) {
+                body.delay(400).removeClass('hidden--loader')
+                body.css('margin-right', '')
+                // header.css('transform', '')
+            }
+        })
+    }, 500)
+})
+function calcScroll() {
+    let div = document.createElement('div')
+    div.style.width = '50px';
+    div.style.height = '50px';
+    div.style.overflowY = 'scroll';
+    div.style.visibility = 'hidden';
+
+    document.body.appendChild(div);
+    let scrollWidth = div.offsetWidth - div.clientWidth;
+    div.remove();
+
+    return scrollWidth;
+}
 $(function () {
     svg4everybody({});
     $('.js-popup-map').magnificPopup({
@@ -73,6 +102,7 @@ $(function () {
         }).on('beforeChange', function (event, slick, currentSlide) {
             lazyLoad()
         });
+        const productImages = $('.product__images')
         $('.product__head-slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -81,11 +111,20 @@ $(function () {
             dotsClass: 'pagination product__pagination pagination--white',
             infinite: false,
             touchThreshold: 40,
+            rows: 0,
+            asNavFor: productImages.length > 0 ? '.product__images' : ''
         }).on('afterChange', function (event, slick, currentSlide) {
             lazyLoad()
         }).on('beforeChange', function (event, slick, currentSlide) {
             lazyLoad()
         });
+        productImages.slick({
+            slidesToShow: 2,
+            // slidesToScroll: 1,
+            // rows: 0,
+            focusOnSelect: true,
+            asNavFor: productImages.length > 0 ? '.product__head-slider.product__head-slider--view' : ''
+        })
         $('.recommend__slider').slick({
             slidesToShow: 4,
             slidesToScroll: 1,
@@ -218,12 +257,12 @@ $(function () {
         elem.hover(function () {
             $(this).toggleClass('product--hover')
             if ($(this).hasClass('product--hover')) {
-                $(this).find('.product__list-item').slideDown()
+                $(this).find('.product__list-item').slideDown(200)
             }
         }, function () {
             $(this).removeClass('product--hover')
             for (let i = 2; i <= $(this).find('.product__list-item').length; i++) {
-                $(this).find('.product__list-item').eq(i).slideUp()
+                $(this).find('.product__list-item').eq(i).slideUp(200)
             }
         })
     }
@@ -366,7 +405,33 @@ $(function () {
             $(this).next().slideToggle()
         })
     }
-
+    const tabs = () => {
+        const elem = $('.catalog__tab')
+        const content = $('.catalog__content')
+        elem.on('click', function (e) {
+            e.preventDefault()
+            const $this = $(this)
+            content.each(function () {
+                if($this.attr('href') === $(this).attr('data-href')) {
+                    elem.removeClass('catalog__tab--current')
+                    $this.addClass('catalog__tab--current')
+                    content.hide()
+                    $(this).show()
+                }
+            })
+        })
+        elem.each(function () {
+            const $this = $(this)
+            content.each(function () {
+                if($this.attr('href') === $(this).attr('data-href')) {
+                    elem.removeClass('catalog__tab--current')
+                    $this.addClass('catalog__tab--current')
+                    content.hide()
+                    $(this).show()
+                }
+            })
+        })
+    }
     popup()
     rangeSlider()
     like()
@@ -384,6 +449,7 @@ $(function () {
     sliderSpace()
     reviewCustom()
     worksAccordion()
+    tabs()
 })
 
 function browser() {

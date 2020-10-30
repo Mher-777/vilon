@@ -1,0 +1,317 @@
+extends layout/main-page
+
+block variables
+    -var title = 'Первые блюда'
+
+block header
+  header.header
+    .header__top
+      .container
+        .header__inner
+          .header__info
+            .logo(data-da="header__menu, 1, 500")
+              a(href="index.html").logo__link
+                img(src="static/images/common/logo.svg" alt="логотип").logo__image
+            .header__icons
+              a(href="tel:+74952239749").header__icons-link
+                +icon('phone', 'header__icon')
+                span.header__item-text +7 (495) 223-97-49
+              a(href="mailto:info@vilon.ru").header__icons-link
+                +icon('email', 'header__icon')
+                span.header__item-text info@vilon.ru
+          form(action="#").header__search
+            input(type="text" placeholder="Поиск" required).header__search-input.input
+            button(type="submit").header__search-btn
+              +icon('search', 'header__search-icon')
+          .header__request(data-da="header__menu, 1, 500")
+            .header__request-icons
+              a(href="#").header__request-link
+                span.header__request-box(data-count="2").header__request-box--number
+                  +icon('heart', 'header__request-icon')
+              a(href="#" ).header__request-link
+                span.header__request-box(data-count="2").header__request-box--number
+                  +icon('basket', 'header__request-icon')
+                span.header__request-text 10,500 р
+              a(href="#").header__request-link.header__request-link--size-small
+                span.header__request-box
+                  +icon('user', 'header__request-icon')
+                span.header__request-text Вход
+            a(href="#" data-da="header__menu-list, last, 500").btn.btn--color-black.btn--bg-yellow.header__btn ОСТАВИТЬ ЗАЯВКУ
+    .header__bottom.header__bottom--shadow
+      .container
+        nav.header__menu
+          button(type="button").hamburger.hamburger--spring
+            span.hamburger-box
+              span.hamburger-inner
+          ul.header__menu-list
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="about.html").header__menu-link О компании
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="history.html").header__dropdown-link История
+                li.header__dropdown-item
+                  a(href="news.html").header__dropdown-link Новости
+                li.header__dropdown-item
+                  a(href="production.html").header__dropdown-link Производство
+                li.header__dropdown-item
+                  a(href="quality.html").header__dropdown-link Качество
+                li.header__dropdown-item
+                  a(href="awards.html").header__dropdown-link Наши награды
+                li.header__dropdown-item
+                  a(href="works.html").header__dropdown-link Вакансии
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="cooperation.html").header__menu-link Сотрудничество
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="horeca.html").header__dropdown-link Horeca
+                li.header__dropdown-item
+                  a(href="suppliers.html").header__dropdown-link Поставщикам
+                li.header__dropdown-item
+                  a(href="distributors.html").header__dropdown-link Дистрибьютерам
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Вендинговые аппараты
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="brands.html").header__menu-link Бренды
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="brands-view.html").header__dropdown-link Сытоедов
+                li.header__dropdown-item
+                  a(href="brands-view.html").header__dropdown-link Обожамс!
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Чебуречье
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Street Food
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Balansika
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Snack Bomb
+            li.header__menu-item.header__menu-item--current
+              a(href="catalog.html").header__menu-link Магазин
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="catalog-view.html").header__dropdown-link Завтраки
+                li.header__dropdown-item
+                  a(href="catalog-view.html").header__dropdown-link Первые блюда
+                li.header__dropdown-item
+                  a(href="catalog-view.html").header__dropdown-link Вторые блюда
+                li.header__dropdown-item
+                  a(href="catalog-view.html").header__dropdown-link Постные блюда
+                li.header__dropdown-item
+                  a(href="catalog-view.html").header__dropdown-link Жюльены
+                li.header__dropdown-item
+                  a(href="catalog-view.html").header__dropdown-link Выпечка
+                li.header__dropdown-item
+                  a(href="catalog-view.html").header__dropdown-link Снеки и чебуреки
+                li.header__dropdown-item
+                  a(href="catalog-view.html").header__dropdown-link Полуфабрикаты
+                li.header__dropdown-item
+                  a(href="catalog-view.html").header__dropdown-link Готовые рационы
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="buyers.html").header__menu-link Покупателям
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Где купить
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Как заказать
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Акции
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Вопрос / ответ
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Доставка / оплата
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Возврат товара
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Образцы документов
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="vilon-life.html").header__menu-link Vilon Life
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Кулинарная школа
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Интересно про еду
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Правильное питание
+            li.header__menu-item
+              a(href="contacts.html").header__menu-link Контакты
+    .header__submenu
+      .container
+        .header__submenu-inner.header__submenu-inner--between
+          a(href="#").header__submenu-link Завтраки
+          a(href="#").header__submenu-link.header__submenu-link--current Первые блюда
+          a(href="#").header__submenu-link Вторые блюда
+          a(href="#").header__submenu-link Постные блюда
+          a(href="#").header__submenu-link Жюльены
+          a(href="#").header__submenu-link Выпечка
+          a(href="#").header__submenu-link Снеки и чебуреки
+          a(href="#").header__submenu-link Полуфабрикаты
+          a(href="#").header__submenu-link.header__submenu-link--icon Готовые рационы
+
+block breadcrumbs
+  .breadcrumbs
+    .container
+      .breadcrumbs__inner
+        a(href="index.html").breadcrumbs__link Главная
+        a(href="#").breadcrumbs__link Магазин
+        a(href="#").breadcrumbs__link Первые блюда
+        a(href="#").breadcrumbs__link Борщ черниговский
+block content
+  .container-fluid
+    .catalog__wrapper
+      .catalog__view
+        h2.catalog__title.title БОРЩ ЧЕРНИГОВСКИЙ
+        .catalog__view-inner
+          .product.product--icon.catalog__view-product.product--icon-bestseller
+            .product__head
+              .product__head-slider.product__head-slider--view
+                .product__head-slide.js-parent
+                  .product__head-image(data-src="static/images/content/category/category-2.jpg").lazy
+                  +icon('heart', 'product__head-icon js-toggle')
+                .product__head-slide
+                  .product__head-image(data-src="static/images/content/category/category-2.jpg").lazy
+                  +icon('heart', 'product__head-icon js-toggle')
+            .product__images
+              .product__images-slide
+                img(data-src="static/images/content/category/category-2.jpg").lazy
+              .product__images-slide
+                img(data-src="static/images/content/category/category-2.jpg").lazy
+          .catalog__view-holder
+            .catalog__view-row
+              .catalog__view-info
+                ul.catalog__view-list
+                  li.catalog__view-item Вес.........................300 гр
+                  li.catalog__view-item Калорийность.........147 Ккал
+                  li.catalog__view-item Белки.......................3,3 г
+                  li.catalog__view-item Жиры.......................6,6 г
+                  li.catalog__view-item Углеводы.................20,1 г
+                .catalog__features
+                  .catalog__features-item
+                    +icon('feature-1', 'catalog__features-icon')
+                    span.catalog__features-text 1 <br> порция
+                  .catalog__features-item
+                    +icon('feature-2', 'catalog__features-icon')
+                    span.catalog__features-text Уже готово!
+                  .catalog__features-item
+                    +icon('feature-3', 'catalog__features-icon')
+                    span.catalog__features-text 7 мин 700 W
+                  .catalog__features-item
+                    +icon('feature-4', 'catalog__features-icon')
+                    span.catalog__features-text 5 мин 250 <sup>0</sup>
+                  .catalog__features-item
+                    +icon('feature-5', 'catalog__features-icon')
+                    span.catalog__features-text Шоковая заморозка
+              .catalog__cart
+                span.catalog__cart-price(data-price="120 р") Цена:
+                .catalog__cart-quantity
+                  span.catalog__cart-text Кол-во:
+                  .counter.catalog__cart-counter
+                    button.counter__btn(data-direction="minus")
+                      +icon('minus', 'counter__icon')
+                    input(value="1" disabled).counter__input
+                    button.counter__btn(data-direction="plus")
+                      +icon('plus', 'counter__icon')
+                button(type="button").catalog__cart-btn.btn.btn--bg-green.btn--color-white В КОРЗИНУ
+                span.catalog__cart-desc При заказе на сумму более 2500р доставка бесплатно!
+            .catalog__view-row
+              .catalog__view-desc
+                ul.catalog__view-list
+                  li.catalog__view-item Артикул...................123
+                  li.catalog__view-item Срок годности.........180 суток
+                  li.catalog__view-item ТУ.........................9165-006-23493844-06
+                  li.catalog__view-item Штрихкод................4607007721424
+                  li.catalog__view-item Упаковка.................тарелка / картонная коробка
+                  li.catalog__view-item В гофрокоробе.......10 шт.
+              .catalog__socilas
+                span.catalog__socilas-text Поделиться
+                a(href="#").catalog__socilas-link
+                  img(data-src="static/images/common/vk.svg").catalog__socilas-icon.lazy
+                a(href="#").catalog__socilas-link
+                  img(data-src="static/images/common/facebook.svg").catalog__socilas-icon.lazy
+                a(href="#").catalog__socilas-link
+                  img(data-src="static/images/common/ok.svg").catalog__socilas-icon.lazy
+                a(href="#").catalog__socilas-link
+                  img(data-src="static/images/common/email.svg").catalog__socilas-icon.lazy
+                a(href="#").catalog__socilas-link
+                  img(data-src="static/images/common/twitter.svg").catalog__socilas-icon.lazy
+        .catalog__tabs
+          a(href="desc").catalog__tab Описание
+          a(href="composition").catalog__tab Состав
+          a(href="cooking-method").catalog__tab.catalog__tab--current Способ приготовления
+          a(href="delivery").catalog__tab Доставка
+        .catalog__content(data-href="desc")
+          h2.catalog__content-title ДОСТАВКА ПО МОСКВЕ(1)
+          p.catalog__content-text МКАД + 15 км - минимальный  аз 1500р <br> МКАД + 15 км - минимальный  аз 1500р
+          p.catalog__content-text Заказ до 17:30 - доставка на следующий день <br> Заказ после 17:30 - доставка через 1 день
+          p.catalog__content-text Доставка производится с 09.00 до 18.00 часов. В день доставки водитель за 1 час до приезда позвонит, согласует точное время. <br> Стоимость доставки — от 300 до 1500 р. (в завиит зоны доставки, указанной на карте).
+          h2.catalog__content-title ДОСТАВКА В ДРУГИЕ ГОРОДА
+          ul.catalog__content-list
+            li.catalog__content-item(data-week="ПН - ") ПН - Дмитров, Дубна, Сергиев-Посад, Владдая обл., Хотьково
+            li.catalog__content-item(data-week="ВТ - ") Тверь, Клин, Солнечногорск
+            li.catalog__content-item(data-week="СР - ") Орехово-Зуево, Павловский-Посад, Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+            li.catalog__content-item(data-week="ЧТ - ") Климовск, Подольск, Кашира, Домодедово, Чехов, Серпухов, Ступино, Протвино, Пущино
+            li.catalog__content-item(data-week="ПТ - ") Коломна, Озеры, Воскресенск, Луховицы, Егорьевск, Зарайск
+            li.catalog__content-item(data-week="СБ - ") Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+            li.catalog__content-item(data-week="ВС - ") Климовск, Подольск, Кашира, Домодедово, Чехов, Ярославль, Ступино, Протвино, Пущино
+          p.catalog__content-text ВНИМАНИЕ! Если при оформлении заказа Вашего города или дома нет в списке, укажите ближайший, а в комментариях напишите нужный Вам город или номер дома. В таком случае стоимость доставки менеджер расчитывает индивидуально. <br> Получить подробную информацию о доссавке можно по телефону: +7 (495) 223-97--
+          a(href="#").catalog__content-btn.btn.btn--bg-yellow.btn--color-black РАСЧИТАТЬ ДОСТАВКУ
+        .catalog__content(data-href="composition")
+          h2.catalog__content-title ДОСТАВКА ПО МОСКВЕ(2)
+          p.catalog__content-text МКАД + 15 км - минимальный  аз 1500р <br> МКАД + 15 км - минимальный  аз 1500р
+          p.catalog__content-text Заказ до 17:30 - доставка на следующий день <br> Заказ после 17:30 - доставка через 1 день
+          p.catalog__content-text Доставка производится с 09.00 до 18.00 часов. В день доставки водитель за 1 час до приезда позвонит, согласует точное время. <br> Стоимость доставки — от 300 до 1500 р. (в завиит зоны доставки, указанной на карте).
+          h2.catalog__content-title ДОСТАВКА В ДРУГИЕ ГОРОДА
+          ul.catalog__content-list
+            li.catalog__content-item(data-week="ПН - ") ПН - Дмитров, Дубна, Сергиев-Посад, Владдая обл., Хотьково
+            li.catalog__content-item(data-week="ВТ - ") Тверь, Клин, Солнечногорск
+            li.catalog__content-item(data-week="СР - ") Орехово-Зуево, Павловский-Посад, Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+            li.catalog__content-item(data-week="ЧТ - ") Климовск, Подольск, Кашира, Домодедово, Чехов, Серпухов, Ступино, Протвино, Пущино
+            li.catalog__content-item(data-week="ПТ - ") Коломна, Озеры, Воскресенск, Луховицы, Егорьевск, Зарайск
+            li.catalog__content-item(data-week="СБ - ") Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+            li.catalog__content-item(data-week="ВС - ") Климовск, Подольск, Кашира, Домодедово, Чехов, Ярославль, Ступино, Протвино, Пущино
+          p.catalog__content-text ВНИМАНИЕ! Если при оформлении заказа Вашего города или дома нет в списке, укажите ближайший, а в комментариях напишите нужный Вам город или номер дома. В таком случае стоимость доставки менеджер расчитывает индивидуально. <br> Получить подробную информацию о доссавке можно по телефону: +7 (495) 223-97--
+          a(href="#").catalog__content-btn.btn.btn--bg-yellow.btn--color-black РАСЧИТАТЬ ДОСТАВКУ
+        .catalog__content(data-href="cooking-method")
+          h2.catalog__content-title ДОСТАВКА ПО МОСКВЕ(4)
+          p.catalog__content-text МКАД + 15 км - минимальный  аз 1500р <br> МКАД + 15 км - минимальный  аз 1500р
+          p.catalog__content-text Заказ до 17:30 - доставка на следующий день <br> Заказ после 17:30 - доставка через 1 день
+          p.catalog__content-text Доставка производится с 09.00 до 18.00 часов. В день доставки водитель за 1 час до приезда позвонит, согласует точное время. <br> Стоимость доставки — от 300 до 1500 р. (в завиит зоны доставки, указанной на карте).
+          h2.catalog__content-title ДОСТАВКА В ДРУГИЕ ГОРОДА
+          ul.catalog__content-list
+            li.catalog__content-item(data-week="ПН - ") ПН - Дмитров, Дубна, Сергиев-Посад, Владдая обл., Хотьково
+            li.catalog__content-item(data-week="ВТ - ") Тверь, Клин, Солнечногорск
+            li.catalog__content-item(data-week="СР - ") Орехово-Зуево, Павловский-Посад, Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+            li.catalog__content-item(data-week="ЧТ - ") Климовск, Подольск, Кашира, Домодедово, Чехов, Серпухов, Ступино, Протвино, Пущино
+            li.catalog__content-item(data-week="ПТ - ") Коломна, Озеры, Воскресенск, Луховицы, Егорьевск, Зарайск
+            li.catalog__content-item(data-week="СБ - ") Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+            li.catalog__content-item(data-week="ВС - ") Климовск, Подольск, Кашира, Домодедово, Чехов, Ярославль, Ступино, Протвино, Пущино
+          p.catalog__content-text ВНИМАНИЕ! Если при оформлении заказа Вашего города или дома нет в списке, укажите ближайший, а в комментариях напишите нужный Вам город или номер дома. В таком случае стоимость доставки менеджер расчитывает индивидуально. <br> Получить подробную информацию о доссавке можно по телефону: +7 (495) 223-97--
+          a(href="#").catalog__content-btn.btn.btn--bg-yellow.btn--color-black РАСЧИТАТЬ ДОСТАВКУ
+        .catalog__content(data-href="delivery")
+          h2.catalog__content-title ДОСТАВКА ПО МОСКВЕ
+          p.catalog__content-text МКАД + 15 км - минимальный  аз 1500р <br> МКАД + 15 км - минимальный  аз 1500р
+          p.catalog__content-text Заказ до 17:30 - доставка на следующий день <br> Заказ после 17:30 - доставка через 1 день
+          p.catalog__content-text Доставка производится с 09.00 до 18.00 часов. В день доставки водитель за 1 час до приезда позвонит, согласует точное время. <br> Стоимость доставки — от 300 до 1500 р. (в завиит зоны доставки, указанной на карте).
+          h2.catalog__content-title ДОСТАВКА В ДРУГИЕ ГОРОДА
+          ul.catalog__content-list
+            li.catalog__content-item(data-week="ПН - ") ПН - Дмитров, Дубна, Сергиев-Посад, Владдая обл., Хотьково
+            li.catalog__content-item(data-week="ВТ - ") Тверь, Клин, Солнечногорск
+            li.catalog__content-item(data-week="СР - ") Орехово-Зуево, Павловский-Посад, Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+            li.catalog__content-item(data-week="ЧТ - ") Климовск, Подольск, Кашира, Домодедово, Чехов, Серпухов, Ступино, Протвино, Пущино
+            li.catalog__content-item(data-week="ПТ - ") Коломна, Озеры, Воскресенск, Луховицы, Егорьевск, Зарайск
+            li.catalog__content-item(data-week="СБ - ") Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+            li.catalog__content-item(data-week="ВС - ") Климовск, Подольск, Кашира, Домодедово, Чехов, Ярославль, Ступино, Протвино, Пущино
+          p.catalog__content-text ВНИМАНИЕ! Если при оформлении заказа Вашего города или дома нет в списке, укажите ближайший, а в комментариях напишите нужный Вам город или номер дома. В таком случае стоимость доставки менеджер расчитывает индивидуально. <br> Получить подробную информацию о доссавке можно по телефону: +7 (495) 223-97--
+          a(href="#delivery").catalog__content-btn.btn.btn--bg-yellow.btn--color-black.js-popup-inline РАСЧИТАТЬ ДОСТАВКУ
+      include pages/catalog/basket
+  include pages/catalog/history
+  include pages/catalog/together
+  include pages/catalog/recommend
+  include pages/catalog/info-block-1
+  include pages/catalog/info-block-2
+  include modules/popup/delivery

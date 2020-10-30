@@ -36,11 +36,6 @@
         background-color: #6fa643;
         color: #fff;
       }
-      &:hover {
-        .header__dropdown {
-          transform: scaleY(0);
-        }
-      }
     }
   }
   &-link {
@@ -123,6 +118,7 @@
     &:hover {
       border-color: #6fa143;
       color: #6fa143;
+      font-weight: 700;
     }
     &--current {
       border-color: #6fa143;

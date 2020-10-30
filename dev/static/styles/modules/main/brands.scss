@@ -19,4 +19,31 @@
   &__image {
     vertical-align: bottom;
   }
+  &__view {
+    padding: 0 40px;
+    &-bg {
+      min-height: 150px;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position:  center;
+      margin-top: 25px;
+      padding-top: 39%;
+    }
+    &-text {
+      margin-top: 30px;
+      color: #6f6f6f;
+    }
+  }
+}
+@media (max-width: 772px) {
+  .brands__view {
+    padding: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .brands__view-text {
+    font-size: 14px;
+  }
 }

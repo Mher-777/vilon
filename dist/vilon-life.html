@@ -9,7 +9,37 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="static/css/styles.css">
   </head>
-  <body>
+  <body class="hidden--loader"><div class="preloader">
+<div class="loader">
+<div class="box box0">
+<div></div>
+</div>
+<div class="box box1">
+<div></div>
+</div>
+<div class="box box2">
+<div></div>
+</div>
+<div class="box box3">
+<div></div>
+</div>
+<div class="box box4">
+<div></div>
+</div>
+<div class="box box5">
+<div></div>
+</div>
+<div class="box box6">
+<div></div>
+</div>
+<div class="box box7">
+<div></div>
+</div>
+<div class="ground">
+<div></div>
+</div>
+</div>
+</div>
     <div class="wrapper">
       <header class="header">
         <div class="header__top">
@@ -82,8 +112,8 @@
                     <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
                   </svg>
                   <ul class="header__dropdown">
-                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Сытоедов</a></li>
-                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Обожамс!</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="brands-view.html">Сытоедов</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="brands-view.html">Обожамс!</a></li>
                     <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Чебуречье</a></li>
                     <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Street Food</a></li>
                     <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Balansika</a></li>
@@ -151,11 +181,31 @@
           <div class="intro__bg" style="background-image: url(static/images/content/intro/intro-bg.jpg)">
             <div class="container">
               <div class="intro__slider">
-                <div class="intro__slide"><img class="intro__image" data-lazy="static/images/content/intro/intro-image-1.jpg" alt=""></div>
-                <div class="intro__slide"><img class="intro__image" data-lazy="static/images/content/intro/intro-image-1.jpg" alt=""></div>
-                <div class="intro__slide"><img class="intro__image" data-lazy="static/images/content/intro/intro-image-1.jpg" alt=""></div>
-                <div class="intro__slide"><img class="intro__image" data-lazy="static/images/content/intro/intro-image-1.jpg" alt=""></div>
-                <div class="intro__slide"><img class="intro__image" data-lazy="static/images/content/intro/intro-image-1.jpg" alt=""></div>
+                <div class="intro__slide">
+                  <div class="intro__box">
+                    <h2 class="intro__title title title--color-white">очень полезные виды мяса</h2><a class="intro__link btn btn--color-white btn--bg-green" href="#">Подробнее</a>
+                  </div><a class="MagicZoomPlus" href="static/images/content/intro/intro-image-1.jpg" rel="zoom-width: 400;zoom-height: 200;"><img class="intro__image" data-lazy="static/images/content/intro/intro-image-1.jpg" alt=""></a>
+                </div>
+                <div class="intro__slide">
+                  <div class="intro__box">
+                    <h2 class="intro__title title title--color-white">очень полезные виды мяса</h2><a class="intro__link btn btn--color-white btn--bg-green" href="#">Подробнее</a>
+                  </div><img class="intro__image" data-lazy="static/images/content/intro/intro-image-1.jpg" alt="">
+                </div>
+                <div class="intro__slide">
+                  <div class="intro__box">
+                    <h2 class="intro__title title title--color-white">очень полезные виды мяса</h2><a class="intro__link btn btn--color-white btn--bg-green" href="#">Подробнее</a>
+                  </div><img class="intro__image" data-lazy="static/images/content/intro/intro-image-1.jpg" alt="">
+                </div>
+                <div class="intro__slide">
+                  <div class="intro__box">
+                    <h2 class="intro__title title title--color-white">очень полезные виды мяса</h2><a class="intro__link btn btn--color-white btn--bg-green" href="#">Подробнее</a>
+                  </div><img class="intro__image" data-lazy="static/images/content/intro/intro-image-1.jpg" alt="">
+                </div>
+                <div class="intro__slide">
+                  <div class="intro__box">
+                    <h2 class="intro__title title title--color-white">очень полезные виды мяса</h2><a class="intro__link btn btn--color-white btn--bg-green" href="#">Подробнее</a>
+                  </div><img class="intro__image" data-lazy="static/images/content/intro/intro-image-1.jpg" alt="">
+                </div>
               </div>
             </div>
           </div>
@@ -168,7 +218,7 @@
             <div class="recipes__inner">
               <div class="recipes__item"><a class="recipes__item-image" href="#" style="background-image: url(static/images/common/example-1.jpg)"></a>
                 <div class="recipes__item-info"><a class="recipes__item-title" href="#">РАССОЛЬНИК</a><span class="recipes__item-text">Наваристый, сытный и любимыытства рассольник, приготовленный из знакомых продуктов.</span></div>
-                <div class="recipes__item-col"><a class="recipes__item-link btn btn--bg-pink btn--color-white" href="#">готовить</a>
+                <div class="recipes__item-col"><a class="recipes__item-link btn btn--bg-pink btn--color-white btn--weight-normal" href="#">готовить</a>
                   <div class="recipes__item-statistics"><span class="recipes__item-statistic">
                       <svg class="icon icon-eye recipes__item-icon">
                         <use xlink:href="static/images/sprite/symbol/sprite.svg#eye"></use>
@@ -180,7 +230,7 @@
               </div>
               <div class="recipes__item"><a class="recipes__item-image" href="#" style="background-image: url(static/images/common/example-1.jpg)"></a>
                 <div class="recipes__item-info"><a class="recipes__item-title" href="#">РАССОЛЬНИК</a><span class="recipes__item-text">Наваристый, сытный и любимыытства рассольник, приготовленный из знакомых продуктов.</span></div>
-                <div class="recipes__item-col"><a class="recipes__item-link btn btn--bg-pink btn--color-white" href="#">готовить</a>
+                <div class="recipes__item-col"><a class="recipes__item-link btn btn--bg-pink btn--color-white btn--weight-normal" href="#">готовить</a>
                   <div class="recipes__item-statistics"><span class="recipes__item-statistic">
                       <svg class="icon icon-eye recipes__item-icon">
                         <use xlink:href="static/images/sprite/symbol/sprite.svg#eye"></use>
@@ -192,7 +242,7 @@
               </div>
               <div class="recipes__item"><a class="recipes__item-image" href="#" style="background-image: url(static/images/common/example-1.jpg)"></a>
                 <div class="recipes__item-info"><a class="recipes__item-title" href="#">РАССОЛЬНИК</a><span class="recipes__item-text">Наваристый, сытный и любимыытства рассольник, приготовленный из знакомых продуктов.</span></div>
-                <div class="recipes__item-col"><a class="recipes__item-link btn btn--bg-pink btn--color-white" href="#">готовить</a>
+                <div class="recipes__item-col"><a class="recipes__item-link btn btn--bg-pink btn--color-white btn--weight-normal" href="#">готовить</a>
                   <div class="recipes__item-statistics"><span class="recipes__item-statistic">
                       <svg class="icon icon-eye recipes__item-icon">
                         <use xlink:href="static/images/sprite/symbol/sprite.svg#eye"></use>
@@ -204,7 +254,7 @@
               </div>
               <div class="recipes__item"><a class="recipes__item-image" href="#" style="background-image: url(static/images/common/example-1.jpg)"></a>
                 <div class="recipes__item-info"><a class="recipes__item-title" href="#">РАССОЛЬНИК</a><span class="recipes__item-text">Наваристый, сытный и любимыытства рассольник, приготовленный из знакомых продуктов.</span></div>
-                <div class="recipes__item-col"><a class="recipes__item-link btn btn--bg-pink btn--color-white" href="#">готовить</a>
+                <div class="recipes__item-col"><a class="recipes__item-link btn btn--bg-pink btn--color-white btn--weight-normal" href="#">готовить</a>
                   <div class="recipes__item-statistics"><span class="recipes__item-statistic">
                       <svg class="icon icon-eye recipes__item-icon">
                         <use xlink:href="static/images/sprite/symbol/sprite.svg#eye"></use>
@@ -216,7 +266,7 @@
               </div>
               <div class="recipes__item"><a class="recipes__item-image" href="#" style="background-image: url(static/images/common/example-1.jpg)"></a>
                 <div class="recipes__item-info"><a class="recipes__item-title" href="#">РАССОЛЬНИК</a><span class="recipes__item-text">Наваристый, сытный и любимыытства рассольник, приготовленный из знакомых продуктов.</span></div>
-                <div class="recipes__item-col"><a class="recipes__item-link btn btn--bg-pink btn--color-white" href="#">готовить</a>
+                <div class="recipes__item-col"><a class="recipes__item-link btn btn--bg-pink btn--color-white btn--weight-normal" href="#">готовить</a>
                   <div class="recipes__item-statistics"><span class="recipes__item-statistic">
                       <svg class="icon icon-eye recipes__item-icon">
                         <use xlink:href="static/images/sprite/symbol/sprite.svg#eye"></use>
@@ -228,7 +278,7 @@
               </div>
               <div class="recipes__item"><a class="recipes__item-image" href="#" style="background-image: url(static/images/common/example-1.jpg)"></a>
                 <div class="recipes__item-info"><a class="recipes__item-title" href="#">РАССОЛЬНИК</a><span class="recipes__item-text">Наваристый, сытный и любимыытства рассольник, приготовленный из знакомых продуктов.</span></div>
-                <div class="recipes__item-col"><a class="recipes__item-link btn btn--bg-pink btn--color-white" href="#">готовить</a>
+                <div class="recipes__item-col"><a class="recipes__item-link btn btn--bg-pink btn--color-white btn--weight-normal" href="#">готовить</a>
                   <div class="recipes__item-statistics"><span class="recipes__item-statistic">
                       <svg class="icon icon-eye recipes__item-icon">
                         <use xlink:href="static/images/sprite/symbol/sprite.svg#eye"></use>
@@ -570,7 +620,7 @@
                 <li class="footer__item"><a class="footer__link" href="#">Первые блюда</a></li>
                 <li class="footer__item"><a class="footer__link" href="#">Вторые блюда</a></li>
                 <li class="footer__item"><a class="footer__link" href="#">Постные блюда</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">Жульены</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Жюльены</a></li>
                 <li class="footer__item"><a class="footer__link" href="#">Выпечка</a></li>
                 <li class="footer__item"><a class="footer__link" href="#">Снеки и чебуреки</a></li>
                 <li class="footer__item"><a class="footer__link" href="#">Полуфабрикаты</a></li>
@@ -621,7 +671,7 @@
           </div>
         </div>
         <div class="footer__copyright">
-          <div class="container">© 1994-2020, ООО ТПК «ВиЛон»</div>
+          <div class="container">© 1994-2020, ООО ТПК «Вилон»</div>
         </div>
       </footer>
     </div>

@@ -13,7 +13,8 @@ html(lang="ru-RU")
     meta(name="keywords" content="")
     link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
     link(rel="stylesheet" type='text/css' href="static/css/styles.css")
-  body
+  body.hidden--loader
+    include ../modules/loader
     .wrapper
       block header
       .content
