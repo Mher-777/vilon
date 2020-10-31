@@ -5,6 +5,12 @@
     width: 100%;
     margin: 0 auto;
     background-color: #fff;
+    padding: 0;
+    .fancybox-close-small {
+      right: 0;
+      top: 0;
+      color: #fff;
+    }
   }
   &__head {
     padding: 22px 15px;
@@ -51,4 +57,15 @@
       }
     }
   }
+}
+@media (max-width: 550px) {
+  .delivery--block {
+    padding: 0;
+    .fancybox-close-small {
+      top: 0;
+    }
+  }
+}
+@media (max-width: 400px) {
+
 }

@@ -1,0 +1,248 @@
+.catalog.popup.popup-catalog#catalog-view-1
+  .catalog__view
+    h2.catalog__title.title БОРЩ ЧЕРНИГОВСКИЙ
+    .catalog__view-inner
+      .product.product--icon.catalog__view-product.product--icon-bestseller
+        .product__head
+          .product__head-slider.product__head-slider--view
+            .product__head-slide.js-parent
+              .product__head-image(data-src="static/images/content/category/category-2.jpg").lazy
+              +icon('heart', 'product__head-icon js-toggle')
+            .product__head-slide
+              .product__head-image(data-src="static/images/content/category/category-2.jpg").lazy
+              +icon('heart', 'product__head-icon js-toggle')
+        .product__images
+          .product__images-slide
+            img(data-src="static/images/content/category/category-2.jpg").lazy
+          .product__images-slide
+            img(data-src="static/images/content/category/category-2.jpg").lazy
+      .catalog__view-holder
+        .catalog__view-row
+          .catalog__view-info
+            h3.catalog__view-title.title.catalog__view-title--mobile ХАРАКТЕРИСТИКИ
+            ul.catalog__view-list
+              li.catalog__view-item Вес.........................300 гр
+              li.catalog__view-item Калорийность.........147 Ккал
+              li.catalog__view-item Белки.......................3,3 г
+              li.catalog__view-item Жиры.......................6,6 г
+              li.catalog__view-item Углеводы.................20,1 г
+            .catalog__features
+              .catalog__features-item
+                +icon('feature-1', 'catalog__features-icon')
+                span.catalog__features-text 1 <br> порция
+              .catalog__features-item
+                +icon('feature-2', 'catalog__features-icon')
+                span.catalog__features-text Уже готово!
+              .catalog__features-item
+                +icon('feature-3', 'catalog__features-icon')
+                span.catalog__features-text 7 мин 700 W
+              .catalog__features-item
+                +icon('feature-4', 'catalog__features-icon')
+                span.catalog__features-text 5 мин 250&nbsp;<sup>0</sup>
+              .catalog__features-item
+                +icon('feature-5', 'catalog__features-icon')
+                span.catalog__features-text Шоковая заморозка
+          .catalog__cart(data-da="catalog__view-product, last, 772")
+            span.catalog__cart-price(data-price="120 р") Цена:
+            .catalog__cart-quantity
+              span.catalog__cart-text Кол-во:
+              .counter.catalog__cart-counter
+                button.counter__btn(data-direction="minus")
+                  +icon('minus', 'counter__icon')
+                input(value="1" disabled).counter__input
+                button.counter__btn(data-direction="plus")
+                  +icon('plus', 'counter__icon')
+            button(type="button").catalog__cart-btn.btn.btn--bg-green.btn--color-white В КОРЗИНУ
+            span.catalog__cart-desc При заказе на сумму более 2500р доставка бесплатно!
+        .catalog__view-row
+          .catalog__view-desc
+            ul.catalog__view-list
+              li.catalog__view-item Артикул...................123
+              li.catalog__view-item Срок годности.........180 суток
+              li.catalog__view-item ТУ.........................9165-006-23493844-06
+              li.catalog__view-item Штрихкод................4607007721424
+              li.catalog__view-item Упаковка.................тарелка / картонная коробка
+              li.catalog__view-item В гофрокоробе.......10 шт.
+          .catalog__socials
+            span.catalog__socials-text Поделиться
+            a(href="#").catalog__socials-link
+              img(data-src="static/images/common/vk.svg").catalog__socials-icon.lazy
+            a(href="#").catalog__socials-link
+              img(data-src="static/images/common/facebook.svg").catalog__socials-icon.lazy
+            a(href="#").catalog__socials-link
+              img(data-src="static/images/common/ok.svg").catalog__socials-icon.lazy
+            a(href="#").catalog__socials-link
+              img(data-src="static/images/common/email.svg").catalog__socials-icon.lazy
+            a(href="#").catalog__socials-link
+              img(data-src="static/images/common/twitter.svg").catalog__socials-icon.lazy
+    .catalog__tabs
+      a(href="desc").catalog__tab Описание
+      a(href="composition").catalog__tab Состав
+      a(href="cooking-method" data-mobile="Приготовление").catalog__tab.catalog__tab--current Способ приготовления
+      a(href="delivery").catalog__tab Доставка
+    .catalog__content(data-href="desc")
+      h2.catalog__content-title ДОСТАВКА ПО МОСКВЕ(1)
+      p.catalog__content-text МКАД + 15 км - минимальный  аз 1500р <br> МКАД + 15 км - минимальный  аз 1500р
+      p.catalog__content-text Заказ до 17:30 - доставка на следующий день <br> Заказ после 17:30 - доставка через 1 день
+      p.catalog__content-text Доставка производится с 09.00 до 18.00 часов. В день доставки водитель за 1 час до приезда позвонит, согласует точное время. <br> Стоимость доставки — от 300 до 1500 р. (в завиит зоны доставки, указанной на карте).
+      h2.catalog__content-title ДОСТАВКА В ДРУГИЕ ГОРОДА
+      ul.catalog__content-list
+        li.catalog__content-item(data-week="ПН - ") ПН - Дмитров, Дубна, Сергиев-Посад, Владдая обл., Хотьково
+        li.catalog__content-item(data-week="ВТ - ") Тверь, Клин, Солнечногорск
+        li.catalog__content-item(data-week="СР - ") Орехово-Зуево, Павловский-Посад, Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+        li.catalog__content-item(data-week="ЧТ - ") Климовск, Подольск, Кашира, Домодедово, Чехов, Серпухов, Ступино, Протвино, Пущино
+        li.catalog__content-item(data-week="ПТ - ") Коломна, Озеры, Воскресенск, Луховицы, Егорьевск, Зарайск
+        li.catalog__content-item(data-week="СБ - ") Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+        li.catalog__content-item(data-week="ВС - ") Климовск, Подольск, Кашира, Домодедово, Чехов, Ярославль, Ступино, Протвино, Пущино
+      p.catalog__content-text ВНИМАНИЕ! Если при оформлении заказа Вашего города или дома нет в списке, укажите ближайший, а в комментариях напишите нужный Вам город или номер дома. В таком случае стоимость доставки менеджер расчитывает индивидуально. <br> Получить подробную информацию о доссавке можно по телефону: +7 (495) 223-97--
+      a(href="#delivery" data-fancybox).catalog__content-btn.btn.btn--bg-yellow.btn--color-black РАСЧИТАТЬ ДОСТАВКУ
+    .catalog__content(data-href="composition")
+      h2.catalog__content-title ДОСТАВКА ПО МОСКВЕ(2)
+      p.catalog__content-text МКАД + 15 км - минимальный  аз 1500р <br> МКАД + 50 км - минимальный  аз 2500 р
+      p.catalog__content-text Заказ до 17:30 - доставка на следующий день <br> Заказ после 17:30 - доставка через 1 день
+      p.catalog__content-text Доставка производится с 09.00 до 18.00 часов. В день доставки водитель за 1 час до приезда позвонит, согласует точное время. <br> Стоимость доставки — от 300 до 1500 р. (в завиит зоны доставки, указанной на карте).
+      h2.catalog__content-title ДОСТАВКА В ДРУГИЕ ГОРОДА
+      ul.catalog__content-list
+        li.catalog__content-item(data-week="ПН - ") ПН - Дмитров, Дубна, Сергиев-Посад, Владдая обл., Хотьково
+        li.catalog__content-item(data-week="ВТ - ") Тверь, Клин, Солнечногорск
+        li.catalog__content-item(data-week="СР - ") Орехово-Зуево, Павловский-Посад, Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+        li.catalog__content-item(data-week="ЧТ - ") Климовск, Подольск, Кашира, Домодедово, Чехов, Серпухов, Ступино, Протвино, Пущино
+        li.catalog__content-item(data-week="ПТ - ") Коломна, Озеры, Воскресенск, Луховицы, Егорьевск, Зарайск
+        li.catalog__content-item(data-week="СБ - ") Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+        li.catalog__content-item(data-week="ВС - ") Климовск, Подольск, Кашира, Домодедово, Чехов, Ярославль, Ступино, Протвино, Пущино
+      p.catalog__content-text ВНИМАНИЕ! Если при оформлении заказа Вашего города или дома нет в списке, укажите ближайший, а в комментариях напишите нужный Вам город или номер дома. В таком случае стоимость доставки менеджер расчитывает индивидуально. <br> Получить подробную информацию о доссавке можно по телефону: +7 (495) 223-97--
+      a(href="#delivery" data-fancybox).catalog__content-btn.btn.btn--bg-yellow.btn--color-black РАСЧИТАТЬ ДОСТАВКУ
+    .catalog__content(data-href="cooking-method")
+      h2.catalog__content-title ДОСТАВКА ПО МОСКВЕ(4)
+      p.catalog__content-text МКАД + 15 км - минимальный  аз 1500р <br> МКАД + 15 км - минимальный  аз 1500р
+      p.catalog__content-text Заказ до 17:30 - доставка на следующий день <br> Заказ после 17:30 - доставка через 1 день
+      p.catalog__content-text Доставка производится с 09.00 до 18.00 часов. В день доставки водитель за 1 час до приезда позвонит, согласует точное время. <br> Стоимость доставки — от 300 до 1500 р. (в завиит зоны доставки, указанной на карте).
+      h2.catalog__content-title ДОСТАВКА В ДРУГИЕ ГОРОДА
+      ul.catalog__content-list
+        li.catalog__content-item(data-week="ПН - ") ПН - Дмитров, Дубна, Сергиев-Посад, Владдая обл., Хотьково
+        li.catalog__content-item(data-week="ВТ - ") Тверь, Клин, Солнечногорск
+        li.catalog__content-item(data-week="СР - ") Орехово-Зуево, Павловский-Посад, Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+        li.catalog__content-item(data-week="ЧТ - ") Климовск, Подольск, Кашира, Домодедово, Чехов, Серпухов, Ступино, Протвино, Пущино
+        li.catalog__content-item(data-week="ПТ - ") Коломна, Озеры, Воскресенск, Луховицы, Егорьевск, Зарайск
+        li.catalog__content-item(data-week="СБ - ") Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+        li.catalog__content-item(data-week="ВС - ") Климовск, Подольск, Кашира, Домодедово, Чехов, Ярославль, Ступино, Протвино, Пущино
+      p.catalog__content-text ВНИМАНИЕ! Если при оформлении заказа Вашего города или дома нет в списке, укажите ближайший, а в комментариях напишите нужный Вам город или номер дома. В таком случае стоимость доставки менеджер расчитывает индивидуально. <br> Получить подробную информацию о доссавке можно по телефону: +7 (495) 223-97--
+      a(href="#delivery" data-fancybox).catalog__content-btn.btn.btn--bg-yellow.btn--color-black РАСЧИТАТЬ ДОСТАВКУ
+    .catalog__content(data-href="delivery")
+      h2.catalog__content-title ДОСТАВКА ПО МОСКВЕ
+      p.catalog__content-text МКАД + 15 км - минимальный  аз 1500р <br> МКАД + 15 км - минимальный  аз 1500р
+      p.catalog__content-text Заказ до 17:30 - доставка на следующий день <br> Заказ после 17:30 - доставка через 1 день
+      p.catalog__content-text Доставка производится с 09.00 до 18.00 часов. В день доставки водитель за 1 час до приезда позвонит, согласует точное время. <br> Стоимость доставки — от 300 до 1500 р. (в завиит зоны доставки, указанной на карте).
+      h2.catalog__content-title ДОСТАВКА В ДРУГИЕ ГОРОДА
+      ul.catalog__content-list
+        li.catalog__content-item(data-week="ПН - ") ПН - Дмитров, Дубна, Сергиев-Посад, Владдая обл., Хотьково
+        li.catalog__content-item(data-week="ВТ - ") Тверь, Клин, Солнечногорск
+        li.catalog__content-item(data-week="СР - ") Орехово-Зуево, Павловский-Посад, Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+        li.catalog__content-item(data-week="ЧТ - ") Климовск, Подольск, Кашира, Домодедово, Чехов, Серпухов, Ступино, Протвино, Пущино
+        li.catalog__content-item(data-week="ПТ - ") Коломна, Озеры, Воскресенск, Луховицы, Егорьевск, Зарайск
+        li.catalog__content-item(data-week="СБ - ") Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+        li.catalog__content-item(data-week="ВС - ") Климовск, Подольск, Кашира, Домодедово, Чехов, Ярославль, Ступино, Протвино, Пущино
+      p.catalog__content-text ВНИМАНИЕ! Если при оформлении заказа Вашего города или дома нет в списке, укажите ближайший, а в комментариях напишите нужный Вам город или номер дома. В таком случае стоимость доставки менеджер расчитывает индивидуально. <br> Получить подробную информацию о доссавке можно по телефону: +7 (495) 223-97--
+      a(href="#delivery" data-fancybox).catalog__content-btn.btn.btn--bg-yellow.btn--color-black.js-popup-inline РАСЧИТАТЬ ДОСТАВКУ
+  section.recommend.recommend--bg-white
+    .container
+      .section-top
+        h2.section-top__title.title С ЭТИМ ТОВАРОМ ПОКУПАЮТ
+    .recommend__slider.recommend__slider--disabled
+      .recommend__slide
+        article.product
+          .product__head
+            .product__head-slider
+              .product__head-slide.js-parent
+                .product__head-image(style="background-image: url(static/images/content/category/category-2.jpg)")
+                  a(href="#").product__head-viewing
+                    span.product__head-text Быстрый просмотр
+                    +icon('search', 'product__head-viewing-icon')
+                +icon('heart', 'product__head-icon js-toggle')
+              .product__head-slide
+                .product__head-image(style="background-image: url(static/images/content/category/category-2.jpg)")
+                +icon('heart', 'product__head-icon js-toggle')
+          a(href="#").product__main
+            h3.product__title БОРЩ ЧЕРНИГОВСКИЙ
+            .product__main-box
+              ul.product__list
+                li.product__list-item Вес.........................300 гр
+                li.product__list-item Калорийность........147 Ккал
+                li.product__list-item Белки......................3,3 г
+                li.product__list-item Жиры......................6,6 г
+                li.product__list-item Углеводы................20,1 г
+          .product__footer
+            .product__info
+              span.product__price 120 р
+              .counter
+                button.counter__btn(data-direction="minus")
+                  +icon('minus', 'counter__icon')
+                input(value="1" disabled).counter__input
+                button.counter__btn(data-direction="plus")
+                  +icon('plus', 'counter__icon')
+            a(href="#").product__btn.btn.btn--bg-green.btn--color-white В КОРЗИНУ
+      .recommend__slide
+        article.product
+          .product__head
+            .product__head-slider
+              .product__head-slide.js-parent
+                .product__head-image(style="background-image: url(static/images/content/category/category-2.jpg)")
+                +icon('heart', 'product__head-icon js-toggle')
+              .product__head-slide
+                .product__head-image(style="background-image: url(static/images/content/category/category-2.jpg)")
+                  a(href="#").product__head-viewing
+                    span.product__head-text Быстрый просмотр
+                    +icon('search', 'product__head-viewing-icon')
+                +icon('heart', 'product__head-icon js-toggle')
+          a(href="#").product__main
+            h3.product__title ТРЕСКА ОТВАРНАЯ С КАРТОФЕЛЕМ И СОУСОМ ИЗ ШПИНАТА
+            .product__main-box
+              ul.product__list
+                li.product__list-item Вес.........................300 гр
+                li.product__list-item Калорийность........147 Ккал
+                li.product__list-item Белки......................3,3 г
+                li.product__list-item Жиры......................6,6 г
+                li.product__list-item Углеводы................20,1 г
+          .product__footer
+            .product__info
+              span.product__price 120 р
+              .counter
+                button.counter__btn(data-direction="minus")
+                  +icon('minus', 'counter__icon')
+                input(value="1" disabled).counter__input
+                button.counter__btn(data-direction="plus")
+                  +icon('plus', 'counter__icon')
+            a(href="#").product__btn.btn.btn--bg-green.btn--color-white В КОРЗИНУ
+      .recommend__slide
+        article.product
+          .product__head
+            .product__head-slider
+              .product__head-slide.js-parent
+                .product__head-image(style="background-image: url(static/images/content/category/category-2.jpg)")
+                +icon('heart', 'product__head-icon js-toggle')
+              .product__head-slide
+                .product__head-image(style="background-image: url(static/images/content/category/category-2.jpg)")
+                  a(href="#").product__head-viewing
+                    span.product__head-text Быстрый просмотр
+                    +icon('search', 'product__head-viewing-icon')
+                +icon('heart', 'product__head-icon js-toggle')
+          a(href="#").product__main
+            h3.product__title СУП-ЛАПША ДОМАШНЯЯ С КУРИЦЕЙ
+            .product__main-box
+              ul.product__list
+                li.product__list-item Вес.........................300 гр
+                li.product__list-item Калорийность........147 Ккал
+                li.product__list-item Белки......................3,3 г
+                li.product__list-item Жиры......................6,6 г
+                li.product__list-item Углеводы................20,1 г
+          .product__footer
+            .product__info
+              span.product__price 120 р
+              .counter
+                button.counter__btn(data-direction="minus")
+                  +icon('minus', 'counter__icon')
+                input(value="1" disabled).counter__input
+                button.counter__btn(data-direction="plus")
+                  +icon('plus', 'counter__icon')
+            a(href="#").product__btn.btn.btn--bg-green.btn--color-white В КОРЗИНУ
+include ../../modules/popup/delivery

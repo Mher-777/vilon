@@ -86,9 +86,6 @@
       }
     }
   }
-  .header__submenu {
-    display: none;
-  }
   .header__dropdown {
     position: static;
     display: none;
@@ -468,18 +465,12 @@
     float: right;
   }
   .recommend__slider {
-    padding-left: 0;
-    padding-right: 0;
-
     .arrow--right {
       right: 20px;
     }
-
     .arrow--left {
       left: 20px;
     }
-  }
-  .advantages__bg {
 
   }
 }

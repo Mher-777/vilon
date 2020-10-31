@@ -1,0 +1,139 @@
+.stores {
+  padding-bottom: 35px;
+  &__row {
+    display: flex;
+    margin-left: -40px;
+    flex-wrap: wrap;
+    margin-top: -20px;
+    padding-bottom: 20px;
+  }
+  &__link {
+    width: calc(33.33333333% - 40px);
+    margin-left: 40px;
+    border: 1px solid #6f6f6f;
+    margin-top: 40px;
+  }
+  &__bg {
+    min-height: 200px;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position:  center;
+    padding-top: 54.5%;
+    margin-bottom: 15px;
+  }
+  &__title {
+    &--padding {
+      padding-left: 40px;
+    }
+  }
+  &__location {
+    padding: 0 40px;
+    &-row {
+      display: flex;
+      align-items: flex-start;
+      margin-left: -40px;
+      margin-top: 15px;
+    }
+    &-col {
+      width: calc(50% - 40px);
+      margin-left: 40px;
+      border-top: 1px solid #6f6f6f;
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #6f6f6f;
+      padding: 9px 0;
+    }
+    &-title {
+      font-weight: 900;
+      margin-right: 10px;
+      max-width: 191px;
+      width: 100%;
+      font-size: 16px;
+    }
+    &-text {
+      color: #6f6f6f;
+      max-width: 305px;
+      width: 100%;
+    }
+  }
+  &__btn {
+    margin-top: 35px;
+  }
+}
+@media (max-width: 1130px) {
+  .stores__location {
+    padding: 0;
+  }
+}
+@media (max-width: 1000px) {
+  .stores__location-col {
+    width: calc(50% - 20px);
+    margin-left: 20px;
+  }
+  .stores__location-row {
+    margin-left: -20px;
+  }
+}
+@media (max-width: 900px) {
+  .stores__location-title {
+    font-size: 14px;
+  }
+  .stores__location-text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 772px) {
+  .stores__location-row {
+    display: block;
+    margin-left: 0;
+  }
+  .stores__location-col {
+    width: 100%;
+    margin-left: 0;
+  }
+  .stores__location-text {
+    max-width: 100%;
+  }
+  .stores__row {
+    margin-left: -20px;
+    margin-top: 0;
+  }
+  .stores__link {
+    margin-left: 20px;
+    width: calc(50% - 20px);
+    margin-top: 20px;
+  }
+}
+@media (max-width: 570px) {
+  .stores__title--padding {
+    padding-left: 0;
+  }
+}
+@media (max-width: 400px) {
+  .stores__title {
+    font-size: 20px;
+  }
+  .stores__link {
+    margin-left: 10px;
+    width: calc(50% - 10px);
+    margin-top: 10px;
+  }
+  .stores__row {
+    margin-left: -10px;
+    margin-bottom: 10px;
+  }
+  .stores__btn {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 360px) {
+  .stores__location-title {
+    font-size: 12px;
+  }
+  .stores__location-text {
+    font-size: 12px;
+  }
+}

@@ -141,9 +141,9 @@
                     <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
                   </svg>
                   <ul class="header__dropdown">
-                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Где купить</a></li>
-                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Как заказать</a></li>
-                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Акции</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="stores.html">Где купить</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="order-steps.html">Как заказать</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="stock.html">Акции</a></li>
                     <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Вопрос / ответ</a></li>
                     <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Доставка / оплата</a></li>
                     <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Возврат товара</a></li>
@@ -238,7 +238,7 @@
             <div class="footer__col footer__col--contacts" data-da="footer__row, 2, 650">
               <h3 class="footer__title">КОНТАКТЫ</h3>
               <ul class="footer__list">
-                <li class="footer__item"><a class="footer__link js-popup-map" href="#map">
+                <li class="footer__item"><a class="footer__link js-popup-map" href="#map" data-fancybox>
                     <svg class="icon icon-marker footer__item-icon">
                       <use xlink:href="static/images/sprite/symbol/sprite.svg#marker"></use>
                     </svg><span>М. О., г Щелково, ул. Поварская, вл. 1</span></a></li>
@@ -263,7 +263,7 @@
         </div>
       </footer>
     </div>
-    <div class="mfp-hide zoom-anim-dialog" id="map">
+    <div class="popup popup__map" id="map">
       <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af2568a7384a85fd05fc7f634c7342c63b956305764ab910b3e4eb494d1c2e624&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
     </div>
     <script src="static/js/libs.js"></script>
