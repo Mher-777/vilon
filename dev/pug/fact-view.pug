@@ -1,0 +1,190 @@
+extends layout/main-page
+
+block variables
+    -var title = 'Интересно про еду'
+
+block header
+  header.header
+    .header__top
+      .container
+        .header__inner
+          .header__info
+            .logo(data-da="header__menu, 1, 500")
+              a(href="index.html").logo__link
+                img(src="static/images/common/logo.svg" alt="логотип").logo__image
+            .header__icons
+              a(href="tel:+74952239749").header__icons-link
+                +icon('phone', 'header__icon')
+                span.header__item-text +7 (495) 223-97-49
+              a(href="mailto:info@vilon.ru").header__icons-link
+                +icon('email', 'header__icon')
+                span.header__item-text info@vilon.ru
+          form(action="#").header__search
+            input(type="text" placeholder="Поиск" required).header__search-input.input
+            button(type="submit").header__search-btn
+              +icon('search', 'header__search-icon')
+          .header__request(data-da="header__menu, 1, 500")
+            .header__request-icons
+              a(href="#").header__request-link
+                span.header__request-box(data-count="2").header__request-box--number
+                  +icon('heart', 'header__request-icon')
+              a(href="#" ).header__request-link
+                span.header__request-box(data-count="2").header__request-box--number
+                  +icon('basket', 'header__request-icon')
+                span.header__request-text 10,500 р
+              a(href="#").header__request-link.header__request-link--size-small
+                span.header__request-box
+                  +icon('user', 'header__request-icon')
+                span.header__request-text Вход
+            a(href="#" data-da="header__menu-list, last, 500").btn.btn--color-black.btn--bg-yellow.header__btn ОСТАВИТЬ ЗАЯВКУ
+    .header__bottom.header__bottom--shadow
+      .container
+        nav.header__menu
+          button(type="button").hamburger.hamburger--spring
+            span.hamburger-box
+              span.hamburger-inner
+          ul.header__menu-list
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="about.html").header__menu-link О компании
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="history.html").header__dropdown-link История
+                li.header__dropdown-item
+                  a(href="news.html").header__dropdown-link Новости
+                li.header__dropdown-item
+                  a(href="production.html").header__dropdown-link Производство
+                li.header__dropdown-item
+                  a(href="quality.html").header__dropdown-link Качество
+                li.header__dropdown-item
+                  a(href="awards.html").header__dropdown-link Наши награды
+                li.header__dropdown-item
+                  a(href="works.html").header__dropdown-link Вакансии
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="cooperation.html").header__menu-link Сотрудничество
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="horeca.html").header__dropdown-link Horeca
+                li.header__dropdown-item
+                  a(href="suppliers.html").header__dropdown-link Поставщикам
+                li.header__dropdown-item
+                  a(href="distributors.html").header__dropdown-link Дистрибьютерам
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Вендинговые аппараты
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="brands.html").header__menu-link Бренды
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="brands-view.html").header__dropdown-link Сытоедов
+                li.header__dropdown-item
+                  a(href="brands-view.html").header__dropdown-link Обожамс!
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Чебуречье
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Street Food
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Balansika
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Snack Bomb
+            li.header__menu-item
+              a(href="catalog.html").header__menu-link Магазин
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Завтраки
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Первые блюда
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Вторые блюда
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Постные блюда
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Жюльены
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Выпечка
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Снеки и чебуреки
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Полуфабрикаты
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Готовые рационы
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="buyers.html").header__menu-link Покупателям
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="stores.html").header__dropdown-link Где купить
+                li.header__dropdown-item
+                  a(href="order-steps.html").header__dropdown-link Как заказать
+                li.header__dropdown-item
+                  a(href="stock.html").header__dropdown-link Акции
+                li.header__dropdown-item
+                  a(href="faq.html").header__dropdown-link Вопрос / ответ
+                li.header__dropdown-item
+                  a(href="delivery.html").header__dropdown-link Доставка / оплата
+                li.header__dropdown-item
+                  a(href="warranty.html").header__dropdown-link Возврат товара
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Образцы документов
+            li.header__menu-item.header__menu-item--dropdown.header__menu-item--current
+              a(href="vilon-life.html").header__menu-link Vilon Life
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="fact-1.html").header__dropdown-link Кулинарная школа
+                li.header__dropdown-item
+                  a(href="fact-2.html").header__dropdown-link Интересно про еду
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Правильное питание
+            li.header__menu-item
+              a(href="contacts.html").header__menu-link Контакты
+    .header__submenu
+      .container
+        .header__submenu-inner
+            a(href="fact-1.html").header__submenu-link Кулинарная школа
+            a(href="fact-2.html").header__submenu-link.header__submenu-link--current Интересно про еду
+            a(href="fact-3.html").header__submenu-link Правильное питание
+block breadcrumbs
+  .breadcrumbs
+    .container
+      .breadcrumbs__inner
+        a(href="index.html").breadcrumbs__link Главная
+        a(href="vilon-life.html").breadcrumbs__link Vilon Life
+        a(href="fact-1.html").breadcrumbs__link Интересно про еду
+        a(href="fact-view.html").breadcrumbs__link Чем пообедать на работе?
+block content
+  section.blog
+    .container
+      .blog__wrapper
+        h2.blog__title.title ЧЕМ ПООБЕДАТЬ НА РАБОТЕ?
+        .blog__bg.lazy(data-src="static/images/content/blog/blog-image-1.jpg")
+          +icon('heart', 'blog__bg-icon js-toggle')
+        .blog__content
+          p.blog__text Если вы считаете, что единственный вариант поесть на работе – это фаст-фуд, то сильно ошибаетесь. Здоровой и вкусной альтернативой может стать готовая еда, которую перед употреблением стоит всего лишь разогреть несколько минут в микроволновке.
+          p.blog__text Современные технологии производства позволяют предложить покупателю максимально удобные и вкусные продукты питания. Российским первопроходцем в этом деле стала Торгово-промышленная компания «Вилон». Она, пожалуй, первой предложила отечественному покупателю новый формат культуры потребления: готовые натуральные замороженные первые и вторые блюда и закуски в удобных однопорционных лотках. Потребители это оценили. Больше никаких многочасовых хлопот на кухне, чтобы собрать контейнер с едой на работу, никаких ожиданий бизнес-ланча и ффовых потерь в кафе и ресторанах. Все уже приготовлено и готово к доставке прямо в офис!
+          p.blog__text Из внушительного ассортимента, который выпускает «Вилон», можно составить полноценный рацион на целый день. Например, не успели позавтракать дома – попробуйте творожную запеканку, пообедать можно вкусным Борщом и Шницелем с картофельным пюре под красным соусом. Весь набор блюд обойдется в 240 рублей. При этом никакой вредной пищи – ингредиенты и рецептура блюд не отличаются от еды домашнего или ресторанного приготовления. Разница лишь в том, что для удобства транспортировки, хранения и потребления блюда сразу после приготовления и упаковки, еще горячие, отправляются в камеры шоковой заморозки. Все полезные вещества – на месте, вкус – на высоте!
+          p.blog__text Готовые замороженные блюда от «Вилон», выпускаемые под торговыми марками «Сытоедов», «Добрые съести», «Чебуречье» и «Обожамс!» представлены во многих магазинах и во всех федеральных сетях. А если нет времени на поход в магазин, можно воспользоваться услугами Интернет-магазина «Вилон».
+          p.blog__text Приятного аппетита!
+        .blog__info
+          .blog__info-statistics
+            time(datetime="01.02.2020").blog__info-day 01.02.2020
+            span.blog__info-statistic
+              +icon('eye', 'blog__info-icon')
+              span 1025
+            span.blog__info-statistic.js-like
+              +icon('like', 'blog__info-icon')
+              span 1025
+          .blog__socials
+            span.blog__socials-text Поделиться:
+            a(href="#").blog__socials-link
+              img(data-src="static/images/common/vk.svg").blog__socials-icon.lazy
+            a(href="#").blog__socials-link
+              img(data-src="static/images/common/facebook.svg").blog__socials-icon.lazy
+            a(href="#").blog__socials-link
+              img(data-src="static/images/common/ok.svg").blog__socials-icon.lazy
+            a(href="#").blog__socials-link
+              img(data-src="static/images/common/email.svg").blog__socials-icon.lazy
+            a(href="#").blog__socials-link
+              img(data-src="static/images/common/twitter.svg").blog__socials-icon.lazy

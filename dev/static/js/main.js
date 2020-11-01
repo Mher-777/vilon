@@ -420,6 +420,38 @@ $(function () {
             $(this).next().slideToggle()
         })
     }
+    const faqAccordion = () => {
+        const btn = $('.faq__item-title')
+        const content = $('.faq__item-content')
+        btn.on('click',function () {
+            btn.siblings(content).slideUp(300);
+            if ($(this).siblings(content).is(':visible') === true) {
+                btn.parent().removeClass('faq__item--active');
+            }
+            if ($(this).siblings(content).is(':hidden') === true) {
+                $(this).siblings(content).slideDown(300);
+                btn.parent().removeClass('faq__item--active');
+                $(this).parent().addClass('faq__item--active');
+            }
+        });
+    }
+    faqAccordion()
+    const deliveryAccordion = () => {
+        const btn = $('.delivery__accordion-title')
+        const content = $('.delivery__accordion-content')
+        btn.on('click',function () {
+            btn.siblings(content).slideUp(300);
+            if ($(this).siblings(content).is(':visible') === true) {
+                btn.parent().removeClass('delivery__accordion-item--active');
+            }
+            if ($(this).siblings(content).is(':hidden') === true) {
+                $(this).siblings(content).slideDown(300);
+                btn.parent().removeClass('delivery__accordion-item--active');
+                $(this).parent().addClass('delivery__accordion-item--active');
+            }
+        });
+    }
+    deliveryAccordion()
     const tabs = () => {
         const elem = $('.catalog__tab')
         const content = $('.catalog__content')

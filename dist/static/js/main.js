@@ -421,6 +421,46 @@ $(function () {
     });
   };
 
+  var faqAccordion = function faqAccordion() {
+    var btn = $('.faq__item-title');
+    var content = $('.faq__item-content');
+    btn.on('click', function () {
+      btn.siblings(content).slideUp(300);
+
+      if ($(this).siblings(content).is(':visible') === true) {
+        btn.parent().removeClass('faq__item--active');
+      }
+
+      if ($(this).siblings(content).is(':hidden') === true) {
+        $(this).siblings(content).slideDown(300);
+        btn.parent().removeClass('faq__item--active');
+        $(this).parent().addClass('faq__item--active');
+      }
+    });
+  };
+
+  faqAccordion();
+
+  var deliveryAccordion = function deliveryAccordion() {
+    var btn = $('.delivery__accordion-title');
+    var content = $('.delivery__accordion-content');
+    btn.on('click', function () {
+      btn.siblings(content).slideUp(300);
+
+      if ($(this).siblings(content).is(':visible') === true) {
+        btn.parent().removeClass('delivery__accordion-item--active');
+      }
+
+      if ($(this).siblings(content).is(':hidden') === true) {
+        $(this).siblings(content).slideDown(300);
+        btn.parent().removeClass('delivery__accordion-item--active');
+        $(this).parent().addClass('delivery__accordion-item--active');
+      }
+    });
+  };
+
+  deliveryAccordion();
+
   var tabs = function tabs() {
     var elem = $('.catalog__tab');
     var content = $('.catalog__content');

@@ -1,0 +1,369 @@
+extends layout/main-page
+
+block variables
+    -var title = 'Вопрос / ответ'
+
+block header
+  header.header
+    .header__top
+      .container
+        .header__inner
+          .header__info
+            .logo(data-da="header__menu, 1, 500")
+              a(href="index.html").logo__link
+                img(src="static/images/common/logo.svg" alt="логотип").logo__image
+            .header__icons
+              a(href="tel:+74952239749").header__icons-link
+                +icon('phone', 'header__icon')
+                span.header__item-text +7 (495) 223-97-49
+              a(href="mailto:info@vilon.ru").header__icons-link
+                +icon('email', 'header__icon')
+                span.header__item-text info@vilon.ru
+          form(action="#").header__search
+            input(type="text" placeholder="Поиск" required).header__search-input.input
+            button(type="submit").header__search-btn
+              +icon('search', 'header__search-icon')
+          .header__request(data-da="header__menu, 1, 500")
+            .header__request-icons
+              a(href="#").header__request-link
+                span.header__request-box(data-count="2").header__request-box--number
+                  +icon('heart', 'header__request-icon')
+              a(href="#" ).header__request-link
+                span.header__request-box(data-count="2").header__request-box--number
+                  +icon('basket', 'header__request-icon')
+                span.header__request-text 10,500 р
+              a(href="#").header__request-link.header__request-link--size-small
+                span.header__request-box
+                  +icon('user', 'header__request-icon')
+                span.header__request-text Вход
+            a(href="#" data-da="header__menu-list, last, 500").btn.btn--color-black.btn--bg-yellow.header__btn ОСТАВИТЬ ЗАЯВКУ
+    .header__bottom.header__bottom--shadow
+      .container
+        nav.header__menu
+          button(type="button").hamburger.hamburger--spring
+            span.hamburger-box
+              span.hamburger-inner
+          ul.header__menu-list
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="about.html").header__menu-link О компании
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="history.html").header__dropdown-link История
+                li.header__dropdown-item
+                  a(href="news.html").header__dropdown-link Новости
+                li.header__dropdown-item
+                  a(href="production.html").header__dropdown-link Производство
+                li.header__dropdown-item
+                  a(href="quality.html").header__dropdown-link Качество
+                li.header__dropdown-item
+                  a(href="awards.html").header__dropdown-link Наши награды
+                li.header__dropdown-item
+                  a(href="works.html").header__dropdown-link Вакансии
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="cooperation.html").header__menu-link Сотрудничество
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="horeca.html").header__dropdown-link Horeca
+                li.header__dropdown-item
+                  a(href="suppliers.html").header__dropdown-link Поставщикам
+                li.header__dropdown-item
+                  a(href="distributors.html").header__dropdown-link Дистрибьютерам
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Вендинговые аппараты
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="brands.html").header__menu-link Бренды
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="brands-view.html").header__dropdown-link Сытоедов
+                li.header__dropdown-item
+                  a(href="brands-view.html").header__dropdown-link Обожамс!
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Чебуречье
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Street Food
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Balansika
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Snack Bomb
+            li.header__menu-item
+              a(href="catalog.html").header__menu-link Магазин
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Завтраки
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Первые блюда
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Вторые блюда
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Постные блюда
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Жюльены
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Выпечка
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Снеки и чебуреки
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Полуфабрикаты
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Готовые рационы
+            li.header__menu-item.header__menu-item--dropdown.header__menu-item--current
+              a(href="buyers.html").header__menu-link Покупателям
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="stores.html").header__dropdown-link Где купить
+                li.header__dropdown-item
+                  a(href="order-steps.html").header__dropdown-link Как заказать
+                li.header__dropdown-item
+                  a(href="stock.html").header__dropdown-link Акции
+                li.header__dropdown-item
+                  a(href="faq.html").header__dropdown-link Вопрос / ответ
+                li.header__dropdown-item
+                  a(href="delivery.html").header__dropdown-link Доставка / оплата
+                li.header__dropdown-item
+                  a(href="warranty.html").header__dropdown-link Возврат товара
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Образцы документов
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="vilon-life.html").header__menu-link Vilon Life
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="fact-1.html").header__dropdown-link Кулинарная школа
+                li.header__dropdown-item
+                  a(href="fact-2.html").header__dropdown-link Интересно про еду
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Правильное питание
+            li.header__menu-item
+              a(href="contacts.html").header__menu-link Контакты
+    .header__submenu
+      .container
+        .header__submenu-inner
+          a(href="#").header__submenu-link Где купить
+          a(href="#").header__submenu-link Как заказать
+          a(href="#").header__submenu-link Акции
+          a(href="#").header__submenu-link.header__submenu-link--current Вопрос / ответ
+          a(href="#").header__submenu-link Доставка / оплата
+          a(href="#").header__submenu-link Возврат товара
+          a(href="#").header__submenu-link Образцы документов
+block breadcrumbs
+  .breadcrumbs
+    .container
+      .breadcrumbs__inner
+        a(href="index.html").breadcrumbs__link Главная
+        a(href="#").breadcrumbs__link Покупателям
+        a(href="#").breadcrumbs__link Вопрос / ответ
+block content
+  section.faq
+    .container
+      .faq__wrapper
+        h2.faq__title.title ЧАСТЫЕ ВОПРОСЫ
+        .faq__items
+          .faq__item
+            h3.faq__item-title У вас собственное производство?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Наше производство состоит из 2 производственных площадок:
+              p.faq__item-text ПЛОЩАДКА 1. МО, г. Щелково, ул. Поварская, вл. 1. Производство готовых первых и вторых блюд.
+              p.faq__item-text ПЛОЩАДКА 2. МО, г. Щелково, ул. Фабричная, д. 1. Производство чебуреков, снековой продукции, полуфабрикатов.
+          .faq__item
+            h3.faq__item-title Весь товар в наличии?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Все блюда всегда в наличии на нашем складе. При оформлении заказа, в случае отсутствия нужной позиции, менеджер может предложить замену блюда.
+          .faq__item
+            h3.faq__item-title Какой размер порций?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Размер каждой порции готовых блюд расчитан в соответствии с рекомендациями по употреблению среднесуточной нормы каллорий.
+              p.faq__item-text Первые блюда: 300 гр (лоток), 250 гр (стакан)
+              p.faq__item-text Вторые блюда: 250-400 гр (в зависимости от блюда)
+              p.faq__item-text Чебуреки: 125 гр
+              p.faq__item-text Снековая продукция: 160-320 гр (в зависимости от упаковки)
+          .faq__item
+            h3.faq__item-title Сколько каллорий в 1 порции?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Наши готовые блюда имеют средний оптимальный размер однократной порции еды и калорийность суточного рациона питания.
+          .faq__item
+            h3.faq__item-title Можно купить товар поштучно в интернет-магазине?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text В нашем интернет-магазине вы можете купить товар оптом или в розницу (поштучно). Минимальная сумма заказа в интернет-магазине 1500 р.
+          .faq__item
+            h3.faq__item-title Где купить вашу продукцию?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Нашу продукцию вы можете купить в нашем интернет-магазине (гиперссылка https://www.vilon.ru/catalog/), а так же в сетевых или розничных магазинах. Подробнее о местах продаж здесь. (гиперссылка в новый раздел Покупателям - Где купить)
+          .faq__item
+            h3.faq__item-title Где купить вашу продукцию в Санкт-Петербурге?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Купить нашу продукцию в Санкт-Петербурге вы можете в сетевых или розничных магазинах. Подробнее здесь. (гиперссылка в новый раздел Покупателям - Где купить)
+              p.faq__item-text На сайте Сытоедов.рф (гиперссылка на сытоедов.рф) вы можете заказать готовые рационы питания.
+              p.faq__item-text Доставка в Санкт-Петербург производится в понедельник и четверг. Точный день доставки согласовывается с менеджером. Время доставки: 10:00-20:00 часов. Курьер предварительно позвонит в день доставки и согласует точное время.
+          .faq__item
+            h3.faq__item-title Как сделать заказ?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Заказать продукцию можно одним из перечисленных способов:
+              p.faq__item-text - На сайте через интернет-магазин (ссылка https://www.vilon.ru/catalog/). Положите нужные товары в корзину, пройдите процедуру оформления заказа, выберите нужный способ оплаты (наличными курьеру, онлайн оплата банковской картой, перевод на расчетный счет организации). После оформления заказа с вами свяжется наш менеджер, чтобы подтвердить заказ уточнить информацию о доставке.
+              p.faq__item-text - С помощью менеджера по телефону +7 (495) 223-97-49
+              p.faq__item-text Отдел продаж: доб.тел.: 290, 183, 235, 204, эл. почта: zakaz@vilon.ru
+          .faq__item
+            h3.faq__item-title Как узнать статус заказа?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Статус заказа вы можете увидеть в своем личном кабинете. Получить детальную информацию по заказу можно у операторов:
+              p.faq__item-text Отдел продаж:
+              p.faq__item-text +7 (495) 223-97-49, доб.тел.: 290, 183, 235, 204 эл. почта: zakaz@vilon.ru
+          .faq__item
+            h3.faq__item-title Есть ли скидки при больших заказах?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Скидка 10% действует при заказе от 10.000 руб.
+          .faq__item
+            h3.faq__item-title Возможные способы оплаты?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Наличный расчет:
+              p.faq__item-text При получении заказ оплачивается водителю наличными. Если Вам необходима будет сдача, укажите это при оформлении заказа в комментариях или оператору по телефону.
+              p.faq__item-text Безналичный расчет:
+              p.faq__item-text Действует только для юридических лиц и производится путем перевода денежных средств на расчетный счет организации.
+              p.faq__item-text Оплата банковской картой:
+              p.faq__item-text После оформления заказа через интернет-магазин и его подтверждения менеджером, Вы можете оплатить заказ через личный кабинет.
+          .faq__item
+            h3.faq__item-title Работаете с НДС или без НДС?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Мы работаем по системе общего налогобложения (с НДС).
+          .faq__item
+            h3.faq__item-title Если сделаю заказ прямо сейчас, то когда его получу?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Доставка по Москве и ближнему Подмосковью:
+              p.faq__item-text ЗАКАЗ до 17:30 - доставка на следующий день.
+              p.faq__item-text ЗАКАЗ после 17:30 - доставка через 1 день.
+              p.faq__item-text Доставка в другие города:
+              p.faq__item-text ПН - Дмитров, Дубна, Сергиев-Посад, Владимирская обл., Хотьково
+              p.faq__item-text ВТ - Тверь, Клин, Солнечногорск
+              p.faq__item-text СР - Орехово-Зуево, Павловский-Посад, Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+              p.faq__item-text ЧТ - Климовск, Подольск, Кашира, Домодедово, Чехов, Серпухов, Ступино, Протвино, Пущино
+              p.faq__item-text ПТ - Коломна, Озеры, Воскресенск, Луховицы, Егорьевск, Зарайск
+              p.faq__item-text СБ - Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+              p.faq__item-text ВС - Климовск, Подольск, Кашира, Домодедово, Чехов, Ярославль, Ступино, Протвино, Пущино
+              p.faq__item-text Доставка производится с 09.00 до 18.00 часов ежедневно. В день доставки водитель за 1 час до приезда позвонит, согласует точное время.
+              p.faq__item-text Все заказы доставляются силами собственной логической службы в специальных машинах, оборудованных изотермическим кузовом, позволяющих поддерживать необходимый температурный режим для замороженной продукции.
+          .faq__item
+            h3.faq__item-title Сколько стоит доставка?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Стоимость доставки — от 300 до 1500 р. (в зависимости от зоны доставки, указанной на карте (гиперссылка в раздел Доставка и оплата)).
+              p.faq__item-text Бесплатная доставка при заказе на сумму от 2.500 руб.
+          .faq__item
+            h3.faq__item-title Какие документы вы предоставляете по факту получения товара?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text При получении к заказу прилагаются товарный и кассовый чеки. Если Вам необходимы дополнительные документы, их необходимо запросить при оформлении заказа в онлайн-магазине, сделав пометку в графе «Комментарий к заказу».
+          .faq__item
+            h3.faq__item-title Есть ли доставка в выходные?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Доставка производится с 09.00 до 18.00 часов ежедневно. В день доставки водитель за 1 час до приезда позвонит, согласует точное время.
+              p.faq__item-text Все заказы доставляются силами собственной логической службы в специальных машинах, оборудованных изотермическим кузовом, позволяющих поддерживать необходимый температурный режим для замороженной продукции.
+          .faq__item
+            h3.faq__item-title Доставка в Санкт-Петербург
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text В Санкт-Петербурге вы можете заказать готовые рационы питания от нашей ТМ "Сытоедов" (гиперссылка на сытоедов.рф). Информацию о доставке в другие города Вы можете посмотреть в нашем разделе “Доставка” (гиперссылка Покупателям - Доставка и оплата).
+          .faq__item
+            h3.faq__item-title В какие города вы доставляете?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text ПН - Дмитров, Дубна, Сергиев-Посад, Владимирская обл., Хотьково
+              p.faq__item-text ВТ - Тверь, Клин, Солнечногорск
+              p.faq__item-text СР - Орехово-Зуево, Павловский-Посад, Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+              p.faq__item-text ЧТ - Климовск, Подольск, Кашира, Домодедово, Чехов, Серпухов, Ступино, Протвино, Пущино
+              p.faq__item-text ПТ - Коломна, Озеры, Воскресенск, Луховицы, Егорьевск, Зарайск
+              p.faq__item-text СБ - Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+              p.faq__item-text ВС - Климовск, Подольск, Кашира, Домодедово, Чехов, Ярославль, Ступино, Протвино, Пущино
+              p.faq__item-text Доставка производится с 09.00 до 18.00 часов. В день доставки водитель за 1 час до приезда позвонит, согласует точное время.
+              p.faq__item-text Все заказы доставляются силами собственной логической службы в специальных машинах, оборудованных изотермическим кузовом, позволяющих поддерживать необходимый температурный режим для замороженной продукции.
+          .faq__item
+            h3.faq__item-title Как доставляются замороженные блюда?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Все заказы доставляются в специальных машинах, оборудованных изотермическим кузовом, позволяющих поддерживать необходимый температурный режим для замороженной продукции. Доставка произодится силами собственной логической службы с автопарком более 40 автомобилей.
+          .faq__item
+            h3.faq__item-title Как оформить возврат?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Покупатель вправе отказаться от заказанного товара в любое время до его получения.
+              p.faq__item-text Возврат товара надлежащего качества законодательно невозможен в соответствии с Законом РФ "О защите прав потребителей".
+              p.faq__item-text Покупатель обязан проверить внешний вид товара, целостность упаковки и срок годности товара. В случае возврата товара ненадлежащего качества в зависимости от желания Покупателя товар ненадлежащего качества может быть возвращен. В случае полного возврата заказанного товара доставка не оплачивается, частичного возврата – доставка оплачивается в полном объеме.
+              p.faq__item-text Под товаром ненадлежащего качества подразумевается товар с истекшим сроком годности, нарушенной упаковкой и требованиям, установленным действующим законодательством Российской Федерации для данных видов товаров.
+              p.faq__item-text Внешний вид и комплектность товара, а также комплектность всего заказа должны быть проверены получателем в момент доставки товара. После получения заказа претензии к внешним дефектам товара, его количеству, комплектности и товарному виду, сроку годности не принимаются.
+              p.faq__item-text Если Вам был передан товар ненадлежащего качества, и оно не было заранее оговорено продавцом, Вы вправе воспользоваться положениями ст. 18 Закона РФ "О защите прав потребителей".
+              p.faq__item-text В связи с особенностями дистанционного способа продажи, замена товара может быть выполнена только посредством возврата товара ненадлежащего качества в момент доставки и оформления нового заказа на аналогичный товар.
+              p.faq__item-text В случае обнаружения фактов ненадлежащего качества товара Покупатель вправе предъявить претензию Интернет-магазину. Претензия должна быть предъявлена Покупателем в письменной форме посредством заполнения заявления на сайте либо предварительного письменного направления претензии менеджеру интернет-магазина на почтовый адрес: 141102, Московская обл., Щелковский район, г. Щелково, ул. Поварская, вл. 1.
+              p.faq__item-text Отдел продаж:
+              p.faq__item-text +7 (495) 223-97-49, доб.тел.: 290, 183, 235, 204 эл. почта: zakaz@vilon.ru
+          .faq__item
+            h3.faq__item-title Как разогреть блюдо?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Готовые блюда разогревают в микроволновой печи. На упаковке каждого товара указаны рекомендации по разогреву. ПФ
+          .faq__item
+            h3.faq__item-title Какой срок годности замороженных блюд?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Срок годности готовых замороженных блюд составляет 180 суток. Продукцию следует хранить в морозильной камере.
+          .faq__item
+            h3.faq__item-title Можно ли заморозить повторно?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Повторное замораживание не допустимо, в виду сохранения вкусовых и качественных показателей готового блюда.
+          .faq__item
+            h3.faq__item-title Сколько консервантов в замороженных блюдах?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Технология шоковой заморозки способствует сохранению блюда в первоначальном виде, не нарушая вкусовых качеств. Глубокая заморозка дает возможность сохранить готовые блюда без использования консервантов.
+          .faq__item
+            h3.faq__item-title Полуфабрикаты для HoReCa
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Для сегмента HoReCa в нашем ассортименте вы найдете: готовые супы и бульоны, комплексные вторые блюда, гарниры и мясные полуфабрикаты, хлебобулочные и снековые изделия, а также многое другое. Вся продукция имеет разную фасовку и упаковку. Скачать прайс можно здесь (гиперссылка на сотрудничество - HoReCa).
+              p.faq__item-text Получить консультацию в отделе продаж:
+              p.faq__item-text +7 (495) 223-97-49, доб.тел.: 290, 183, 235, 204 эл. почта: zakaz@vilon.ru
+          .faq__item
+            h3.faq__item-title Я забыл логин или пароль.
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Для восстановления данных вашей учетной записи нажмите значок "Личный кабинет". В открывшейся форме входа нажмите "Восстановить пароль", далее следуйте подсказкам системы.
+          .faq__item
+            h3.faq__item-title Не получается войти на сайт.
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Если у вас не получается войти в свой личный кабинет, проверьте правильность введенных данных.
+              p.faq__item-text Для помощи в решении проблемы обратитесь в тех.поддержку:
+              p.faq__item-text +7 (495) 223-97-49, доб.тел.: 144, эл. почта: yeremina@vilon.ru
+          .faq__item
+            h3.faq__item-title Как оставить отзыв?
+              +icon('arrow-down', 'faq__item-icon')
+            .faq__item-content
+              p.faq__item-text Предложения и замечания вы можете написать нам через форму заявки на сайте или оператору на электронную почту: zakaz@vilon.ru
+          .info-block
+            h2.info-block__title.title ПОМОЩЬ ПОКУПАТЕЛЮ
+            p.info-block__text Мы ценим наших покупателей и их драгоценное время!
+            p.info-block__text Если вы не нашли ответ на интересующий Вас вопрос, свяжитесь с нами:
+            p.info-block__text.info-block__text--margin Тел.: 8 (495) 223-97-49
+            p.info-block__text Эл. почта: info@vilon.ru
+            p.info-block__text.info-block__text--margin Мы рады помочь вам в решении любых вопросов, которые могут возникнуть в процессе нашего сотрудничества.
+            a(href="#").info-block__link.info-block__link--margin.btn.btn--bg-yellow.btn--color-black
+              +icon('spoon', 'btn-icon')
+              | НАДОЕЛО ГОТОВИТЬ? <br> ЖМИ!
+              +icon('fork', 'btn-icon')

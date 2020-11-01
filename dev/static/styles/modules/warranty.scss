@@ -1,0 +1,24 @@
+.warranty {
+  padding-bottom: 30px;
+  &__content {
+    padding-left: 40px;
+    color: #6f6f6f;
+  }
+  &__title {
+    margin-bottom: 5px;
+  }
+  &__text {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 772px) {
+  .warranty__content {
+    padding-left: 0;
+  }
+}
+@media (max-width: 772px) {
+  .warranty__text {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
