@@ -162,15 +162,15 @@ block content
     .container
       .delivery__info
         .delivery__info-col
-          h2.delivery__title МКАД + 15 км
-          span.delivery__subtitle минимальный заказ 1500 р.
+          h2.delivery__title.title МКАД + 15 км
+          span.delivery__subtitle минимальный заказ 1500&nbsp;р.
           h2.delivery__title.title МКАД + 50 км
-          span.delivery__subtitle минимальный заказ 2500 р.
+          span.delivery__subtitle минимальный заказ 2500&nbsp;р.
         .delivery__info-col.delivery__info-col--center
           h2.delivery__title.delivery__title--icon.delivery__title--weight-black.delivery__title--color-japonica БЕСПЛАТНАЯ <br> ДОСТАВКА
-          span.delivery__subtitle при заказе от <strong>2500</strong> р.
+          span.delivery__subtitle при заказе от <strong>2500</strong>&nbsp;р.
         .delivery__info-col
-          h2.delivery__title ЗАКАЗ до 17:30
+          h2.delivery__title.title ЗАКАЗ до 17:30
           span.delivery__subtitle доставка на следующий день
           h2.delivery__title.title ЗАКАЗ после 17:30
           span.delivery__subtitle доставка через 1 день
@@ -185,10 +185,47 @@ block content
         h3.delivery__content-title.title ДОСТАВКА
         ul.delivery__content-items
           li.delivery__content-item • Доставка производится ежедневно с 09.00 до 18.00  ов. В день доставки водитель за 1 час до приезда позвонит, согласует точное время.
-          li.delivery__content-item • Стоимость доставки — от 300 до 1500 р. (в завиит зоны доставки, указанной на карте).
+          li.delivery__content-item • Стоимость доставки — от 300 до 1500&nbsp;р. (в завиит зоны доставки, указанной на карте).
           li.delivery__content-item • Если есть ограничения на  ъезд во двор или на прилегающую парковку, сообщите об этом в комментарии к заказу.
           li.delivery__content-item • Все заказы доставляются силами собственной логической службы в специальных машинаххудованных изотермическим кузовом, позволяющих поддерживать необходимый температурный режим для замороженной продукции.
-
+      .delivery__map
+        .delivery__map-content
+          .delivery__map-row
+            .delivery__map-col
+              h3.delivery__title 1 ЗОНА
+              span.delivery__subtitle доставка 300&nbsp;р.
+            .delivery__map-col
+              h3.delivery__title 3 ЗОНА
+              span.delivery__subtitle доставка 400&nbsp;р.
+            .delivery__map-col
+              h3.delivery__title 2 ЗОНА
+              span.delivery__subtitle доставка 350&nbsp;р.
+            .delivery__map-col
+              h3.delivery__title 4 ЗОНА
+              span.delivery__subtitle доставка 1500&nbsp;р.
+          ul.delivery__map-items
+            li.delivery__map-item
+              strong.delivery__map-text.delivery__map-text--wieght-black ПН
+              span.delivery__map-text Дмитров, Дубна, Сергиев-Посад, Владдая обл., Хотьково
+            li.delivery__map-item
+              strong.delivery__map-text.delivery__map-text--wieght-black ВТ
+              span.delivery__map-text Тверь, Клин, Солнечногорск
+            li.delivery__map-item
+              strong.delivery__map-text.delivery__map-text--wieght-black СР
+              span.delivery__map-text Орехово-Зуево, Павловский-Посад, Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+            li.delivery__map-item
+              strong.delivery__map-text.delivery__map-text--wieght-black ЧТ
+              span.delivery__map-text Климовск, Подольск, Кашира, Домодедово, Чехов, Серпухов, Ступино, Протвино, Пущино
+            li.delivery__map-item
+              strong.delivery__map-text.delivery__map-text--wieght-black ПТ
+              span.delivery__map-text Коломна, Озеры, Воскресенск, Луховицы, Егорьевск, Зарайск
+            li.delivery__map-item
+              strong.delivery__map-text.delivery__map-text--wieght-black СБ
+              span.delivery__map-text Одинцово, Наро-Фоминск, Кубинка, Истра, Дедовск, Ликино-Дулево, Троицк, Звенигород
+            li.delivery__map-item
+              strong.delivery__map-text.delivery__map-text--wieght-black ВС
+              span.delivery__map-text Климовск, Подольск, Кашира, Домодедово, Чехов, Ярославль, Ступино, Протвино, Пущино
+        .delivery__map-bg(style="background-image: url(static/images/content/delivery/delivery-map.jpg)")
       .delivery__content
         h3.delivery__content-title.title ОПЛАТА
         span.delivery__content-subtitle Возможные способы оплаты:
