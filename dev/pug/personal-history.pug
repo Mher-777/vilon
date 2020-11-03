@@ -1,0 +1,484 @@
+extends layout/main-page
+
+block variables
+    -var title = 'ИСТОРИЯ ЗАКАЗОВ'
+
+block header
+  header.header
+    .header__top
+      .container
+        .header__inner
+          .header__info
+            .logo(data-da="header__menu, 1, 500")
+              a(href="index.html").logo__link
+                img(src="static/images/common/logo.svg" alt="логотип").logo__image
+            .header__icons
+              a(href="tel:+74952239749").header__icons-link
+                +icon('phone', 'header__icon')
+                span.header__item-text +7 (495) 223-97-49
+              a(href="mailto:info@vilon.ru").header__icons-link
+                +icon('email', 'header__icon')
+                span.header__item-text info@vilon.ru
+          form(action="#").header__search
+            input(type="text" placeholder="Поиск" required).header__search-input.input
+            button(type="submit").header__search-btn
+              +icon('search', 'header__search-icon')
+          .header__request(data-da="header__menu, 1, 500")
+            .header__request-icons
+              a(href="favorites.html").header__request-link
+                span.header__request-box(data-count="2").header__request-box--number
+                  +icon('heart', 'header__request-icon')
+              a(href="#" ).header__request-link
+                span.header__request-box(data-count="2").header__request-box--number
+                  +icon('basket', 'header__request-icon')
+                span.header__request-text 10,500 р
+              a(href="#").header__request-link.header__request-link--size-small
+                span.header__request-box
+                  +icon('user', 'header__request-icon')
+                span.header__request-text Вход
+            a(href="#" data-da="header__menu-list, last, 500").btn.btn--color-black.btn--bg-yellow.header__btn ОСТАВИТЬ ЗАЯВКУ
+    .header__bottom.header__bottom--shadow
+      .container
+        nav.header__menu
+          button(type="button").hamburger.hamburger--spring
+            span.hamburger-box
+              span.hamburger-inner
+          ul.header__menu-list
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="about.html").header__menu-link О компании
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="history.html").header__dropdown-link История
+                li.header__dropdown-item
+                  a(href="news.html").header__dropdown-link Новости
+                li.header__dropdown-item
+                  a(href="production.html").header__dropdown-link Производство
+                li.header__dropdown-item
+                  a(href="quality.html").header__dropdown-link Качество
+                li.header__dropdown-item
+                  a(href="awards.html").header__dropdown-link Наши награды
+                li.header__dropdown-item
+                  a(href="works.html").header__dropdown-link Вакансии
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="cooperation.html").header__menu-link Сотрудничество
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="horeca.html").header__dropdown-link Horeca
+                li.header__dropdown-item
+                  a(href="suppliers.html").header__dropdown-link Поставщикам
+                li.header__dropdown-item
+                  a(href="distributors.html").header__dropdown-link Дистрибьютерам
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Вендинговые аппараты
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="brands.html").header__menu-link Бренды
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="brands-view.html").header__dropdown-link Сытоедов
+                li.header__dropdown-item
+                  a(href="brands-view.html").header__dropdown-link Обожамс!
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Чебуречье
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Street Food
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Balansika
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Snack Bomb
+            li.header__menu-item
+              a(href="catalog.html").header__menu-link Магазин
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Завтраки
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Первые блюда
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Вторые блюда
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Постные блюда
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Жюльены
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Выпечка
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Снеки и чебуреки
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Полуфабрикаты
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Готовые рационы
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="buyers.html").header__menu-link Покупателям
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="stores.html").header__dropdown-link Где купить
+                li.header__dropdown-item
+                  a(href="order-steps.html").header__dropdown-link Как заказать
+                li.header__dropdown-item
+                  a(href="stock.html").header__dropdown-link Акции
+                li.header__dropdown-item
+                  a(href="faq.html").header__dropdown-link Вопрос / ответ
+                li.header__dropdown-item
+                  a(href="delivery.html").header__dropdown-link Доставка / оплата
+                li.header__dropdown-item
+                  a(href="warranty.html").header__dropdown-link Возврат товара
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Образцы документов
+            li.header__menu-item.header__menu-item--dropdown
+              a(href="vilon-life.html").header__menu-link Vilon Life
+              +icon('arrow-down', 'header__menu-icon')
+              ul.header__dropdown
+                li.header__dropdown-item
+                  a(href="fact-1.html").header__dropdown-link Кулинарная школа
+                li.header__dropdown-item
+                  a(href="fact-2.html").header__dropdown-link Интересно про еду
+                li.header__dropdown-item
+                  a(href="#").header__dropdown-link Правильное питание
+            li.header__menu-item
+              a(href="contacts.html").header__menu-link Контакты
+block breadcrumbs
+  .breadcrumbs.breadcrumbs--padding.breadcrumbs--margin
+    .container
+      .breadcrumbs__inner
+        a(href="index.html").breadcrumbs__link Главная
+        a(href="personal.html").breadcrumbs__link Личный кабинет
+        a(href="personal-history.html").breadcrumbs__link История заказов
+block content
+  section.orders-history
+    .container
+      .orders-history__inner
+        h2.orders-history__title.title ИСТОРИЯ ЗАКАЗОВ
+        .orders-history__item
+          .orders-history__item-top
+            .orders-history__item-head
+              h3.orders-history__item-title VLN-000000265
+                a(href="#" download).orders-history__item-save
+                  +icon('save')
+              span.orders-history__item-status Ожидает оплаты
+              +icon('arrow-down', 'orders-history__item-icon')
+            .orders-history__item-info
+              span.orders-history__item-price 2400 р
+              time(datetime="1 августа 2020").orders-history__item-day 1 августа 2020
+          .orders-history__content
+            .order
+              table.order__table
+                thead.order__head
+                  tr.order__head-row
+                    td.order__head-col.order__head-col--padding
+                      span.order__head-title Товар
+                    td.order__head-col.order__head-col--align-center
+                      span.order__head-title Количество
+                    td.order__head-col.order__head-col--align-center
+                      span.order__head-title Розничная цена
+                    td.order__head-col.order__head-col--align-right
+                      span.order__head-title Сумма
+                tbody.order__body
+                  tr.order__body-row
+                    td.order__body-col.order__body-col--align-left
+                      .order__item
+                        a(href="#" style="background-image: url(static/images/common/example-1.jpg)").order__item-image
+                        .order__item-info
+                          a(href="#").order__body-title СУП-ЛАПША ДОМАШНЯЯ С КУРИЦЕЙ
+                          p.order__item-text
+                            span 350 гр.
+                            span 150 Ккал
+                            span Артикул: 123
+                    td.order__body-col
+                      .counter.order__counter
+                        input(value="2" disabled).counter__input.counter__input--width
+                    td.order__body-col
+                      span.order__price 120 р
+                    td.order__body-col.order__body-col--align-right
+                      span.order__price.order__price--weight-bold 240 р
+                  tr.order__body-row
+                    td.order__body-col.order__body-col--align-left
+                      .order__item
+                        a(href="#" style="background-image: url(static/images/common/example-1.jpg)").order__item-image
+                        .order__item-info
+                          a(href="#").order__body-title БОРЩ ЧЕРНИГОВСКИЙ
+                          p.order__item-text
+                            span 350 гр.
+                            span 150 Ккал
+                            span Артикул: 123
+                    td.order__body-col
+                      .counter.order__counter
+                        input(value="1" disabled).counter__input.counter__input--width
+                    td.order__body-col
+                      span.order__price 120 р
+                    td.order__body-col.order__body-col--align-right
+                      span.order__price.order__price--weight-bold 120 р
+                  tr.order__body-row
+                    td.order__body-col.order__body-col--align-left
+                      .order__item
+                        a(href="#" style="background-image: url(static/images/common/example-1.jpg)").order__item-image
+                        .order__item-info
+                          a(href="#").order__body-title СУП-ЛАПША ДОМАШНЯЯ С КУРИЦЕЙ
+                          p.order__item-text
+                            span 350 гр.
+                            span 150 Ккал
+                            span Артикул: 123
+                    td.order__body-col
+                      .counter.order__counter
+                        input(value="1" disabled).counter__input.counter__input--width
+                    td.order__body-col
+                      span.order__price 120 р
+                    td.order__body-col.order__body-col--align-right
+                      span.order__price.order__price--weight-bold 120 р
+                  tr.order__body-row
+                    td.order__body-col.order__body-col--align-left
+                      .order__item.order__item--vertical-center
+                        .order__item-image.order__item-image--empty
+                        h2.order__body-title ПЕРСОНАЛЬНАЯ СКИДКА
+                          sup ?
+                    td.order__body-col
+                    td.order__body-col
+                      span.order__price 5%
+                    td.order__body-col.order__body-col--align-right
+                      span.order__price.order__price--weight-bold.order__price--color-green 24 р
+                  tr.order__body-row
+                    td.order__body-col.order__body-col--align-left
+                      .order__item.order__item--vertical-center
+                        .order__item-image.order__item-image--empty
+                        .order__item-info
+                          h2.order__body-title ДОСТАВКА
+                          p.order__item-text г. Сергиев-Посад, ул. Первая Измайловская, д. 123, к. 1, кв. 122
+                    td.order__body-col
+                    td.order__body-col
+                    td.order__body-col.order__body-col--align-right
+                      span.order__price.order__price--weight-bold 0 р
+                  tr.order__body-row
+                    td.order__body-col.order__body-col--align-left
+                      .order__item.order__item--vertical-center
+                        .order__item-image.order__item-image--empty
+                        .order__item-info
+                          p.order__item-text.order__item-text--size-small Общая калорийность: 3300 Ккал
+                    td.order__body-col.order__body-col--align-right
+                      span.order__body-title.order__body-title--size-small Всего с доставкой:
+                    td.order__body-col
+                    td.order__body-col.order__body-col--align-right
+                      span.order__price.order__price--weight-bold 2508 р
+            p.orders-history__text Онлайн-оплата будет доступна после подтверждения заказа менеджером. Пожалуйста, ожидайте.
+        .orders-history__item
+          .orders-history__item-top
+            .orders-history__item-head
+              h3.orders-history__item-title VLN-000000265
+                a(href="#" download).orders-history__item-save
+                  +icon('save')
+              span.orders-history__item-status Отменен
+              +icon('arrow-down', 'orders-history__item-icon')
+            .orders-history__item-info
+              span.orders-history__item-price 2400 р
+              time(datetime="1 августа 2020").orders-history__item-day 1 августа 2020
+          .orders-history__content
+            .order
+              table.order__table
+                thead.order__head
+                  tr.order__head-row
+                    td.order__head-col.order__head-col--padding
+                      span.order__head-title Товар
+                    td.order__head-col.order__head-col--align-center
+                      span.order__head-title Количество
+                    td.order__head-col.order__head-col--align-center
+                      span.order__head-title Розничная цена
+                    td.order__head-col.order__head-col--align-right
+                      span.order__head-title Сумма
+                tbody.order__body
+                  tr.order__body-row
+                    td.order__body-col.order__body-col--align-left
+                      .order__item
+                        a(href="#" style="background-image: url(static/images/common/example-1.jpg)").order__item-image
+                        .order__item-info
+                          a(href="#").order__body-title СУП-ЛАПША ДОМАШНЯЯ С КУРИЦЕЙ
+                          p.order__item-text
+                            span 350 гр.
+                            span 150 Ккал
+                            span Артикул: 123
+                    td.order__body-col
+                      .counter.order__counter
+                        input(value="2" disabled).counter__input.counter__input--width
+                    td.order__body-col
+                      span.order__price 120 р
+                    td.order__body-col.order__body-col--align-right
+                      span.order__price.order__price--weight-bold 240 р
+                  tr.order__body-row
+                    td.order__body-col.order__body-col--align-left
+                      .order__item
+                        a(href="#" style="background-image: url(static/images/common/example-1.jpg)").order__item-image
+                        .order__item-info
+                          a(href="#").order__body-title БОРЩ ЧЕРНИГОВСКИЙ
+                          p.order__item-text
+                            span 350 гр.
+                            span 150 Ккал
+                            span Артикул: 123
+                    td.order__body-col
+                      .counter.order__counter
+                        input(value="1" disabled).counter__input.counter__input--width
+                    td.order__body-col
+                      span.order__price 120 р
+                    td.order__body-col.order__body-col--align-right
+                      span.order__price.order__price--weight-bold 120 р
+                  tr.order__body-row
+                    td.order__body-col.order__body-col--align-left
+                      .order__item
+                        a(href="#" style="background-image: url(static/images/common/example-1.jpg)").order__item-image
+                        .order__item-info
+                          a(href="#").order__body-title СУП-ЛАПША ДОМАШНЯЯ С КУРИЦЕЙ
+                          p.order__item-text
+                            span 350 гр.
+                            span 150 Ккал
+                            span Артикул: 123
+                    td.order__body-col
+                      .counter.order__counter
+                        input(value="1" disabled).counter__input.counter__input--width
+                    td.order__body-col
+                      span.order__price 120 р
+                    td.order__body-col.order__body-col--align-right
+                      span.order__price.order__price--weight-bold 120 р
+                  tr.order__body-row
+                    td.order__body-col.order__body-col--align-left
+                      .order__item.order__item--vertical-center
+                        .order__item-image.order__item-image--empty
+                        h2.order__body-title ПЕРСОНАЛЬНАЯ СКИДКА
+                          sup ?
+                    td.order__body-col
+                    td.order__body-col
+                      span.order__price 5%
+                    td.order__body-col.order__body-col--align-right
+                      span.order__price.order__price--weight-bold.order__price--color-green 24 р
+                  tr.order__body-row
+                    td.order__body-col.order__body-col--align-left
+                      .order__item.order__item--vertical-center
+                        .order__item-image.order__item-image--empty
+                        .order__item-info
+                          h2.order__body-title ДОСТАВКА
+                          p.order__item-text г. Сергиев-Посад, ул. Первая Измайловская, д. 123, к. 1, кв. 122
+                    td.order__body-col
+                    td.order__body-col
+                    td.order__body-col.order__body-col--align-right
+                      span.order__price.order__price--weight-bold 0 р
+                  tr.order__body-row
+                    td.order__body-col.order__body-col--align-left
+                      .order__item.order__item--vertical-center
+                        .order__item-image.order__item-image--empty
+                        .order__item-info
+                          p.order__item-text.order__item-text--size-small Общая калорийность: 3300 Ккал
+                    td.order__body-col.order__body-col--align-right
+                      span.order__body-title.order__body-title--size-small Всего с доставкой:
+                    td.order__body-col
+                    td.order__body-col.order__body-col--align-right
+                      span.order__price.order__price--weight-bold 2508 р
+            p.orders-history__text Онлайн-оплата будет доступна после подтверждения заказа менеджером. Пожалуйста, ожидайте.
+        .orders-history__item
+          .orders-history__item-top
+            .orders-history__item-head
+              h3.orders-history__item-title VLN-000000265
+                a(href="#" download).orders-history__item-save
+                  +icon('save')
+              span.orders-history__item-status Доставлен
+              +icon('arrow-down', 'orders-history__item-icon')
+            .orders-history__item-info
+              span.orders-history__item-price 2400 р
+              time(datetime="1 августа 2020").orders-history__item-day 1 августа 2020
+          .orders-history__content
+            .order
+              table.order__table
+                thead.order__head
+                  tr.order__head-row
+                    td.order__head-col.order__head-col--padding
+                      span.order__head-title Товар
+                    td.order__head-col.order__head-col--align-center
+                      span.order__head-title Количество
+                    td.order__head-col.order__head-col--align-center
+                      span.order__head-title Розничная цена
+                    td.order__head-col.order__head-col--align-right
+                      span.order__head-title Сумма
+                tbody.order__body
+                  tr.order__body-row
+                    td.order__body-col.order__body-col--align-left
+                      .order__item
+                        a(href="#" style="background-image: url(static/images/common/example-1.jpg)").order__item-image
+                        .order__item-info
+                          a(href="#").order__body-title СУП-ЛАПША ДОМАШНЯЯ С КУРИЦЕЙ
+                          p.order__item-text
+                            span 350 гр.
+                            span 150 Ккал
+                            span Артикул: 123
+                    td.order__body-col
+                      .counter.order__counter
+                        input(value="2" disabled).counter__input.counter__input--width
+                    td.order__body-col
+                      span.order__price 120 р
+                    td.order__body-col.order__body-col--align-right
+                      span.order__price.order__price--weight-bold 240 р
+                  tr.order__body-row
+                    td.order__body-col.order__body-col--align-left
+                      .order__item
+                        a(href="#" style="background-image: url(static/images/common/example-1.jpg)").order__item-image
+                        .order__item-info
+                          a(href="#").order__body-title БОРЩ ЧЕРНИГОВСКИЙ
+                          p.order__item-text
+                            span 350 гр.
+                            span 150 Ккал
+                            span Артикул: 123
+                    td.order__body-col
+                      .counter.order__counter
+                        input(value="1" disabled).counter__input.counter__input--width
+                    td.order__body-col
+                      span.order__price 120 р
+                    td.order__body-col.order__body-col--align-right
+                      span.order__price.order__price--weight-bold 120 р
+                  tr.order__body-row
+                    td.order__body-col.order__body-col--align-left
+                      .order__item
+                        a(href="#" style="background-image: url(static/images/common/example-1.jpg)").order__item-image
+                        .order__item-info
+                          a(href="#").order__body-title СУП-ЛАПША ДОМАШНЯЯ С КУРИЦЕЙ
+                          p.order__item-text
+                            span 350 гр.
+                            span 150 Ккал
+                            span Артикул: 123
+                    td.order__body-col
+                      .counter.order__counter
+                        input(value="1" disabled).counter__input.counter__input--width
+                    td.order__body-col
+                      span.order__price 120 р
+                    td.order__body-col.order__body-col--align-right
+                      span.order__price.order__price--weight-bold 120 р
+                  tr.order__body-row
+                    td.order__body-col.order__body-col--align-left
+                      .order__item.order__item--vertical-center
+                        .order__item-image.order__item-image--empty
+                        h2.order__body-title ПЕРСОНАЛЬНАЯ СКИДКА
+                          sup ?
+                    td.order__body-col
+                    td.order__body-col
+                      span.order__price 5%
+                    td.order__body-col.order__body-col--align-right
+                      span.order__price.order__price--weight-bold.order__price--color-green 24 р
+                  tr.order__body-row
+                    td.order__body-col.order__body-col--align-left
+                      .order__item.order__item--vertical-center
+                        .order__item-image.order__item-image--empty
+                        .order__item-info
+                          h2.order__body-title ДОСТАВКА
+                          p.order__item-text г. Сергиев-Посад, ул. Первая Измайловская, д. 123, к. 1, кв. 122
+                    td.order__body-col
+                    td.order__body-col
+                    td.order__body-col.order__body-col--align-right
+                      span.order__price.order__price--weight-bold 0 р
+                  tr.order__body-row
+                    td.order__body-col.order__body-col--align-left
+                      .order__item.order__item--vertical-center
+                        .order__item-image.order__item-image--empty
+                        .order__item-info
+                          p.order__item-text.order__item-text--size-small Общая калорийность: 3300 Ккал
+                    td.order__body-col.order__body-col--align-right
+                      span.order__body-title.order__body-title--size-small Всего с доставкой:
+                    td.order__body-col
+                    td.order__body-col.order__body-col--align-right
+                      span.order__price.order__price--weight-bold 2508 р
+            p.orders-history__text Онлайн-оплата будет доступна после подтверждения заказа менеджером. Пожалуйста, ожидайте.

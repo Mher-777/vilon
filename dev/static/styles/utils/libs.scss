@@ -1,6 +1,7 @@
 @import "../../../../node_modules/normalize.css/normalize";
 @import "../../../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../../../node_modules/ion-rangeslider/css/ion.rangeSlider";
+@import "../../../../node_modules/select2/dist/css/select2";
 
 .jq-ry-container {
   position: relative;
@@ -936,6 +937,39 @@ body.compensate-for-scrollbar {
       right: 0px;
       top: 0px;
       background-color: #fff;
+    }
+  }
+}
+.select2 {
+  width: 100%;
+  .select2-selection.select2-selection--single {
+    height: auto;
+    border: 1px solid #9c9c9c;
+    background: transparent;
+    border-radius: 13px;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
+  }
+  span.select2-selection.select2-selection--single {
+    outline: none;
+  }
+  .select2-selection--single .select2-selection__rendered {
+    padding: 8px 15px;
+    font-size: 16px;
+    color: #000000;
+    height: 40.4px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+  }
+  &.select2-container--disabled {
+    .select2-selection--single .select2-selection__rendered  {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .select2-selection--single {
+      background: transparent;
+      box-shadow: none;
+      border: none;
     }
   }
 }

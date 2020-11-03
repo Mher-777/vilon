@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>ИСТОРИЯ ЗАКАЗОВ</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+  </head>
+  <body class="hidden--loader"><div class="preloader">
+<div class="loader">
+<div class="box box0">
+<div></div>
+</div>
+<div class="box box1">
+<div></div>
+</div>
+<div class="box box2">
+<div></div>
+</div>
+<div class="box box3">
+<div></div>
+</div>
+<div class="box box4">
+<div></div>
+</div>
+<div class="box box5">
+<div></div>
+</div>
+<div class="box box6">
+<div></div>
+</div>
+<div class="box box7">
+<div></div>
+</div>
+<div class="ground">
+<div></div>
+</div>
+</div>
+</div>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__top">
+          <div class="container">
+            <div class="header__inner">
+              <div class="header__info">
+                <div class="logo" data-da="header__menu, 1, 500"><a class="logo__link" href="index.html"><img class="logo__image" src="static/images/common/logo.svg" alt="логотип"></a></div>
+                <div class="header__icons"><a class="header__icons-link" href="tel:+74952239749">
+                    <svg class="icon icon-phone header__icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#phone"></use>
+                    </svg><span class="header__item-text">+7 (495) 223-97-49</span></a><a class="header__icons-link" href="mailto:info@vilon.ru">
+                    <svg class="icon icon-email header__icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#email"></use>
+                    </svg><span class="header__item-text">info@vilon.ru</span></a></div>
+              </div>
+              <form class="header__search" action="#">
+                <input class="header__search-input input" type="text" placeholder="Поиск" required>
+                <button class="header__search-btn" type="submit">
+                  <svg class="icon icon-search header__search-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+              <div class="header__request" data-da="header__menu, 1, 500">
+                <div class="header__request-icons"><a class="header__request-link" href="favorites.html"><span class="header__request-box header__request-box--number" data-count="2">
+                      <svg class="icon icon-heart header__request-icon">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#heart"></use>
+                      </svg></span></a><a class="header__request-link" href="#"><span class="header__request-box header__request-box--number" data-count="2">
+                      <svg class="icon icon-basket header__request-icon">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#basket"></use>
+                      </svg></span><span class="header__request-text">10,500 р</span></a><a class="header__request-link header__request-link--size-small" href="#"><span class="header__request-box">
+                      <svg class="icon icon-user header__request-icon">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#user"></use>
+                      </svg></span><span class="header__request-text">Вход</span></a></div><a class="btn btn--color-black btn--bg-yellow header__btn" href="#" data-da="header__menu-list, last, 500">ОСТАВИТЬ ЗАЯВКУ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom header__bottom--shadow">
+          <div class="container">
+            <nav class="header__menu">
+              <button class="hamburger hamburger--spring" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+              <ul class="header__menu-list">
+                <li class="header__menu-item header__menu-item--dropdown"><a class="header__menu-link" href="about.html">О компании</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="history.html">История</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="news.html">Новости</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="production.html">Производство</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="quality.html">Качество</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="awards.html">Наши награды</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="works.html">Вакансии</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item header__menu-item--dropdown"><a class="header__menu-link" href="cooperation.html">Сотрудничество</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="horeca.html">Horeca</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="suppliers.html">Поставщикам</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="distributors.html">Дистрибьютерам</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Вендинговые аппараты</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item header__menu-item--dropdown"><a class="header__menu-link" href="brands.html">Бренды</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="brands-view.html">Сытоедов</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="brands-view.html">Обожамс!</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Чебуречье</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Street Food</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Balansika</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Snack Bomb</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item"><a class="header__menu-link" href="catalog.html">Магазин</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Завтраки</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Первые блюда</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Вторые блюда</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Постные блюда</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Жюльены</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Выпечка</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Снеки и чебуреки</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Полуфабрикаты</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Готовые рационы</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item header__menu-item--dropdown"><a class="header__menu-link" href="buyers.html">Покупателям</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="stores.html">Где купить</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="order-steps.html">Как заказать</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="stock.html">Акции</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="faq.html">Вопрос / ответ</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="delivery.html">Доставка / оплата</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="warranty.html">Возврат товара</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Образцы документов</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item header__menu-item--dropdown"><a class="header__menu-link" href="vilon-life.html">Vilon Life</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="fact-1.html">Кулинарная школа</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="fact-2.html">Интересно про еду</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Правильное питание</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item"><a class="header__menu-link" href="contacts.html">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <div class="breadcrumbs breadcrumbs--padding breadcrumbs--margin">
+          <div class="container">
+            <div class="breadcrumbs__inner"><a class="breadcrumbs__link" href="index.html">Главная</a><a class="breadcrumbs__link" href="personal.html">Личный кабинет</a><a class="breadcrumbs__link" href="personal-history.html">История заказов</a></div>
+          </div>
+        </div>
+        <section class="orders-history">
+          <div class="container">
+            <div class="orders-history__inner">
+              <h2 class="orders-history__title title">ИСТОРИЯ ЗАКАЗОВ</h2>
+              <div class="orders-history__item">
+                <div class="orders-history__item-top">
+                  <div class="orders-history__item-head">
+                    <h3 class="orders-history__item-title">VLN-000000265<a class="orders-history__item-save" href="#" download>
+                        <svg class="icon icon-save ">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#save"></use>
+                        </svg></a></h3><span class="orders-history__item-status">Ожидает оплаты</span>
+                    <svg class="icon icon-arrow-down orders-history__item-icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                    </svg>
+                  </div>
+                  <div class="orders-history__item-info"><span class="orders-history__item-price">2400 р</span>
+                    <time class="orders-history__item-day" datetime="1 августа 2020">1 августа 2020</time>
+                  </div>
+                </div>
+                <div class="orders-history__content">
+                  <div class="order">
+                    <table class="order__table">
+                      <thead class="order__head">
+                        <tr class="order__head-row">
+                          <td class="order__head-col order__head-col--padding"><span class="order__head-title">Товар</span></td>
+                          <td class="order__head-col order__head-col--align-center"><span class="order__head-title">Количество</span></td>
+                          <td class="order__head-col order__head-col--align-center"><span class="order__head-title">Розничная цена</span></td>
+                          <td class="order__head-col order__head-col--align-right"><span class="order__head-title">Сумма</span></td>
+                        </tr>
+                      </thead>
+                      <tbody class="order__body">
+                        <tr class="order__body-row">
+                          <td class="order__body-col order__body-col--align-left">
+                            <div class="order__item"><a class="order__item-image" href="#" style="background-image: url(static/images/common/example-1.jpg)"></a>
+                              <div class="order__item-info"><a class="order__body-title" href="#">СУП-ЛАПША ДОМАШНЯЯ С КУРИЦЕЙ</a>
+                                <p class="order__item-text"><span>350 гр.</span><span>150 Ккал</span><span>Артикул: 123</span></p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="order__body-col">
+                            <div class="counter order__counter">
+                              <input class="counter__input counter__input--width" value="2" disabled>
+                            </div>
+                          </td>
+                          <td class="order__body-col"><span class="order__price">120 р</span></td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__price order__price--weight-bold">240 р</span></td>
+                        </tr>
+                        <tr class="order__body-row">
+                          <td class="order__body-col order__body-col--align-left">
+                            <div class="order__item"><a class="order__item-image" href="#" style="background-image: url(static/images/common/example-1.jpg)"></a>
+                              <div class="order__item-info"><a class="order__body-title" href="#">БОРЩ ЧЕРНИГОВСКИЙ</a>
+                                <p class="order__item-text"><span>350 гр.</span><span>150 Ккал</span><span>Артикул: 123</span></p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="order__body-col">
+                            <div class="counter order__counter">
+                              <input class="counter__input counter__input--width" value="1" disabled>
+                            </div>
+                          </td>
+                          <td class="order__body-col"><span class="order__price">120 р</span></td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__price order__price--weight-bold">120 р</span></td>
+                        </tr>
+                        <tr class="order__body-row">
+                          <td class="order__body-col order__body-col--align-left">
+                            <div class="order__item"><a class="order__item-image" href="#" style="background-image: url(static/images/common/example-1.jpg)"></a>
+                              <div class="order__item-info"><a class="order__body-title" href="#">СУП-ЛАПША ДОМАШНЯЯ С КУРИЦЕЙ</a>
+                                <p class="order__item-text"><span>350 гр.</span><span>150 Ккал</span><span>Артикул: 123</span></p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="order__body-col">
+                            <div class="counter order__counter">
+                              <input class="counter__input counter__input--width" value="1" disabled>
+                            </div>
+                          </td>
+                          <td class="order__body-col"><span class="order__price">120 р</span></td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__price order__price--weight-bold">120 р</span></td>
+                        </tr>
+                        <tr class="order__body-row">
+                          <td class="order__body-col order__body-col--align-left">
+                            <div class="order__item order__item--vertical-center">
+                              <div class="order__item-image order__item-image--empty"></div>
+                              <h2 class="order__body-title">ПЕРСОНАЛЬНАЯ СКИДКА<sup>?</sup></h2>
+                            </div>
+                          </td>
+                          <td class="order__body-col"></td>
+                          <td class="order__body-col"><span class="order__price">5%</span></td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__price order__price--weight-bold order__price--color-green">24 р</span></td>
+                        </tr>
+                        <tr class="order__body-row">
+                          <td class="order__body-col order__body-col--align-left">
+                            <div class="order__item order__item--vertical-center">
+                              <div class="order__item-image order__item-image--empty"></div>
+                              <div class="order__item-info">
+                                <h2 class="order__body-title">ДОСТАВКА</h2>
+                                <p class="order__item-text">г. Сергиев-Посад, ул. Первая Измайловская, д. 123, к. 1, кв. 122</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="order__body-col"></td>
+                          <td class="order__body-col"></td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__price order__price--weight-bold">0 р</span></td>
+                        </tr>
+                        <tr class="order__body-row">
+                          <td class="order__body-col order__body-col--align-left">
+                            <div class="order__item order__item--vertical-center">
+                              <div class="order__item-image order__item-image--empty"></div>
+                              <div class="order__item-info">
+                                <p class="order__item-text order__item-text--size-small">Общая калорийность: 3300 Ккал</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__body-title order__body-title--size-small">Всего с доставкой:</span></td>
+                          <td class="order__body-col"></td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__price order__price--weight-bold">2508 р</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p class="orders-history__text">Онлайн-оплата будет доступна после подтверждения заказа менеджером. Пожалуйста, ожидайте.</p>
+                </div>
+              </div>
+              <div class="orders-history__item">
+                <div class="orders-history__item-top">
+                  <div class="orders-history__item-head">
+                    <h3 class="orders-history__item-title">VLN-000000265<a class="orders-history__item-save" href="#" download>
+                        <svg class="icon icon-save ">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#save"></use>
+                        </svg></a></h3><span class="orders-history__item-status">Отменен</span>
+                    <svg class="icon icon-arrow-down orders-history__item-icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                    </svg>
+                  </div>
+                  <div class="orders-history__item-info"><span class="orders-history__item-price">2400 р</span>
+                    <time class="orders-history__item-day" datetime="1 августа 2020">1 августа 2020</time>
+                  </div>
+                </div>
+                <div class="orders-history__content">
+                  <div class="order">
+                    <table class="order__table">
+                      <thead class="order__head">
+                        <tr class="order__head-row">
+                          <td class="order__head-col order__head-col--padding"><span class="order__head-title">Товар</span></td>
+                          <td class="order__head-col order__head-col--align-center"><span class="order__head-title">Количество</span></td>
+                          <td class="order__head-col order__head-col--align-center"><span class="order__head-title">Розничная цена</span></td>
+                          <td class="order__head-col order__head-col--align-right"><span class="order__head-title">Сумма</span></td>
+                        </tr>
+                      </thead>
+                      <tbody class="order__body">
+                        <tr class="order__body-row">
+                          <td class="order__body-col order__body-col--align-left">
+                            <div class="order__item"><a class="order__item-image" href="#" style="background-image: url(static/images/common/example-1.jpg)"></a>
+                              <div class="order__item-info"><a class="order__body-title" href="#">СУП-ЛАПША ДОМАШНЯЯ С КУРИЦЕЙ</a>
+                                <p class="order__item-text"><span>350 гр.</span><span>150 Ккал</span><span>Артикул: 123</span></p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="order__body-col">
+                            <div class="counter order__counter">
+                              <input class="counter__input counter__input--width" value="2" disabled>
+                            </div>
+                          </td>
+                          <td class="order__body-col"><span class="order__price">120 р</span></td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__price order__price--weight-bold">240 р</span></td>
+                        </tr>
+                        <tr class="order__body-row">
+                          <td class="order__body-col order__body-col--align-left">
+                            <div class="order__item"><a class="order__item-image" href="#" style="background-image: url(static/images/common/example-1.jpg)"></a>
+                              <div class="order__item-info"><a class="order__body-title" href="#">БОРЩ ЧЕРНИГОВСКИЙ</a>
+                                <p class="order__item-text"><span>350 гр.</span><span>150 Ккал</span><span>Артикул: 123</span></p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="order__body-col">
+                            <div class="counter order__counter">
+                              <input class="counter__input counter__input--width" value="1" disabled>
+                            </div>
+                          </td>
+                          <td class="order__body-col"><span class="order__price">120 р</span></td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__price order__price--weight-bold">120 р</span></td>
+                        </tr>
+                        <tr class="order__body-row">
+                          <td class="order__body-col order__body-col--align-left">
+                            <div class="order__item"><a class="order__item-image" href="#" style="background-image: url(static/images/common/example-1.jpg)"></a>
+                              <div class="order__item-info"><a class="order__body-title" href="#">СУП-ЛАПША ДОМАШНЯЯ С КУРИЦЕЙ</a>
+                                <p class="order__item-text"><span>350 гр.</span><span>150 Ккал</span><span>Артикул: 123</span></p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="order__body-col">
+                            <div class="counter order__counter">
+                              <input class="counter__input counter__input--width" value="1" disabled>
+                            </div>
+                          </td>
+                          <td class="order__body-col"><span class="order__price">120 р</span></td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__price order__price--weight-bold">120 р</span></td>
+                        </tr>
+                        <tr class="order__body-row">
+                          <td class="order__body-col order__body-col--align-left">
+                            <div class="order__item order__item--vertical-center">
+                              <div class="order__item-image order__item-image--empty"></div>
+                              <h2 class="order__body-title">ПЕРСОНАЛЬНАЯ СКИДКА<sup>?</sup></h2>
+                            </div>
+                          </td>
+                          <td class="order__body-col"></td>
+                          <td class="order__body-col"><span class="order__price">5%</span></td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__price order__price--weight-bold order__price--color-green">24 р</span></td>
+                        </tr>
+                        <tr class="order__body-row">
+                          <td class="order__body-col order__body-col--align-left">
+                            <div class="order__item order__item--vertical-center">
+                              <div class="order__item-image order__item-image--empty"></div>
+                              <div class="order__item-info">
+                                <h2 class="order__body-title">ДОСТАВКА</h2>
+                                <p class="order__item-text">г. Сергиев-Посад, ул. Первая Измайловская, д. 123, к. 1, кв. 122</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="order__body-col"></td>
+                          <td class="order__body-col"></td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__price order__price--weight-bold">0 р</span></td>
+                        </tr>
+                        <tr class="order__body-row">
+                          <td class="order__body-col order__body-col--align-left">
+                            <div class="order__item order__item--vertical-center">
+                              <div class="order__item-image order__item-image--empty"></div>
+                              <div class="order__item-info">
+                                <p class="order__item-text order__item-text--size-small">Общая калорийность: 3300 Ккал</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__body-title order__body-title--size-small">Всего с доставкой:</span></td>
+                          <td class="order__body-col"></td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__price order__price--weight-bold">2508 р</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p class="orders-history__text">Онлайн-оплата будет доступна после подтверждения заказа менеджером. Пожалуйста, ожидайте.</p>
+                </div>
+              </div>
+              <div class="orders-history__item">
+                <div class="orders-history__item-top">
+                  <div class="orders-history__item-head">
+                    <h3 class="orders-history__item-title">VLN-000000265<a class="orders-history__item-save" href="#" download>
+                        <svg class="icon icon-save ">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#save"></use>
+                        </svg></a></h3><span class="orders-history__item-status">Доставлен</span>
+                    <svg class="icon icon-arrow-down orders-history__item-icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                    </svg>
+                  </div>
+                  <div class="orders-history__item-info"><span class="orders-history__item-price">2400 р</span>
+                    <time class="orders-history__item-day" datetime="1 августа 2020">1 августа 2020</time>
+                  </div>
+                </div>
+                <div class="orders-history__content">
+                  <div class="order">
+                    <table class="order__table">
+                      <thead class="order__head">
+                        <tr class="order__head-row">
+                          <td class="order__head-col order__head-col--padding"><span class="order__head-title">Товар</span></td>
+                          <td class="order__head-col order__head-col--align-center"><span class="order__head-title">Количество</span></td>
+                          <td class="order__head-col order__head-col--align-center"><span class="order__head-title">Розничная цена</span></td>
+                          <td class="order__head-col order__head-col--align-right"><span class="order__head-title">Сумма</span></td>
+                        </tr>
+                      </thead>
+                      <tbody class="order__body">
+                        <tr class="order__body-row">
+                          <td class="order__body-col order__body-col--align-left">
+                            <div class="order__item"><a class="order__item-image" href="#" style="background-image: url(static/images/common/example-1.jpg)"></a>
+                              <div class="order__item-info"><a class="order__body-title" href="#">СУП-ЛАПША ДОМАШНЯЯ С КУРИЦЕЙ</a>
+                                <p class="order__item-text"><span>350 гр.</span><span>150 Ккал</span><span>Артикул: 123</span></p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="order__body-col">
+                            <div class="counter order__counter">
+                              <input class="counter__input counter__input--width" value="2" disabled>
+                            </div>
+                          </td>
+                          <td class="order__body-col"><span class="order__price">120 р</span></td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__price order__price--weight-bold">240 р</span></td>
+                        </tr>
+                        <tr class="order__body-row">
+                          <td class="order__body-col order__body-col--align-left">
+                            <div class="order__item"><a class="order__item-image" href="#" style="background-image: url(static/images/common/example-1.jpg)"></a>
+                              <div class="order__item-info"><a class="order__body-title" href="#">БОРЩ ЧЕРНИГОВСКИЙ</a>
+                                <p class="order__item-text"><span>350 гр.</span><span>150 Ккал</span><span>Артикул: 123</span></p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="order__body-col">
+                            <div class="counter order__counter">
+                              <input class="counter__input counter__input--width" value="1" disabled>
+                            </div>
+                          </td>
+                          <td class="order__body-col"><span class="order__price">120 р</span></td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__price order__price--weight-bold">120 р</span></td>
+                        </tr>
+                        <tr class="order__body-row">
+                          <td class="order__body-col order__body-col--align-left">
+                            <div class="order__item"><a class="order__item-image" href="#" style="background-image: url(static/images/common/example-1.jpg)"></a>
+                              <div class="order__item-info"><a class="order__body-title" href="#">СУП-ЛАПША ДОМАШНЯЯ С КУРИЦЕЙ</a>
+                                <p class="order__item-text"><span>350 гр.</span><span>150 Ккал</span><span>Артикул: 123</span></p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="order__body-col">
+                            <div class="counter order__counter">
+                              <input class="counter__input counter__input--width" value="1" disabled>
+                            </div>
+                          </td>
+                          <td class="order__body-col"><span class="order__price">120 р</span></td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__price order__price--weight-bold">120 р</span></td>
+                        </tr>
+                        <tr class="order__body-row">
+                          <td class="order__body-col order__body-col--align-left">
+                            <div class="order__item order__item--vertical-center">
+                              <div class="order__item-image order__item-image--empty"></div>
+                              <h2 class="order__body-title">ПЕРСОНАЛЬНАЯ СКИДКА<sup>?</sup></h2>
+                            </div>
+                          </td>
+                          <td class="order__body-col"></td>
+                          <td class="order__body-col"><span class="order__price">5%</span></td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__price order__price--weight-bold order__price--color-green">24 р</span></td>
+                        </tr>
+                        <tr class="order__body-row">
+                          <td class="order__body-col order__body-col--align-left">
+                            <div class="order__item order__item--vertical-center">
+                              <div class="order__item-image order__item-image--empty"></div>
+                              <div class="order__item-info">
+                                <h2 class="order__body-title">ДОСТАВКА</h2>
+                                <p class="order__item-text">г. Сергиев-Посад, ул. Первая Измайловская, д. 123, к. 1, кв. 122</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="order__body-col"></td>
+                          <td class="order__body-col"></td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__price order__price--weight-bold">0 р</span></td>
+                        </tr>
+                        <tr class="order__body-row">
+                          <td class="order__body-col order__body-col--align-left">
+                            <div class="order__item order__item--vertical-center">
+                              <div class="order__item-image order__item-image--empty"></div>
+                              <div class="order__item-info">
+                                <p class="order__item-text order__item-text--size-small">Общая калорийность: 3300 Ккал</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__body-title order__body-title--size-small">Всего с доставкой:</span></td>
+                          <td class="order__body-col"></td>
+                          <td class="order__body-col order__body-col--align-right"><span class="order__price order__price--weight-bold">2508 р</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p class="orders-history__text">Онлайн-оплата будет доступна после подтверждения заказа менеджером. Пожалуйста, ожидайте.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__row">
+            <div class="footer__col">
+              <h3 class="footer__title">ГОТОВЫЕ БЛЮДА</h3>
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="#">Завтраки</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Первые блюда</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Вторые блюда</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Постные блюда</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Жюльены</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Выпечка</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Снеки и чебуреки</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Полуфабрикаты</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Готовые рационы</a></li>
+              </ul>
+            </div>
+            <div class="footer__col">
+              <h3 class="footer__title">ПОКУПАТЕЛЯМ</h3>
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="#">Сотрудничество</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Как заказать</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Где купить</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Акции</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Вопрос / Ответ</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Доставка и оплата</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Возврат товара</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Образцы документов</a></li>
+              </ul>
+            </div>
+            <div class="footer__col footer__col--brands">
+              <h3 class="footer__title footer__title--align-center">НАШИ БРЕНДЫ</h3>
+              <div class="footer__images"><a class="footer__images-link" href="#"><img class="footer__image lazy" src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-balansika.jpg" alt=""></a><a class="footer__images-link" href="#"><img class="footer__image lazy" src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-cheburechie.jpg" alt=""></a><a class="footer__images-link" href="#"><img class="footer__image lazy" src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-obojams.jpg" alt=""></a><a class="footer__images-link" href="#"><img class="footer__image lazy" src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-sitoedov.jpg" alt=""></a><a class="footer__images-link" href="#"><img class="footer__image lazy" src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-snackbomb.jpg" alt=""></a><a class="footer__images-link" href="#"><img class="footer__image lazy" src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-streetfood.jpg" alt=""></a></div>
+            </div>
+            <div class="footer__col footer__col--payments">
+              <h3 class="footer__title">ПЛАТЕЖНЫЕ СИСТЕМЫ</h3><img class="footer__col-image lazy" src="static/images/common/loader.gif" data-src="static/images/common/payments.png">
+            </div>
+            <div class="footer__col footer__col--contacts" data-da="footer__row, 2, 650">
+              <h3 class="footer__title">КОНТАКТЫ</h3>
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link js-popup-map" href="#map" data-fancybox>
+                    <svg class="icon icon-marker footer__item-icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#marker"></use>
+                    </svg><span>М. О., г Щелково, ул. Поварская, вл. 1</span></a></li>
+                <li class="footer__item"><a class="footer__link" href="#">
+                    <svg class="icon icon-email footer__item-icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#email"></use>
+                    </svg><span>info@vilon.ru</span></a></li>
+                <li class="footer__item"><a class="footer__link" href="#">
+                    <svg class="icon icon-phone footer__item-icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#phone"></use>
+                    </svg><span> +7 (495) 223-97-49</span></a></li>
+                <li class="footer__item"><a class="footer__link" href="#">
+                    <svg class="icon icon-clock footer__item-icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#clock"></use>
+                    </svg><span>ПН - ПТ 9:00-18:00</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <div class="container">© 1994-2020, ООО ТПК «Вилон»</div>
+        </div>
+      </footer>
+    </div>
+    <div class="popup popup__map" id="map">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af2568a7384a85fd05fc7f634c7342c63b956305764ab910b3e4eb494d1c2e624&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+    <script src="static/js/libs.js"></script>
+    <script src="static/js/main.js"></script>
+  </body>
+</html>

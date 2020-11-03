@@ -1,0 +1,230 @@
+.personal {
+  padding: 35px 0 0;
+  &__inner {
+    padding-left: 40px;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  &__item {
+    margin-right: 40px;
+    text-align: center;
+    max-width: 130px;
+    width: 100%;
+    margin-top: 25px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &-icon {
+      width: 114px;
+      height: 114px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+      border: 3px solid #51914b;
+      margin: 0 auto 10px;
+      &--number {
+        position: relative;
+        &::before {
+          content: attr(data-number);
+          width: 19px;
+          height: 19px;
+          background-color: #c38064;
+          border-radius: 50%;
+          position: absolute;
+          color: #fff;
+          right: 5px;
+          top: 5px;
+        }
+      }
+      svg {
+        width: auto;
+        height: auto;
+        max-height: 55px;
+        fill: #51914b;
+        &.icon-notifications {
+          margin-top: 10px;
+        }
+      }
+    }
+    &-text {
+      font-size: 16px;
+    }
+    &:hover {
+      .personal__item-text {
+        font-weight: 700;
+      }
+    }
+    &--active {
+      .personal__item-icon {
+        border-color: #6faa43;
+        svg {
+          fill: #6faa43;
+        }
+      }
+      .personal__item-text {
+        font-weight: 700;
+        color: #6faa43;
+      }
+    }
+  }
+  &__form {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  &__btn {
+    padding: 9px 20px;
+    min-width: 250px;
+    margin-bottom: 25px;
+  }
+  &__controls {
+    max-width: 740px;
+    width: 100%;
+    margin-right: 20px;
+    margin-top: 15px;
+    margin-left: -30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    & > * {
+      width: calc(50% - 30px);
+      margin-left: 30px;
+      display: block;
+    }
+    &.personal__controls--block {
+      display: block;
+      margin-left: 0;
+      & > * {
+        width: 100%;
+        margin-left: 0;
+      }
+      .personal__control {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    & > * {
+      width: calc(50% - 10px);
+    }
+  }
+  &__control {
+    margin-bottom: 25px;
+    &-title {
+      display: block;
+      font-size: 14px;
+      color: #949494;
+      margin-bottom: 10px;
+      white-space: nowrap;
+    }
+    &-input {
+      font-size: 16px;
+      line-height: 16px;
+      box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
+      padding: 11px 15px;
+      color: #000000;
+      border: 1px solid transparent;
+      &:disabled {
+        box-shadow: none;
+        border: none;
+        background-color: transparent;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+  &__content {
+    border: 1px solid #6f6f6f;
+    padding: 20px 25px 5px 35px;
+    margin-top: 30px;
+    margin-left: -35px;
+    display: none;
+    &--active {
+      display: block;
+    }
+  }
+  &__row {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 1210px) {
+  .personal__title {
+
+  }
+
+}
+@media (max-width: 972px) {
+  .personal__btn {
+    min-width: 200px;
+  }
+  .personal__controls {
+    margin-left: -20px;
+  }
+  .personal__controls > * {
+    width: calc(50% - 20px);
+    margin-left: 20px;
+  }
+  .personal__inner {
+    padding-left: 20px;
+  }
+  .personal__content {
+    margin-left: -20px;
+    padding-left: 20px;
+  }
+  .section-top--padding {
+    padding-left: 0;
+  }
+}
+@media (max-width: 830px) {
+  .personal__form {
+    display: block;
+  }
+}
+@media (max-width: 772px) {
+  .personal__item-icon {
+    width: 100px;
+    height: 100px;
+  }
+  .personal__item-icon svg {
+    max-height: 45px;
+  }
+  .personal__item {
+    margin-right: 25px;
+  }
+}
+@media (max-width: 650px) {
+  .personal__controls {
+    margin-left: 0;
+    display: block;
+  }
+  .personal__controls > * {
+    width: 100%;
+    margin-left: 0;
+  }
+  .personal__item {
+    max-width: 25%;
+    padding-right: 10px;
+    margin-right: 0;
+  }
+  .personal__inner {
+    padding-left: 0;
+  }
+  .section-top--padding {
+    margin-left: -15px;
+  }
+  .personal__content {
+    margin-left: 0;
+  }
+}
+@media (max-width: 550px) {
+  .personal__item {
+    max-width: 50%;
+  }
+}

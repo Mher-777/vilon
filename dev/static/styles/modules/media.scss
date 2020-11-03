@@ -1,6 +1,9 @@
 @media (max-width: 1210px) {
   .section-top {
     padding-left: 50px;
+    &--padding {
+      padding-left: 25px;
+    }
   }
 }
 

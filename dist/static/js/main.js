@@ -234,7 +234,9 @@ $(function () {
 
     $('.counter__btn').each(function () {
       var btn = $(this);
-      btn.on('click', function () {
+      btn.on('click', function (e) {
+        e.preventDefault();
+
         if ($(this).attr('data-direction') === 'plus') {
           counterPlus(btn.prev(), btn.prev().val());
         } else {
@@ -419,6 +421,10 @@ $(function () {
       $(this).parent().toggleClass('works__item--active');
       $(this).next().slideToggle();
     });
+    $('.orders-history__item-top').on('click', function () {
+      $(this).parent().toggleClass('orders-history__item--active');
+      $(this).next().slideToggle();
+    });
   };
 
   var faqAccordion = function faqAccordion() {
@@ -514,6 +520,52 @@ $(function () {
     });
   };
 
+  var selectCustom = function selectCustom() {
+    $('.select').select2({
+      width: null,
+      minimumResultsForSearch: -1
+    });
+  };
+
+  var inputMask = function inputMask() {
+    var dateMask = document.querySelector('.js-date-mask');
+
+    if (dateMask) {
+      IMask(dateMask, {
+        mask: Date,
+        min: new Date(1910, 0, 1),
+        max: new Date(2003, 0, 1),
+        lazy: false
+      });
+    }
+  };
+
+  var personalForm = function personalForm() {
+    var content = $('.personal__content');
+    $('.js-is-disabled').on('click', function (e) {
+      e.preventDefault();
+      $(this).closest(content).find('.personal__btn').text($(this).attr('data-save'));
+      $(this).closest(content).find('.personal__control-input').prop("disabled", false);
+      $(this).closest(content).find('.select').prop("disabled", false);
+    });
+    var tab = $('.personal__item--tab');
+    tab.on('click', function (e) {
+      e.preventDefault();
+      var $this = $(this);
+      var attr = $this.attr('href');
+      content.each(function () {
+        if ($(this).attr('id') === attr) {
+          tab.removeClass('personal__item--active');
+          $this.addClass('personal__item--active');
+          content.hide();
+          $(this).show();
+        }
+      });
+    });
+  };
+
+  personalForm();
+  selectCustom();
   popup();
   tabsOrder();
   rangeSlider();
@@ -522,6 +574,7 @@ $(function () {
   toggle('.product__head', '.js-toggle', 'icon-heart--active');
   toggle('.news__item', '.js-toggle', 'icon-heart--active');
   toggle('.blog__bg', '.js-toggle', 'icon-heart--active');
+  toggle('.favorites__item', '.js-toggle', 'icon-heart--active');
   mainSliders();
   menuToggle();
   counter();
@@ -533,6 +586,7 @@ $(function () {
   reviewCustom();
   worksAccordion();
   tabs();
+  inputMask();
 });
 
 function browser() {

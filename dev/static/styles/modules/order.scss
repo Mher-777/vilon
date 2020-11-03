@@ -1,0 +1,146 @@
+.order {
+  &__table {
+    width: 100%;
+  }
+  &__head {
+    &-title {
+      color: #9d9d9d;
+      font-size: 12px;
+      display: block;
+      padding-bottom: 5px;
+    }
+    &-col {
+      &--padding {
+        padding-left: 85px;
+      }
+      &--align {
+        &-center {
+          text-align: center;
+        }
+        &-right {
+          text-align: right;
+        }
+      }
+    }
+  }
+  &__body {
+    &-col {
+      padding: 15px 0;
+      border-top: 1px solid #6f6f6f;
+      text-align: center;
+      &--align {
+        &-right {
+          text-align: right;
+        }
+        &-left {
+          text-align: left;
+        }
+      }
+    }
+    &-title {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 700;
+      color: #000;
+      display: block;
+      sup {
+        color: #c38064;
+        font-size: 12px;
+        cursor: pointer;
+      }
+      &--size {
+        &-small {
+          font-size: 21px;
+        }
+      }
+    }
+  }
+
+  &__price {
+    color: #6f6f6f;
+    font-size: 21px;
+    white-space: nowrap;
+    &--weight {
+      &-bold {
+        font-weight: 700;
+        color: #000;
+      }
+    }
+    &--color {
+      &-green {
+        color: #238a46;
+      }
+    }
+  }
+  &__counter {
+    margin: 0 auto;
+    .counter__input {
+      color: #6f6f6f;
+      &--width {
+        width: 100%;
+
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    &--vertical-center {
+      align-items: center;
+    }
+    &-image {
+      min-width: 70px;
+      min-height: 71px;
+      max-height: 80px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position:  center;
+      margin-right: 15px;
+      border: 1px solid #6f6f6f;
+      &--empty {
+        border: none;
+        min-height: 40px;
+      }
+    }
+
+    &-info {
+      color: #6f6f6f;
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &-text {
+      margin-top: auto;
+      line-height: 14px;
+      padding-top: 3px;
+      span {
+        display: block;
+      }
+      &--size {
+        &-small {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+}
+@media (max-width: 972px) {
+  .order__price {
+    font-size: 16px;
+  }
+  .order__body-title {
+    font-size: 14px;
+  }
+  .order__item {
+    max-width: 400px;
+  }
+}
+@media (max-width: 772px) {
+  .orders-history__text {
+    margin-right: auto;
+  }
+  .orders-history__content {
+    padding-bottom: 20px;
+  }
+}

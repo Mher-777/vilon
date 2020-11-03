@@ -14,6 +14,7 @@ $(window).on('load', function () {
         })
     }, 500)
 })
+
 function calcScroll() {
     let div = document.createElement('div')
     div.style.width = '50px';
@@ -27,6 +28,7 @@ function calcScroll() {
 
     return scrollWidth;
 }
+
 $(function () {
     svg4everybody({});
     const mainSliders = () => {
@@ -146,12 +148,10 @@ $(function () {
         }).on('init', function (event, slick) {
             lazyLoad()
         });
-        if(recommendSlider.length > 0) {
-            $(window).bind('resize', function(e)
-            {
+        if (recommendSlider.length > 0) {
+            $(window).bind('resize', function (e) {
                 if (window.RT) clearTimeout(window.RT);
-                window.RT = setTimeout(function()
-                {
+                window.RT = setTimeout(function () {
                     // this.location.reload(false);
                     $('.product__images').slick('refresh')
                     $('.recommend__slider').slick('refresh')
@@ -185,7 +185,6 @@ $(function () {
                 boxThis.find(item).toggleClass(elemClass)
             })
         })
-
     }
     const menuToggle = () => {
         const menu = $('.header__menu-list')
@@ -203,7 +202,7 @@ $(function () {
             $(this).toggleClass('is-active')
             menu.slideToggle()
         })
-        subButton.on('click',function () {
+        subButton.on('click', function () {
             dropdown.slideUp(300);
             if ($(this).siblings(dropdown).is(':visible') === true) {
                 subButton.parent().removeClass('header__menu-item--open');
@@ -235,8 +234,10 @@ $(function () {
             }
         };
         $('.counter__btn').each(function () {
+
             let btn = $(this)
-            btn.on('click', function () {
+            btn.on('click', function (e) {
+                e.preventDefault()
                 if ($(this).attr('data-direction') === 'plus') {
                     counterPlus(btn.prev(), btn.prev().val())
                 } else {
@@ -284,7 +285,7 @@ $(function () {
             const $this = $(this)
             let number = $this.text()
             $this.toggleClass('active')
-            if($this.hasClass('active')) {
+            if ($this.hasClass('active')) {
                 $this.find('span').html(++number)
             } else {
                 $this.find('span').html(--number)
@@ -366,19 +367,19 @@ $(function () {
                 return current.type === "image" ? "zoom" : false;
             },
             lang: "ru",
-            onInit: function( instance, current ) {
+            onInit: function (instance, current) {
                 $('.popup .product__images').slick('refresh')
                 $('.popup .recommend__slider').slick('refresh')
                 $('.popup .product__head-slider').slick('refresh')
                 lazyLoad()
             },
-            beforeLoad: function( instance, current ) {
+            beforeLoad: function (instance, current) {
                 $('.popup .product__images').slick('refresh')
                 $('.popup .recommend__slider').slick('refresh')
                 $('.popup .product__head-slider').slick('refresh')
                 lazyLoad()
             },
-            afterLoad: function( instance, current ) {
+            afterLoad: function (instance, current) {
                 $('.popup .product__images').slick('refresh')
                 $('.popup .recommend__slider').slick('refresh')
                 $('.popup .product__head-slider').slick('refresh')
@@ -414,16 +415,20 @@ $(function () {
             }
         });
     }
-    const worksAccordion  = () => {
+    const worksAccordion = () => {
         $('.works__item-top').on('click', function () {
             $(this).parent().toggleClass('works__item--active')
+            $(this).next().slideToggle()
+        })
+        $('.orders-history__item-top').on('click', function () {
+            $(this).parent().toggleClass('orders-history__item--active')
             $(this).next().slideToggle()
         })
     }
     const faqAccordion = () => {
         const btn = $('.faq__item-title')
         const content = $('.faq__item-content')
-        btn.on('click',function () {
+        btn.on('click', function () {
             btn.siblings(content).slideUp(300);
             if ($(this).siblings(content).is(':visible') === true) {
                 btn.parent().removeClass('faq__item--active');
@@ -439,7 +444,7 @@ $(function () {
     const deliveryAccordion = () => {
         const btn = $('.delivery__accordion-title')
         const content = $('.delivery__accordion-content')
-        btn.on('click',function () {
+        btn.on('click', function () {
             btn.siblings(content).slideUp(300);
             if ($(this).siblings(content).is(':visible') === true) {
                 btn.parent().removeClass('delivery__accordion-item--active');
@@ -459,7 +464,7 @@ $(function () {
             e.preventDefault()
             const $this = $(this)
             content.each(function () {
-                if($this.attr('href') === $(this).attr('data-href')) {
+                if ($this.attr('href') === $(this).attr('data-href')) {
                     elem.removeClass('catalog__tab--current')
                     $this.addClass('catalog__tab--current')
                     content.hide()
@@ -470,7 +475,7 @@ $(function () {
         elem.each(function () {
             const $this = $(this)
             content.each(function () {
-                if($this.attr('href') === $(this).attr('data-href')) {
+                if ($this.attr('href') === $(this).attr('data-href')) {
                     elem.removeClass('catalog__tab--current')
                     $this.addClass('catalog__tab--current')
                     content.hide()
@@ -491,7 +496,7 @@ $(function () {
                 lazyLoad()
             }, 2)
             content.each(function () {
-                if($this.attr('data-href') === $(this).attr('data-id')) {
+                if ($this.attr('data-href') === $(this).attr('data-id')) {
                     elem.removeClass('order-steps__tab--active')
                     $this.addClass('order-steps__tab--active')
                     content.hide()
@@ -503,6 +508,50 @@ $(function () {
             })
         })
     }
+    const selectCustom = () => {
+        $('.select').select2({
+            width: null,
+            minimumResultsForSearch: -1
+        })
+    }
+    const inputMask = () => {
+        const dateMask = document.querySelector('.js-date-mask')
+        if (dateMask) {
+            IMask(dateMask,
+                {
+                    mask: Date,
+                    min: new Date(1910, 0, 1),
+                    max: new Date(2003, 0, 1),
+                    lazy: false
+                });
+        }
+    }
+    const personalForm = () => {
+        const content = $('.personal__content')
+        $('.js-is-disabled').on('click', function (e) {
+            e.preventDefault()
+            $(this).closest(content).find('.personal__btn').text($(this).attr('data-save'))
+            $(this).closest(content).find('.personal__control-input').prop("disabled", false)
+            $(this).closest(content).find('.select').prop("disabled", false)
+        })
+        const tab = $('.personal__item--tab')
+
+        tab.on('click', function (e) {
+            e.preventDefault()
+            const $this = $(this)
+            const attr = $this.attr('href')
+            content.each(function () {
+                if ($(this).attr('id') === attr) {
+                    tab.removeClass('personal__item--active')
+                    $this.addClass('personal__item--active')
+                    content.hide()
+                    $(this).show()
+                }
+            })
+        })
+    }
+    personalForm()
+    selectCustom()
     popup()
     tabsOrder()
     rangeSlider()
@@ -511,6 +560,7 @@ $(function () {
     toggle('.product__head', '.js-toggle', 'icon-heart--active')
     toggle('.news__item', '.js-toggle', 'icon-heart--active')
     toggle('.blog__bg', '.js-toggle', 'icon-heart--active')
+    toggle('.favorites__item', '.js-toggle', 'icon-heart--active')
     mainSliders()
     menuToggle()
     counter()
@@ -522,6 +572,8 @@ $(function () {
     reviewCustom()
     worksAccordion()
     tabs()
+
+    inputMask()
 })
 
 function browser() {
