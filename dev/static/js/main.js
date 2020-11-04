@@ -1,34 +1,43 @@
-$(window).on('load', function () {
-    const body = $('body')
-    // const header = $('.header__inner')
-    body.css('margin-right', calcScroll())
-    // header.css('transform', 'translateX(' + -calcScroll() / 2 + 'px)')
-    setTimeout(function () {
-        $('.preloader').fadeOut(500, function () {
-            $(this).remove()
-            if (body.hasClass('hidden--loader')) {
-                body.delay(400).removeClass('hidden--loader')
-                body.css('margin-right', '')
-                // header.css('transform', '')
-            }
-        })
-    }, 500)
-})
-
-function calcScroll() {
-    let div = document.createElement('div')
-    div.style.width = '50px';
-    div.style.height = '50px';
-    div.style.overflowY = 'scroll';
-    div.style.visibility = 'hidden';
-
-    document.body.appendChild(div);
-    let scrollWidth = div.offsetWidth - div.clientWidth;
-    div.remove();
-
-    return scrollWidth;
+function browser() {
+    if ((navigator.userAgent.indexOf("MSIE") !== -1) || (!!document.documentMode === true)) {
+        document.querySelector('html').classList.add('browser-ie')
+    }
 }
 
+browser()
+if (!$('html').hasClass('browser-ie')) {
+    console.log('browser-ie')
+    $(window).on('load', function () {
+        const body = $('body')
+        // const header = $('.header__inner')
+        body.css('margin-right', calcScroll())
+        // header.css('transform', 'translateX(' + -calcScroll() / 2 + 'px)')
+        setTimeout(function () {
+            $('.preloader').fadeOut(500, function () {
+                $(this).remove()
+                if (body.hasClass('hidden--loader')) {
+                    body.delay(400).removeClass('hidden--loader')
+                    body.css('margin-right', '')
+                    // header.css('transform', '')
+                }
+            })
+        }, 500)
+    })
+
+    function calcScroll() {
+        let div = document.createElement('div')
+        div.style.width = '50px';
+        div.style.height = '50px';
+        div.style.overflowY = 'scroll';
+        div.style.visibility = 'hidden';
+
+        document.body.appendChild(div);
+        let scrollWidth = div.offsetWidth - div.clientWidth;
+        div.remove();
+
+        return scrollWidth;
+    }
+}
 $(function () {
     svg4everybody({});
     const mainSliders = () => {
@@ -394,6 +403,19 @@ $(function () {
             e.stopPropagation();
             $.fancybox.close();
         })
+        $('.js-open-popup').each(function () {
+            const dataPopupLink = $(this).attr('data-popup-link')
+            $(this).on('click', function (e) {
+                e.preventDefault();
+                $.fancybox.close();
+                setTimeout(function () {
+                    $.fancybox.open({
+                        src: dataPopupLink,
+                        type: 'inline',
+                    });
+                }, 1);
+            });
+        })
     }
     const reviewCustom = () => {
         $('.js-stars').rateYo({
@@ -511,8 +533,10 @@ $(function () {
     const selectCustom = () => {
         $('.select').select2({
             width: null,
-            minimumResultsForSearch: -1
-        })
+            minimumResultsForSearch: -1,
+        }).on('select2:open', function (e) {
+            $('.select2-results__options').scrollbar().parent().addClass('scrollbar-inner');
+        });
     }
     const inputMask = () => {
         const dateMask = document.querySelector('.js-date-mask')
@@ -525,6 +549,14 @@ $(function () {
                     lazy: false
                 });
         }
+        $('.js-show-password').on('click', function () {
+            const input = $(this).parent().find('.popup__input')
+            if (input.attr('type') === 'password') {
+                input.attr('type', 'text')
+            } else {
+                input.attr('type', 'password')
+            }
+        })
     }
     const personalForm = () => {
         const content = $('.personal__content')
@@ -550,6 +582,26 @@ $(function () {
             })
         })
     }
+    const fileUpload = () => {
+        $(".file-upload input[type=file]").change(function () {
+            let filename = $(this).val().replace(/.*\\/, "");
+            $(this).closest('.file-upload').find('.file-upload__text').html(filename);
+        });
+    }
+    const popupTabs = () => {
+        const btn = $('.popup__tabs-btn')
+        const input = $('.js-input')
+        btn.on('click', function (e) {
+            const $this = $(this)
+            e.preventDefault()
+            btn.removeClass('popup__tabs-btn--active')
+            $this.addClass('popup__tabs-btn--active')
+            if ($this.hasClass('popup__tabs-btn--active')) {
+                input.attr('type', $this.attr('data-type'))
+                input.attr('placeholder', $this.text())
+            }
+        })
+    }
     personalForm()
     selectCustom()
     popup()
@@ -572,14 +624,14 @@ $(function () {
     reviewCustom()
     worksAccordion()
     tabs()
-
+    fileUpload()
     inputMask()
+    popupTabs()
 })
+tippy('[data-tippy-content]', {
+    arrow: false,
+    allowHTML: true
+});
 
-function browser() {
-    if ((navigator.userAgent.indexOf("MSIE") !== -1) || (!!document.documentMode === true)) {
-        document.querySelector('html').classList.add('browser-ie')
-    }
-}
 
-browser()
+

@@ -28,6 +28,7 @@
       padding: 15px 0;
       border-top: 1px solid #6f6f6f;
       text-align: center;
+      position: relative;
       &--align {
         &-right {
           text-align: right;
@@ -123,7 +124,66 @@
       }
     }
   }
-
+  &__close {
+    width: 12px;
+    height: 12px;
+    stroke: #a3a3a3;
+    stroke-width: 2px;
+    position: absolute;
+    right: -15px;
+    transform: translateY(-7px);
+    cursor: pointer;
+  }
+  &__snippet {
+    color: #6fa043;
+    font-size: 16px;
+    display: block;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    &-icon {
+      width: 20px;
+      height: 20px;
+      &.icon-save {
+        fill: #a3a3a3;
+      }
+    }
+    &-close {
+      stroke: #a3a3a3;
+      stroke-width: 2px;
+      width: 20px;
+      height: 20px;
+      margin-right: -20px;
+      cursor: pointer;
+    }
+  }
+  &__bottom {
+    margin-top: -15px;
+  }
+  &__btn {
+    background-color: #e3e3e3;
+    color: #a3a3a3;
+    max-width: 395px;
+    width: 100%;
+    margin-top: 8px;
+    margin-left: auto;
+    min-height: 55px;
+    &:hover {
+      background-color: #ddd54f;
+      color: #000000;
+    }
+    &:disabled {
+      background-color: #e3e3e3;
+      color: #a3a3a3;
+      &:hover {
+        background-color: #e3e3e3;
+        color: #a3a3a3;
+      }
+    }
+  }
 }
 @media (max-width: 972px) {
   .order__price {
@@ -136,11 +196,35 @@
     max-width: 400px;
   }
 }
-@media (max-width: 772px) {
-  .orders-history__text {
-    margin-right: auto;
+@media (max-width: 800px) {
+  .order__bottom {
+    margin-top: 0;
   }
-  .orders-history__content {
-    padding-bottom: 20px;
+}
+@media (max-width: 772px) {
+  .order {
+    overflow-x: auto;
+    &__wrapper {
+      overflow-x: auto;
+    }
+  }
+  .order__btn {
+    margin-left: 0;
+  }
+  .order__table {
+    width: 710px;
+  }
+  .order__top-close {
+    margin-right: 0;
+  }
+}
+@media (max-width: 550px) {
+  .order__btn {
+    max-width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .order__snippet {
+    text-align: center;
   }
 }

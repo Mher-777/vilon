@@ -17,4 +17,15 @@
   .socials__content {
     margin-top: 95px;
   }
+  .preloader {
+    display: none;
+  }
+  body.hidden--loader {
+    overflow: auto;
+    scrollbar-width: inital;
+    position: static;
+    &::-webkit-scrollbar {
+      display: block;
+    }
+  }
 }

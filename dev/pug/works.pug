@@ -181,7 +181,7 @@ block content
                 li.works__list-item • Оформление согласно ТК РФ;
                 li.works__list-item • График работы: 5/2 с 9.00 до 18.00;
                 li.works__list-item • Место работы (офис компании) - Московская область, г. Щёлково.
-            button(type="button").works__item-btn.btn.btn--bg-yellow.btn--color-black ОТПРАВИТЬ РЕЗЮМЕ
+            button(type="button" data-popup-link="#cv").works__item-btn.btn.btn--bg-yellow.btn--color-black.js-open-popup ОТПРАВИТЬ РЕЗЮМЕ
             .works__socials
               span.works__socials-text Поделиться
               a(href="#").works__socials-link
@@ -258,3 +258,4 @@ block content
                 img(src="static/images/common/email.svg").works__socials-icon.lazy
               a(href="#").works__socials-link
                 img(src="static/images/common/twitter.svg").works__socials-icon.lazy
+  include modules/popup/cv

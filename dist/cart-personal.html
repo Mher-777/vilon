@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Корзина</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+  </head>
+  <body class="hidden--loader"><div class="preloader">
+<div class="loader">
+<div class="box box0">
+<div></div>
+</div>
+<div class="box box1">
+<div></div>
+</div>
+<div class="box box2">
+<div></div>
+</div>
+<div class="box box3">
+<div></div>
+</div>
+<div class="box box4">
+<div></div>
+</div>
+<div class="box box5">
+<div></div>
+</div>
+<div class="box box6">
+<div></div>
+</div>
+<div class="box box7">
+<div></div>
+</div>
+<div class="ground">
+<div></div>
+</div>
+</div>
+</div>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__top">
+          <div class="container">
+            <div class="header__inner">
+              <div class="header__info">
+                <div class="logo" data-da="header__menu, 1, 500"><a class="logo__link" href="index.html"><img class="logo__image" src="static/images/common/logo.svg" alt="логотип"></a></div>
+                <div class="header__icons"><a class="header__icons-link" href="tel:+74952239749">
+                    <svg class="icon icon-phone header__icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#phone"></use>
+                    </svg><span class="header__item-text">+7 (495) 223-97-49</span></a><a class="header__icons-link" href="mailto:info@vilon.ru">
+                    <svg class="icon icon-email header__icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#email"></use>
+                    </svg><span class="header__item-text">info@vilon.ru</span></a></div>
+              </div>
+              <form class="header__search" action="#">
+                <input class="header__search-input input" type="text" placeholder="Поиск" required>
+                <button class="header__search-btn" type="submit">
+                  <svg class="icon icon-search header__search-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+              <div class="header__request" data-da="header__menu, 1, 500">
+                <div class="header__request-icons"><a class="header__request-link" href="favorites.html"><span class="header__request-box header__request-box--number" data-count="2">
+                      <svg class="icon icon-heart header__request-icon">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#heart"></use>
+                      </svg></span></a><a class="header__request-link" href="#"><span class="header__request-box header__request-box--number" data-count="2">
+                      <svg class="icon icon-basket header__request-icon">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#basket"></use>
+                      </svg></span><span class="header__request-text">10,500 р</span></a><a class="header__request-link header__request-link--size-small" href="#login" data-fancybox><span class="header__request-box">
+                      <svg class="icon icon-user header__request-icon">
+                        <use xlink:href="static/images/sprite/symbol/sprite.svg#user"></use>
+                      </svg></span><span class="header__request-text">Вход</span></a></div><a class="btn btn--color-black btn--bg-yellow header__btn" href="#" data-da="header__menu-list, last, 500">ОСТАВИТЬ ЗАЯВКУ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom header__bottom--shadow">
+          <div class="container">
+            <nav class="header__menu">
+              <button class="hamburger hamburger--spring" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+              <ul class="header__menu-list">
+                <li class="header__menu-item header__menu-item--dropdown"><a class="header__menu-link" href="about.html">О компании</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="history.html">История</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="news.html">Новости</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="production.html">Производство</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="quality.html">Качество</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="awards.html">Наши награды</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="works.html">Вакансии</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item header__menu-item--dropdown"><a class="header__menu-link" href="cooperation.html">Сотрудничество</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="horeca.html">Horeca</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="suppliers.html">Поставщикам</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="distributors.html">Дистрибьютерам</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Вендинговые аппараты</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item header__menu-item--dropdown"><a class="header__menu-link" href="brands.html">Бренды</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="brands-view.html">Сытоедов</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="brands-view.html">Обожамс!</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Чебуречье</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Street Food</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Balansika</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Snack Bomb</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item"><a class="header__menu-link" href="catalog.html">Магазин</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Завтраки</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Первые блюда</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Вторые блюда</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Постные блюда</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Жюльены</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Выпечка</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Снеки и чебуреки</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Полуфабрикаты</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Готовые рационы</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item header__menu-item--dropdown"><a class="header__menu-link" href="buyers.html">Покупателям</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="stores.html">Где купить</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="order-steps.html">Как заказать</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="stock.html">Акции</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="faq.html">Вопрос / ответ</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="delivery.html">Доставка / оплата</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="warranty.html">Возврат товара</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Образцы документов</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item header__menu-item--dropdown"><a class="header__menu-link" href="vilon-life.html">Vilon Life</a>
+                  <svg class="icon icon-arrow-down header__menu-icon">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#arrow-down"></use>
+                  </svg>
+                  <ul class="header__dropdown">
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="fact-1.html">Кулинарная школа</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="fact-2.html">Интересно про еду</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Правильное питание</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item"><a class="header__menu-link" href="contacts.html">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="header__submenu">
+          <div class="container">
+            <div class="header__submenu-inner"><a class="header__submenu-link" href="#">Продолжить покупки</a><a class="header__submenu-link" href="#">Доставка и оплата</a></div>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <div class="breadcrumbs">
+          <div class="container">
+            <div class="breadcrumbs__inner"><a class="breadcrumbs__link" href="index.html">Главная</a><a class="breadcrumbs__link" href="#">Магазин</a><a class="breadcrumbs__link" href="#">Корзина</a></div>
+          </div>
+        </div>
+        <section class="cart">
+          <div class="container">
+            <div class="order cart__order">
+              <div class="order__top">
+                <h2 class="order__title title">ВАШ ЗАКАЗ</h2><span class="order__snippet" data-da="order__bottom, first, 500">Беслатная доставка от 2500 р</span>
+                <div class="order__top-icons"><a class="order__top-save" href="#" download data-tippy-content="&lt;span class='tooltip'&gt;скачать&lt;/span&gt;" data-tippy-placement="top-end">
+                    <svg class="icon icon-save order__top-icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#save"></use>
+                    </svg></a>
+                  <svg class="icon icon-close order__top-close" data-tippy-content="&lt;span class='tooltip'&gt;очистить&lt;/span&gt;" data-tippy-placement="top-start">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#close"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="order__wrapper">
+                <table class="order__table">
+                  <thead class="order__head">
+                    <tr class="order__head-row">
+                      <td class="order__head-col order__head-col--padding"><span class="order__head-title">Товар</span></td>
+                      <td class="order__head-col order__head-col--align-center"><span class="order__head-title">Количество</span></td>
+                      <td class="order__head-col order__head-col--align-center"><span class="order__head-title">Розничная цена</span></td>
+                      <td class="order__head-col order__head-col--align-right"><span class="order__head-title">Сумма</span></td>
+                    </tr>
+                  </thead>
+                  <tbody class="order__body">
+                    <tr class="order__body-row">
+                      <td class="order__body-col order__body-col--align-left">
+                        <div class="order__item"><a class="order__item-image" href="#" style="background-image: url(static/images/common/example-1.jpg)"></a>
+                          <div class="order__item-info"><a class="order__body-title" href="#">СУП-ЛАПША ДОМАШНЯЯ С КУРИЦЕЙ</a>
+                            <p class="order__item-text"><span>350 гр.</span><span>150 Ккал</span><span>Артикул: 123</span></p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="order__body-col">
+                        <div class="counter order__counter">
+                          <button class="counter__btn" data-direction="minus">
+                            <svg class="icon icon-minus counter__icon">
+                              <use xlink:href="static/images/sprite/symbol/sprite.svg#minus"></use>
+                            </svg>
+                          </button>
+                          <input class="counter__input" value="20" disabled>
+                          <button class="counter__btn" data-direction="plus">
+                            <svg class="icon icon-plus counter__icon">
+                              <use xlink:href="static/images/sprite/symbol/sprite.svg#plus"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="order__body-col"><span class="order__price">120 р</span></td>
+                      <td class="order__body-col order__body-col--align-right">
+                        <svg class="icon icon-close order__close">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#close"></use>
+                        </svg><span class="order__price order__price--weight-bold">2400 р</span>
+                      </td>
+                    </tr>
+                    <tr class="order__body-row">
+                      <td class="order__body-col order__body-col--align-left">
+                        <div class="order__item"><a class="order__item-image" href="#" style="background-image: url(static/images/common/example-1.jpg)"></a>
+                          <div class="order__item-info"><a class="order__body-title" href="#">БОРЩ ЧЕРНИГОВСКИЙ</a>
+                            <p class="order__item-text"><span>350 гр.</span><span>150 Ккал</span><span>Артикул: 123</span></p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="order__body-col">
+                        <div class="counter order__counter">
+                          <button class="counter__btn" data-direction="minus">
+                            <svg class="icon icon-minus counter__icon">
+                              <use xlink:href="static/images/sprite/symbol/sprite.svg#minus"></use>
+                            </svg>
+                          </button>
+                          <input class="counter__input" value="1" disabled>
+                          <button class="counter__btn" data-direction="plus">
+                            <svg class="icon icon-plus counter__icon">
+                              <use xlink:href="static/images/sprite/symbol/sprite.svg#plus"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="order__body-col"><span class="order__price">120 р</span></td>
+                      <td class="order__body-col order__body-col--align-right">
+                        <svg class="icon icon-close order__close">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#close"></use>
+                        </svg><span class="order__price order__price--weight-bold">120 р</span>
+                      </td>
+                    </tr>
+                    <tr class="order__body-row">
+                      <td class="order__body-col order__body-col--align-left">
+                        <div class="order__item"><a class="order__item-image" href="#" style="background-image: url(static/images/common/example-1.jpg)"></a>
+                          <div class="order__item-info"><a class="order__body-title" href="#">СУП-ЛАПША ДОМАШНЯЯ С КУРИЦЕЙ</a>
+                            <p class="order__item-text"><span>350 гр.</span><span>150 Ккал</span><span>Артикул: 123</span></p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="order__body-col">
+                        <div class="counter order__counter">
+                          <div class="counter order__counter">
+                            <button class="counter__btn" data-direction="minus">
+                              <svg class="icon icon-minus counter__icon">
+                                <use xlink:href="static/images/sprite/symbol/sprite.svg#minus"></use>
+                              </svg>
+                            </button>
+                            <input class="counter__input" value="1" disabled>
+                            <button class="counter__btn" data-direction="plus">
+                              <svg class="icon icon-plus counter__icon">
+                                <use xlink:href="static/images/sprite/symbol/sprite.svg#plus"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="order__body-col"><span class="order__price">120 р</span></td>
+                      <td class="order__body-col order__body-col--align-right">
+                        <svg class="icon icon-close order__close">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#close"></use>
+                        </svg><span class="order__price order__price--weight-bold">120 р</span>
+                      </td>
+                    </tr>
+                    <tr class="order__body-row">
+                      <td class="order__body-col order__body-col--align-left">
+                        <div class="order__item order__item--vertical-center">
+                          <div class="order__item-image order__item-image--empty"></div>
+                          <!--(делается на весь заказ)-->
+                          <h2 class="order__body-title">ПЕРСОНАЛЬНАЯ СКИДКА<sup data-tippy-content="&lt;span class='tooltip'&gt;Персональная скидка: &lt;br&gt; 10% - при заказе на сумму от 10.000 руб.&lt;/span&gt;" data-tippy-placement="top-start">?</sup></h2>
+                        </div>
+                      </td>
+                      <td class="order__body-col"></td>
+                      <td class="order__body-col"><span class="order__price">5%</span></td>
+                      <td class="order__body-col order__body-col--align-right">
+                        <svg class="icon icon-close order__close">
+                          <use xlink:href="static/images/sprite/symbol/sprite.svg#close"></use>
+                        </svg><span class="order__price order__price--weight-bold order__price--color-green">132 р</span>
+                      </td>
+                    </tr>
+                    <tr class="order__body-row">
+                      <td class="order__body-col order__body-col--align-left">
+                        <div class="order__item order__item--vertical-center">
+                          <div class="order__item-image order__item-image--empty"></div>
+                          <div class="order__item-info">
+                            <!-- (п.1 х 20 шт + п.2 + п.33)-->
+                            <p class="order__item-text order__item-text--size-small">Общая калорийность: 450 Ккал</p>
+                            <p class="order__item-text order__item-text--size-small">Для формирования заказа добавьте в корзину товаров на 1044 р.</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="order__body-col order__body-col--align-right"><span class="order__body-title order__body-title--size-small">Всего без доставки:</span></td>
+                      <td class="order__body-col"></td>
+                      <td class="order__body-col order__body-col--align-right"><span class="order__price order__price--weight-bold">456 р</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="order__bottom">
+                <button class="order__btn btn" type="button" disabled>ОФОРМИТЬ ЗАКАЗ</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__row">
+            <div class="footer__col">
+              <h3 class="footer__title">ГОТОВЫЕ БЛЮДА</h3>
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="#">Завтраки</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Первые блюда</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Вторые блюда</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Постные блюда</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Жюльены</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Выпечка</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Снеки и чебуреки</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Полуфабрикаты</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Готовые рационы</a></li>
+              </ul>
+            </div>
+            <div class="footer__col">
+              <h3 class="footer__title">ПОКУПАТЕЛЯМ</h3>
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="#">Сотрудничество</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Как заказать</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Где купить</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Акции</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Вопрос / Ответ</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Доставка и оплата</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Возврат товара</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Образцы документов</a></li>
+              </ul>
+            </div>
+            <div class="footer__col footer__col--brands">
+              <h3 class="footer__title footer__title--align-center">НАШИ БРЕНДЫ</h3>
+              <div class="footer__images"><a class="footer__images-link" href="#"><img class="footer__image lazy" src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-balansika.jpg" alt=""></a><a class="footer__images-link" href="#"><img class="footer__image lazy" src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-cheburechie.jpg" alt=""></a><a class="footer__images-link" href="#"><img class="footer__image lazy" src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-obojams.jpg" alt=""></a><a class="footer__images-link" href="#"><img class="footer__image lazy" src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-sitoedov.jpg" alt=""></a><a class="footer__images-link" href="#"><img class="footer__image lazy" src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-snackbomb.jpg" alt=""></a><a class="footer__images-link" href="#"><img class="footer__image lazy" src="static/images/common/loader.gif" data-src="static/images/content/brands/logo-streetfood.jpg" alt=""></a></div>
+            </div>
+            <div class="footer__col footer__col--payments">
+              <h3 class="footer__title">ПЛАТЕЖНЫЕ СИСТЕМЫ</h3><img class="footer__col-image lazy" src="static/images/common/loader.gif" data-src="static/images/common/payments.png">
+            </div>
+            <div class="footer__col footer__col--contacts" data-da="footer__row, 2, 650">
+              <h3 class="footer__title">КОНТАКТЫ</h3>
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link js-popup-map" href="#map" data-fancybox>
+                    <svg class="icon icon-marker footer__item-icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#marker"></use>
+                    </svg><span>М. О., г Щелково, ул. Поварская, вл. 1</span></a></li>
+                <li class="footer__item"><a class="footer__link" href="#">
+                    <svg class="icon icon-email footer__item-icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#email"></use>
+                    </svg><span>info@vilon.ru</span></a></li>
+                <li class="footer__item"><a class="footer__link" href="#">
+                    <svg class="icon icon-phone footer__item-icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#phone"></use>
+                    </svg><span> +7 (495) 223-97-49</span></a></li>
+                <li class="footer__item"><a class="footer__link" href="#">
+                    <svg class="icon icon-clock footer__item-icon">
+                      <use xlink:href="static/images/sprite/symbol/sprite.svg#clock"></use>
+                    </svg><span>ПН - ПТ 9:00-18:00</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <div class="container">© 1994-2020, ООО ТПК «Вилон»</div>
+        </div>
+      </footer>
+    </div>
+    <div class="popup popup__map" id="map">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af2568a7384a85fd05fc7f634c7342c63b956305764ab910b3e4eb494d1c2e624&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+    <div class="popup popup--width" id="login">
+      <div class="popup__head">
+        <h2 class="popup__title title title--color-white">ВХОД НА САЙТ</h2>
+      </div>
+      <form class="popup__form" action="#">
+        <label class="popup__control">
+          <input class="input popup__input" type="email" placeholder="E-mail">
+        </label>
+        <label class="popup__control">
+          <input class="input popup__input" type="password" placeholder="Пароль">
+          <svg class="icon icon-eye popup__control-icon js-show-password">
+            <use xlink:href="static/images/sprite/symbol/sprite.svg#eye"></use>
+          </svg>
+        </label>
+        <div class="popup__block">
+          <label class="checkbox popup__block-checkbox"><span class="checkbox__text">Запомнить меня</span>
+            <input type="checkbox"><span class="checkbox__custom"></span>
+          </label><a class="popup__block-link popup__block-link--color-black js-open-popup" href="#" data-popup-link="#reset">Забыли пароль</a><a class="popup__block-link js-open-popup" href="#" data-popup-link="#registration">Регистрация</a>
+        </div>
+        <button class="btn btn--color-black btn--bg-yellow popup__btn" type="submit">войти</button>
+      </form>
+    </div>
+    <div class="popup popup--width" id="reset">
+      <div class="popup__head">
+        <h2 class="popup__title title title--color-white">восстановление пароля</h2>
+      </div>
+      <form class="popup__form" action="#"><span class="popup__text">Укажите E-mail, указанный при регистрации. <br> Контрольная строка для смены пароля, а так же ваши регистрационные данные, будут высланы вам по E-mail.</span>
+        <label class="popup__control">
+          <input class="input popup__input" type="email" placeholder="E-mail">
+        </label>
+        <button class="btn btn--color-black btn--bg-yellow popup__btn" type="submit">восстановить</button>
+      </form>
+    </div>
+    <div class="popup popup--width" id="registration">
+      <div class="popup__head">
+        <h2 class="popup__title title title--color-white">Регистрация</h2>
+      </div>
+      <form class="popup__form" action="#">
+        <div class="popup__row">
+          <label class="popup__control popup__control--required">
+            <input class="input popup__input" type="text" placeholder="Имя" required>
+          </label>
+          <label class="popup__control popup__control--required">
+            <input class="input popup__input" type="text" placeholder="Фамилия" required>
+          </label>
+        </div>
+        <label class="popup__control popup__control--required">
+          <input class="input popup__input" type="email" placeholder="E-mail" required>
+        </label>
+        <label class="popup__control">
+          <input class="input popup__input" type="tel" placeholder="Телефон">
+        </label>
+        <label class="popup__control popup__control--required">
+          <input class="input popup__input" type="password" placeholder="Пароль" required>
+        </label>
+        <label class="checkbox popup__checkbox"><span class="checkbox__text">Я согласен получать информацию о скидках и новостях</span>
+          <input type="checkbox"><span class="checkbox__custom"></span>
+        </label>
+        <label class="checkbox popup__checkbox"><span class="checkbox__text">Я принимаю условия пользовательского соглашения</span>
+          <input type="checkbox"><span class="checkbox__custom"></span>
+        </label><a class="popup__link js-open-popup" href="#" data-popup-link="#login">У меня уже есть учетная запись</a>
+        <button class="btn btn--color-black btn--bg-yellow popup__btn" type="submit">зарегистрироваться</button>
+      </form>
+    </div>
+    <div class="popup popup--width" id="request">
+      <div class="popup__head">
+        <h2 class="popup__title title title--color-white">Напишите нам</h2>
+      </div>
+      <form class="popup__form" action="#">
+        <label class="popup__control popup__control--select">
+          <select class="select popup__select" data-placeholder="Выберите тему обращения:" data-dropdown-parent=".popup__control--select">
+            <option class="select__option" value=""></option>
+            <option class="select__option" value="1">Магазин и товары</option>
+            <option class="select__option" value="2">Мой заказ</option>
+            <option class="select__option" value="3">Доставка и оплата</option>
+            <option class="select__option" value="4">Поставщики</option>
+            <option class="select__option" value="5">Дистрибуция</option>
+            <option class="select__option" value="6">Качество</option>
+            <option class="select__option" value="7">Сертификаты на продукцию</option>
+            <option class="select__option" value="8">Реклама и PR</option>
+            <option class="select__option" value="9">Технические проблемы на сайте</option>
+            <option class="select__option" value="10">Другое</option>
+          </select>
+        </label>
+        <label class="popup__control popup__control--required">
+          <input class="input popup__input" type="text" placeholder="Имя" required>
+        </label>
+        <div class="popup__tabs"><span class="popup__tabs-text">Способ связи:</span>
+          <button class="popup__tabs-btn popup__tabs-btn--active" type="button" data-type="email">E-mail</button>
+          <button class="popup__tabs-btn" type="button" data-type="tel">Телефон</button>
+        </div>
+        <label class="popup__control popup__control--required">
+          <input class="input popup__input js-input" type="email" placeholder="E-mail" required>
+        </label>
+        <div class="popup__row">
+          <label class="popup__control popup__control--required">
+            <input class="input popup__input" type="text" placeholder="Гражданство" required>
+          </label>
+          <label class="popup__control popup__control--required">
+            <input class="input popup__input" type="text" placeholder="Город проживания" required>
+          </label>
+        </div>
+        <label class="popup__control">
+          <textarea class="textarea popup__textarea" placeholder="Сообщение"></textarea>
+        </label>
+        <div class="file-upload popup__file-upload"><span class="file-upload__text">Прикрепите резюме</span>
+          <div class="file-upload__btn">
+            <label class="file-upload__btn_label">
+              <input type="file"><span class="file-upload__btn_text">Выберите файл</span>
+            </label>
+          </div>
+        </div><span class="popup__quote">Нажимая "Отправить" Вы принимаете условия пользовательского соглашения.</span>
+        <button class="btn btn--color-black btn--bg-yellow popup__btn" type="submit">Отправить</button>
+      </form>
+    </div>
+    <script src="static/js/libs.js"></script>
+    <script src="static/js/main.js"></script>
+  </body>
+</html>

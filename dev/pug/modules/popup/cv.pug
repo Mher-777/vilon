@@ -1,0 +1,30 @@
+.popup.popup--width#cv
+  .popup__head
+    h2.popup__title.title.title--color-white Резюме
+  form(action="#").popup__form
+    .popup__row
+      label.popup__control.popup__control--required
+        input(type="text" placeholder="Имя" required).input.popup__input
+      label.popup__control.popup__control--required
+        input(type="text" placeholder="Фамилия" required).input.popup__input
+    label.popup__control.popup__control--required
+      input(type="email" placeholder="E-mail" required).input.popup__input
+    label.popup__control.popup__control--required
+      input(type="tel" placeholder="Телефон" required).input.popup__input
+    label.popup__control.popup__control--required
+      input(type="text" placeholder="Желаемая должность" required).input.popup__input
+    .popup__row
+      label.popup__control.popup__control--required
+        input(type="text" placeholder="Гражданство" required).input.popup__input
+      label.popup__control.popup__control--required
+        input(type="text" placeholder="Город проживания" required).input.popup__input
+    label.popup__control
+      textarea(placeholder="Сообщение").textarea.popup__textarea
+    .file-upload.popup__file-upload
+      span.file-upload__text Прикрепите резюме
+      .file-upload__btn
+        label.file-upload__btn_label
+          input(type="file")
+          span.file-upload__btn_text Выберите файл
+    span.popup__quote Нажимая "Отправить" Вы принимаете условия пользовательского соглашения.
+    button(type="submit").btn.btn--color-black.btn--bg-yellow.popup__btn Отправить

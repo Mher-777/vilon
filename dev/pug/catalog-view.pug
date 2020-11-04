@@ -32,7 +32,7 @@ block header
                 span.header__request-box(data-count="2").header__request-box--number
                   +icon('basket', 'header__request-icon')
                 span.header__request-text 10,500 р
-              a(href="#").header__request-link.header__request-link--size-small
+              a(href="#login" data-fancybox).header__request-link.header__request-link--size-small
                 span.header__request-box
                   +icon('user', 'header__request-icon')
                 span.header__request-text Вход
@@ -310,7 +310,15 @@ block content
               li.catalog__content-item(data-week="ВС - ") Климовск, Подольск, Кашира, Домодедово, Чехов, Ярославль, Ступино, Протвино, Пущино
             p.catalog__content-text ВНИМАНИЕ! Если при оформлении заказа Вашего города или дома нет в списке, укажите ближайший, а в комментариях напишите нужный Вам город или номер дома. В таком случае стоимость доставки менеджер расчитывает индивидуально. <br> Получить подробную информацию о доссавке можно по телефону: +7 (495) 223-97--
             a(href="#delivery" data-fancybox).catalog__content-btn.btn.btn--bg-yellow.btn--color-black.js-popup-inline РАСЧИТАТЬ ДОСТАВКУ
-        include pages/catalog/basket
+        .catalog__basket.basket.basket--empty
+          .basket__head
+            h2.basket__title.title.title--size-small.title--color-white КОРЗИНА
+            +icon('save', 'basket__head-icon')
+          .basket__main
+          .basket__footer
+            .basket__total
+              span.basket__total-price(data-price="390 р") Всего:
+            a(href="#").basket__link.btn.btn--bg-yellow.btn--color-black.basket__link--disabled ОФОРМИТЬ ЗАКАЗ
     include pages/catalog/history
     include pages/catalog/together
   include pages/catalog/recommend

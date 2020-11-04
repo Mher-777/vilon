@@ -1,0 +1,25 @@
+.popup.popup--width#registration
+  .popup__head
+    h2.popup__title.title.title--color-white Регистрация
+  form(action="#").popup__form
+    .popup__row
+      label.popup__control.popup__control--required
+        input(type="text" placeholder="Имя" required).input.popup__input
+      label.popup__control.popup__control--required
+        input(type="text" placeholder="Фамилия" required).input.popup__input
+    label.popup__control.popup__control--required
+      input(type="email" placeholder="E-mail" required).input.popup__input
+    label.popup__control
+      input(type="tel" placeholder="Телефон" ).input.popup__input
+    label.popup__control.popup__control--required
+      input(type="password" placeholder="Пароль" required).input.popup__input
+    label.checkbox.popup__checkbox
+      span.checkbox__text Я согласен получать информацию о скидках и новостях
+      input(type="checkbox")
+      span.checkbox__custom
+    label.checkbox.popup__checkbox
+      span.checkbox__text Я принимаю условия пользовательского соглашения
+      input(type="checkbox")
+      span.checkbox__custom
+    a(href="#" data-popup-link="#login").popup__link.js-open-popup У меня уже есть учетная запись
+    button(type="submit").btn.btn--color-black.btn--bg-yellow.popup__btn зарегистрироваться

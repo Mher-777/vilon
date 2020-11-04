@@ -1,0 +1,17 @@
+.popup.popup--width#login
+  .popup__head
+    h2.popup__title.title.title--color-white ВХОД НА САЙТ
+  form(action="#").popup__form
+    label.popup__control
+      input(type="email" placeholder="E-mail").input.popup__input
+    label.popup__control
+      input(type="password" placeholder="Пароль").input.popup__input
+      +icon('eye', 'popup__control-icon js-show-password')
+    .popup__block
+      label.checkbox.popup__block-checkbox
+        span.checkbox__text Запомнить меня
+        input(type="checkbox")
+        span.checkbox__custom
+      a(href="#" data-popup-link="#reset").popup__block-link.popup__block-link--color-black.js-open-popup Забыли пароль
+      a(href="#" data-popup-link="#registration").popup__block-link.js-open-popup Регистрация
+    button(type="submit").btn.btn--color-black.btn--bg-yellow.popup__btn войти

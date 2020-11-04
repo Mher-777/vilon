@@ -70,7 +70,7 @@
                       </svg></span></a><a class="header__request-link" href="#"><span class="header__request-box header__request-box--number" data-count="2">
                       <svg class="icon icon-basket header__request-icon">
                         <use xlink:href="static/images/sprite/symbol/sprite.svg#basket"></use>
-                      </svg></span><span class="header__request-text">10,500 р</span></a><a class="header__request-link header__request-link--size-small" href="#"><span class="header__request-box">
+                      </svg></span><span class="header__request-text">10,500 р</span></a><a class="header__request-link header__request-link--size-small" href="#login" data-fancybox><span class="header__request-box">
                       <svg class="icon icon-user header__request-icon">
                         <use xlink:href="static/images/sprite/symbol/sprite.svg#user"></use>
                       </svg></span><span class="header__request-text">Вход</span></a></div><a class="btn btn--color-black btn--bg-yellow header__btn" href="#" data-da="header__menu-list, last, 500">ОСТАВИТЬ ЗАЯВКУ</a>
@@ -348,93 +348,16 @@
                   <p class="catalog__content-text">ВНИМАНИЕ! Если при оформлении заказа Вашего города или дома нет в списке, укажите ближайший, а в комментариях напишите нужный Вам город или номер дома. В таком случае стоимость доставки менеджер расчитывает индивидуально. <br> Получить подробную информацию о доссавке можно по телефону: +7 (495) 223-97--</p><a class="catalog__content-btn btn btn--bg-yellow btn--color-black js-popup-inline" href="#delivery" data-fancybox>РАСЧИТАТЬ ДОСТАВКУ</a>
                 </div>
               </div>
-              <div class="catalog__basket basket">
+              <div class="catalog__basket basket basket--empty">
                 <div class="basket__head">
                   <h2 class="basket__title title title--size-small title--color-white">КОРЗИНА</h2>
                   <svg class="icon icon-save basket__head-icon">
                     <use xlink:href="static/images/sprite/symbol/sprite.svg#save"></use>
                   </svg>
                 </div>
-                <div class="basket__main">
-                  <ul class="basket__list">
-                    <li class="basket__item">
-                      <div class="basket__item-top">
-                        <h3 class="basket__item-title">Суп-лапша домашняя <br> с курицей</h3>
-                        <svg class="icon icon-close basket__item-icon">
-                          <use xlink:href="static/images/sprite/symbol/sprite.svg#close"></use>
-                        </svg>
-                      </div>
-                      <div class="basket__item-bottom">
-                        <div class="basket__item-info"><span class="basket__item-text">350 гр.</span><span class="basket__item-text">150 Ккал</span></div>
-                        <div class="counter basket__counter">
-                          <button class="counter__btn" data-direction="minus">
-                            <svg class="icon icon-minus counter__icon">
-                              <use xlink:href="static/images/sprite/symbol/sprite.svg#minus"></use>
-                            </svg>
-                          </button>
-                          <input class="counter__input" value="1" disabled>
-                          <button class="counter__btn" data-direction="plus">
-                            <svg class="icon icon-plus counter__icon">
-                              <use xlink:href="static/images/sprite/symbol/sprite.svg#plus"></use>
-                            </svg>
-                          </button>
-                        </div><span class="basket__price">150 р</span>
-                      </div>
-                    </li>
-                    <li class="basket__item">
-                      <div class="basket__item-top">
-                        <h3 class="basket__item-title">Треска отварная с <br> картофелем и соусом <br> из шпината</h3>
-                        <svg class="icon icon-close basket__item-icon">
-                          <use xlink:href="static/images/sprite/symbol/sprite.svg#close"></use>
-                        </svg>
-                      </div>
-                      <div class="basket__item-bottom">
-                        <div class="basket__item-info"><span class="basket__item-text">350 гр.</span><span class="basket__item-text">150 Ккал</span></div>
-                        <div class="counter basket__counter">
-                          <button class="counter__btn" data-direction="minus">
-                            <svg class="icon icon-minus counter__icon">
-                              <use xlink:href="static/images/sprite/symbol/sprite.svg#minus"></use>
-                            </svg>
-                          </button>
-                          <input class="counter__input" value="1" disabled>
-                          <button class="counter__btn" data-direction="plus">
-                            <svg class="icon icon-plus counter__icon">
-                              <use xlink:href="static/images/sprite/symbol/sprite.svg#plus"></use>
-                            </svg>
-                          </button>
-                        </div><span class="basket__price">120 р</span>
-                      </div>
-                    </li>
-                    <li class="basket__item">
-                      <div class="basket__item-top">
-                        <h3 class="basket__item-title">Суп-лапша домашняя <br> с курицей</h3>
-                        <svg class="icon icon-close basket__item-icon">
-                          <use xlink:href="static/images/sprite/symbol/sprite.svg#close"></use>
-                        </svg>
-                      </div>
-                      <div class="basket__item-bottom">
-                        <div class="basket__item-info"><span class="basket__item-text">350 гр.</span><span class="basket__item-text">150 Ккал</span></div>
-                        <div class="counter basket__counter">
-                          <button class="counter__btn" data-direction="minus">
-                            <svg class="icon icon-minus counter__icon">
-                              <use xlink:href="static/images/sprite/symbol/sprite.svg#minus"></use>
-                            </svg>
-                          </button>
-                          <input class="counter__input" value="1" disabled>
-                          <button class="counter__btn" data-direction="plus">
-                            <svg class="icon icon-plus counter__icon">
-                              <use xlink:href="static/images/sprite/symbol/sprite.svg#plus"></use>
-                            </svg>
-                          </button>
-                        </div><span class="basket__price">120 р</span>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="basket__info"><span class="basket__info-text" data-text="1350 Ккал">Общая калорийность:</span><span class="basket__info-text" data-text="5%">Персональная скидка</span><span class="basket__info-text">Цена без доставки</span></div>
-                  <div class="basket__desc"><span class="basket__desc-text">Минимальный заказ 1500р</span><span class="basket__desc-text basket__desc-text--size-small basket__desc-text--color-green">Беслатная доставка от 2500 р</span></div>
-                </div>
+                <div class="basket__main"></div>
                 <div class="basket__footer">
-                  <div class="basket__total"><span class="basket__total-price" data-price="390 р">Всего:</span></div><a class="basket__link btn btn--bg-yellow btn--color-black" href="#">ОФОРМИТЬ ЗАКАЗ</a>
+                  <div class="basket__total"><span class="basket__total-price" data-price="390 р">Всего:</span></div><a class="basket__link btn btn--bg-yellow btn--color-black basket__link--disabled" href="#">ОФОРМИТЬ ЗАКАЗ</a>
                 </div>
               </div>
             </div>
@@ -1563,6 +1486,121 @@
     </div>
     <div class="popup popup__map" id="map">
       <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af2568a7384a85fd05fc7f634c7342c63b956305764ab910b3e4eb494d1c2e624&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+    <div class="popup popup--width" id="login">
+      <div class="popup__head">
+        <h2 class="popup__title title title--color-white">ВХОД НА САЙТ</h2>
+      </div>
+      <form class="popup__form" action="#">
+        <label class="popup__control">
+          <input class="input popup__input" type="email" placeholder="E-mail">
+        </label>
+        <label class="popup__control">
+          <input class="input popup__input" type="password" placeholder="Пароль">
+          <svg class="icon icon-eye popup__control-icon js-show-password">
+            <use xlink:href="static/images/sprite/symbol/sprite.svg#eye"></use>
+          </svg>
+        </label>
+        <div class="popup__block">
+          <label class="checkbox popup__block-checkbox"><span class="checkbox__text">Запомнить меня</span>
+            <input type="checkbox"><span class="checkbox__custom"></span>
+          </label><a class="popup__block-link popup__block-link--color-black js-open-popup" href="#" data-popup-link="#reset">Забыли пароль</a><a class="popup__block-link js-open-popup" href="#" data-popup-link="#registration">Регистрация</a>
+        </div>
+        <button class="btn btn--color-black btn--bg-yellow popup__btn" type="submit">войти</button>
+      </form>
+    </div>
+    <div class="popup popup--width" id="reset">
+      <div class="popup__head">
+        <h2 class="popup__title title title--color-white">восстановление пароля</h2>
+      </div>
+      <form class="popup__form" action="#"><span class="popup__text">Укажите E-mail, указанный при регистрации. <br> Контрольная строка для смены пароля, а так же ваши регистрационные данные, будут высланы вам по E-mail.</span>
+        <label class="popup__control">
+          <input class="input popup__input" type="email" placeholder="E-mail">
+        </label>
+        <button class="btn btn--color-black btn--bg-yellow popup__btn" type="submit">восстановить</button>
+      </form>
+    </div>
+    <div class="popup popup--width" id="registration">
+      <div class="popup__head">
+        <h2 class="popup__title title title--color-white">Регистрация</h2>
+      </div>
+      <form class="popup__form" action="#">
+        <div class="popup__row">
+          <label class="popup__control popup__control--required">
+            <input class="input popup__input" type="text" placeholder="Имя" required>
+          </label>
+          <label class="popup__control popup__control--required">
+            <input class="input popup__input" type="text" placeholder="Фамилия" required>
+          </label>
+        </div>
+        <label class="popup__control popup__control--required">
+          <input class="input popup__input" type="email" placeholder="E-mail" required>
+        </label>
+        <label class="popup__control">
+          <input class="input popup__input" type="tel" placeholder="Телефон">
+        </label>
+        <label class="popup__control popup__control--required">
+          <input class="input popup__input" type="password" placeholder="Пароль" required>
+        </label>
+        <label class="checkbox popup__checkbox"><span class="checkbox__text">Я согласен получать информацию о скидках и новостях</span>
+          <input type="checkbox"><span class="checkbox__custom"></span>
+        </label>
+        <label class="checkbox popup__checkbox"><span class="checkbox__text">Я принимаю условия пользовательского соглашения</span>
+          <input type="checkbox"><span class="checkbox__custom"></span>
+        </label><a class="popup__link js-open-popup" href="#" data-popup-link="#login">У меня уже есть учетная запись</a>
+        <button class="btn btn--color-black btn--bg-yellow popup__btn" type="submit">зарегистрироваться</button>
+      </form>
+    </div>
+    <div class="popup popup--width" id="request">
+      <div class="popup__head">
+        <h2 class="popup__title title title--color-white">Напишите нам</h2>
+      </div>
+      <form class="popup__form" action="#">
+        <label class="popup__control popup__control--select">
+          <select class="select popup__select" data-placeholder="Выберите тему обращения:" data-dropdown-parent=".popup__control--select">
+            <option class="select__option" value=""></option>
+            <option class="select__option" value="1">Магазин и товары</option>
+            <option class="select__option" value="2">Мой заказ</option>
+            <option class="select__option" value="3">Доставка и оплата</option>
+            <option class="select__option" value="4">Поставщики</option>
+            <option class="select__option" value="5">Дистрибуция</option>
+            <option class="select__option" value="6">Качество</option>
+            <option class="select__option" value="7">Сертификаты на продукцию</option>
+            <option class="select__option" value="8">Реклама и PR</option>
+            <option class="select__option" value="9">Технические проблемы на сайте</option>
+            <option class="select__option" value="10">Другое</option>
+          </select>
+        </label>
+        <label class="popup__control popup__control--required">
+          <input class="input popup__input" type="text" placeholder="Имя" required>
+        </label>
+        <div class="popup__tabs"><span class="popup__tabs-text">Способ связи:</span>
+          <button class="popup__tabs-btn popup__tabs-btn--active" type="button" data-type="email">E-mail</button>
+          <button class="popup__tabs-btn" type="button" data-type="tel">Телефон</button>
+        </div>
+        <label class="popup__control popup__control--required">
+          <input class="input popup__input js-input" type="email" placeholder="E-mail" required>
+        </label>
+        <div class="popup__row">
+          <label class="popup__control popup__control--required">
+            <input class="input popup__input" type="text" placeholder="Гражданство" required>
+          </label>
+          <label class="popup__control popup__control--required">
+            <input class="input popup__input" type="text" placeholder="Город проживания" required>
+          </label>
+        </div>
+        <label class="popup__control">
+          <textarea class="textarea popup__textarea" placeholder="Сообщение"></textarea>
+        </label>
+        <div class="file-upload popup__file-upload"><span class="file-upload__text">Прикрепите резюме</span>
+          <div class="file-upload__btn">
+            <label class="file-upload__btn_label">
+              <input type="file"><span class="file-upload__btn_text">Выберите файл</span>
+            </label>
+          </div>
+        </div><span class="popup__quote">Нажимая "Отправить" Вы принимаете условия пользовательского соглашения.</span>
+        <button class="btn btn--color-black btn--bg-yellow popup__btn" type="submit">Отправить</button>
+      </form>
     </div>
     <script src="static/js/libs.js"></script>
     <script src="static/js/main.js"></script>

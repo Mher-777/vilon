@@ -26,11 +26,11 @@ header.header
               span.header__request-box(data-count="2").header__request-box--number
                 +icon('basket', 'header__request-icon')
               span.header__request-text 10,500 р
-            a(href="#").header__request-link.header__request-link--size-small
+            a(href="#login" data-fancybox).header__request-link.header__request-link--size-small
               span.header__request-box
                 +icon('user', 'header__request-icon')
               span.header__request-text Вход
-          a(href="#" data-da="header__menu-list, last, 500").btn.btn--color-black.btn--bg-yellow.header__btn ОСТАВИТЬ ЗАЯВКУ
+          a(href="#request" data-fancybox data-da="header__menu-list, last, 500").btn.btn--color-black.btn--bg-yellow.header__btn ОСТАВИТЬ ЗАЯВКУ
   .header__bottom
     .container
       nav.header__menu

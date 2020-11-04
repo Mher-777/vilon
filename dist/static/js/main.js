@@ -1,32 +1,43 @@
 "use strict";
 
-$(window).on('load', function () {
-  var body = $('body'); // const header = $('.header__inner')
+function browser() {
+  if (navigator.userAgent.indexOf("MSIE") !== -1 || !!document.documentMode === true) {
+    document.querySelector('html').classList.add('browser-ie');
+  }
+}
 
-  body.css('margin-right', calcScroll()); // header.css('transform', 'translateX(' + -calcScroll() / 2 + 'px)')
+browser();
 
-  setTimeout(function () {
-    $('.preloader').fadeOut(500, function () {
-      $(this).remove();
+if (!$('html').hasClass('browser-ie')) {
+  var calcScroll = function calcScroll() {
+    var div = document.createElement('div');
+    div.style.width = '50px';
+    div.style.height = '50px';
+    div.style.overflowY = 'scroll';
+    div.style.visibility = 'hidden';
+    document.body.appendChild(div);
+    var scrollWidth = div.offsetWidth - div.clientWidth;
+    div.remove();
+    return scrollWidth;
+  };
 
-      if (body.hasClass('hidden--loader')) {
-        body.delay(400).removeClass('hidden--loader');
-        body.css('margin-right', ''); // header.css('transform', '')
-      }
-    });
-  }, 500);
-});
+  console.log('browser-ie');
+  $(window).on('load', function () {
+    var body = $('body'); // const header = $('.header__inner')
 
-function calcScroll() {
-  var div = document.createElement('div');
-  div.style.width = '50px';
-  div.style.height = '50px';
-  div.style.overflowY = 'scroll';
-  div.style.visibility = 'hidden';
-  document.body.appendChild(div);
-  var scrollWidth = div.offsetWidth - div.clientWidth;
-  div.remove();
-  return scrollWidth;
+    body.css('margin-right', calcScroll()); // header.css('transform', 'translateX(' + -calcScroll() / 2 + 'px)')
+
+    setTimeout(function () {
+      $('.preloader').fadeOut(500, function () {
+        $(this).remove();
+
+        if (body.hasClass('hidden--loader')) {
+          body.delay(400).removeClass('hidden--loader');
+          body.css('margin-right', ''); // header.css('transform', '')
+        }
+      });
+    }, 500);
+  });
 }
 
 $(function () {
@@ -400,6 +411,19 @@ $(function () {
       e.stopPropagation();
       $.fancybox.close();
     });
+    $('.js-open-popup').each(function () {
+      var dataPopupLink = $(this).attr('data-popup-link');
+      $(this).on('click', function (e) {
+        e.preventDefault();
+        $.fancybox.close();
+        setTimeout(function () {
+          $.fancybox.open({
+            src: dataPopupLink,
+            type: 'inline'
+          });
+        }, 1);
+      });
+    });
   };
 
   var reviewCustom = function reviewCustom() {
@@ -524,6 +548,8 @@ $(function () {
     $('.select').select2({
       width: null,
       minimumResultsForSearch: -1
+    }).on('select2:open', function (e) {
+      $('.select2-results__options').scrollbar().parent().addClass('scrollbar-inner');
     });
   };
 
@@ -538,6 +564,16 @@ $(function () {
         lazy: false
       });
     }
+
+    $('.js-show-password').on('click', function () {
+      var input = $(this).parent().find('.popup__input');
+
+      if (input.attr('type') === 'password') {
+        input.attr('type', 'text');
+      } else {
+        input.attr('type', 'password');
+      }
+    });
   };
 
   var personalForm = function personalForm() {
@@ -564,6 +600,29 @@ $(function () {
     });
   };
 
+  var fileUpload = function fileUpload() {
+    $(".file-upload input[type=file]").change(function () {
+      var filename = $(this).val().replace(/.*\\/, "");
+      $(this).closest('.file-upload').find('.file-upload__text').html(filename);
+    });
+  };
+
+  var popupTabs = function popupTabs() {
+    var btn = $('.popup__tabs-btn');
+    var input = $('.js-input');
+    btn.on('click', function (e) {
+      var $this = $(this);
+      e.preventDefault();
+      btn.removeClass('popup__tabs-btn--active');
+      $this.addClass('popup__tabs-btn--active');
+
+      if ($this.hasClass('popup__tabs-btn--active')) {
+        input.attr('type', $this.attr('data-type'));
+        input.attr('placeholder', $this.text());
+      }
+    });
+  };
+
   personalForm();
   selectCustom();
   popup();
@@ -586,13 +645,11 @@ $(function () {
   reviewCustom();
   worksAccordion();
   tabs();
+  fileUpload();
   inputMask();
+  popupTabs();
 });
-
-function browser() {
-  if (navigator.userAgent.indexOf("MSIE") !== -1 || !!document.documentMode === true) {
-    document.querySelector('html').classList.add('browser-ie');
-  }
-}
-
-browser();
+tippy('[data-tippy-content]', {
+  arrow: false,
+  allowHTML: true
+});

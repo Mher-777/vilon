@@ -1,0 +1,11 @@
+.cart {
+  padding-bottom: 40px;
+  &__order {
+    padding-right: 10px;
+  }
+}
+@media (max-width: 772px) {
+  .cart__order {
+    padding-right: 0;
+  }
+}

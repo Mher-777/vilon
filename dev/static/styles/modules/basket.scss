@@ -134,5 +134,19 @@
   }
   &__link {
     padding: 17px 15px;
+
+  }
+  &--empty {
+    .basket__link {
+      &--disabled {
+        pointer-events: none;
+        cursor: default;
+        background-color: #ededed;
+        color: #a0a0a0;
+      }
+    }
+    .basket__total-price {
+      color: #a0a0a0;
+    }
   }
 }

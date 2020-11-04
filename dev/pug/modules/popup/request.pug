@@ -1,0 +1,40 @@
+.popup.popup--width#request
+  .popup__head
+    h2.popup__title.title.title--color-white Напишите нам
+  form(action="#").popup__form
+    label.popup__control.popup__control--select
+      select(data-placeholder="Выберите тему обращения:" data-dropdown-parent=".popup__control--select").select.popup__select
+        option(value="").select__option
+        option(value="1").select__option Магазин и товары
+        option(value="2").select__option Мой заказ
+        option(value="3").select__option Доставка и оплата
+        option(value="4").select__option Поставщики
+        option(value="5").select__option Дистрибуция
+        option(value="6").select__option Качество
+        option(value="7").select__option Сертификаты на продукцию
+        option(value="8").select__option Реклама и PR
+        option(value="9").select__option Технические проблемы на сайте
+        option(value="10").select__option Другое
+    label.popup__control.popup__control--required
+      input(type="text" placeholder="Имя" required).input.popup__input
+    .popup__tabs
+      span.popup__tabs-text Способ связи:
+      button(type="button" data-type="email").popup__tabs-btn.popup__tabs-btn--active E-mail
+      button(type="button" data-type="tel").popup__tabs-btn Телефон
+    label.popup__control.popup__control--required
+      input(type="email" placeholder="E-mail" required).input.popup__input.js-input
+    .popup__row
+      label.popup__control.popup__control--required
+        input(type="text" placeholder="Гражданство" required).input.popup__input
+      label.popup__control.popup__control--required
+        input(type="text" placeholder="Город проживания" required).input.popup__input
+    label.popup__control
+      textarea(placeholder="Сообщение").textarea.popup__textarea
+    .file-upload.popup__file-upload
+      span.file-upload__text Прикрепите резюме
+      .file-upload__btn
+        label.file-upload__btn_label
+          input(type="file")
+          span.file-upload__btn_text Выберите файл
+    span.popup__quote Нажимая "Отправить" Вы принимаете условия пользовательского соглашения.
+    button(type="submit").btn.btn--color-black.btn--bg-yellow.popup__btn Отправить

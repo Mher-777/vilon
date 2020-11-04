@@ -14,6 +14,8 @@ const vendorsScripts = [
   'dev/static/js/vendor/rateyo.js',
   'node_modules/select2/dist/js/select2.js',
   'node_modules/imask/dist/imask.min.js',
+  'dev/static/js/vendor/tippy.js',
+  'dev/static/js/vendor/jquery.scrollbar.js',
   'node_modules/svg4everybody/dist/svg4everybody.js',
 ]
 
