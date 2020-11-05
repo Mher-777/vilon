@@ -25,6 +25,8 @@
       margin-top: 25px;
       &:hover {
         background-color: #cc8064;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
       }
     }
     &-content {

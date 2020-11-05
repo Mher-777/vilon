@@ -104,15 +104,20 @@
     margin-bottom: 15px;
   }
   .info-block__step {
-    margin-left: auto;
-    margin-right: auto;
+
   }
   .info-block__step:not(:first-child) {
     padding-left: 0;
   }
   .info-block__steps {
-    display: block;
-    margin-top: 25px;
+
+  }
+  .info-block__number {
+    font-size: 50px;
+    line-height: 58px;
+  }
+  .info-block__subtitle {
+    font-size: 16px;
   }
 }
 @media (max-width: 550px) {
@@ -122,10 +127,23 @@
   .info-block__text {
     margin-top: 10px;
   }
+  .info-block__subtitle {
+    font-size: 16px;
+  }
+  .info-block__step {
+    margin-bottom: 25px;
+  }
 }
 @media (max-width: 400px) {
   .info-block__text {
     font-size: 14px;
     line-height: 20px;
+  }
+  .info-block__subtitle {
+    font-size: 12px;
+  }
+  .info-block__number {
+    font-size: 40px;
+    line-height: 46px;
   }
 }

@@ -6,7 +6,7 @@ function browser() {
 
 browser()
 if (!$('html').hasClass('browser-ie')) {
-    console.log('browser-ie')
+
     $(window).on('load', function () {
         const body = $('body')
         // const header = $('.header__inner')
@@ -411,7 +411,7 @@ $(function () {
                 setTimeout(function () {
                     $.fancybox.open({
                         src: dataPopupLink,
-                        type: 'inline',
+                        type: 'images',
                     });
                 }, 1);
             });
@@ -424,6 +424,7 @@ $(function () {
             ratedFill: "#efe74f",
             spacing: "4px",
             halfStar: true,
+            fullStar: true,
             starSvg: `
             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18">
                 <g>
@@ -433,7 +434,7 @@ $(function () {
             </svg>
         `,
             onChange: function (rating, rateYoInstance) {
-                console.log(rateYoInstance)
+
             }
         });
     }

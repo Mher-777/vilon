@@ -116,14 +116,18 @@
       margin-right: 0;
     }
     &:hover {
-      border-color: #6fa143;
-      color: #6fa143;
+      border-color: #000;
       font-weight: 700;
     }
     &--current {
       border-color: #6fa143;
       color: #6fa143;
       font-weight: 700;
+      &:hover {
+        border-color: #6fa143;
+        color: #6fa143;
+        font-weight: 700;
+      }
     }
   }
 }

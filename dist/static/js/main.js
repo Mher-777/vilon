@@ -21,7 +21,6 @@ if (!$('html').hasClass('browser-ie')) {
     return scrollWidth;
   };
 
-  console.log('browser-ie');
   $(window).on('load', function () {
     var body = $('body'); // const header = $('.header__inner')
 
@@ -419,7 +418,7 @@ $(function () {
         setTimeout(function () {
           $.fancybox.open({
             src: dataPopupLink,
-            type: 'inline'
+            type: 'images'
           });
         }, 1);
       });
@@ -433,10 +432,9 @@ $(function () {
       ratedFill: "#efe74f",
       spacing: "4px",
       halfStar: true,
+      fullStar: true,
       starSvg: "\n            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"17\" height=\"18\" viewBox=\"0 0 17 18\">\n                <g>\n                    <g><path d=\"M17.072 8.77a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0z\"/></g>\n                     <g><path class=\"svg-ellipse\" d=\"M8.572 3.457L9.786 7.19h3.926l-3.177 2.307 1.214 3.734-3.177-2.308-3.176 2.308L6.61 9.498 3.433 7.19H7.36z\"/></g>\n                </g>\n            </svg>\n        ",
-      onChange: function onChange(rating, rateYoInstance) {
-        console.log(rateYoInstance);
-      }
+      onChange: function onChange(rating, rateYoInstance) {}
     });
   };
 
