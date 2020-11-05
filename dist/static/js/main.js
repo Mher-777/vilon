@@ -418,7 +418,7 @@ $(function () {
         setTimeout(function () {
           $.fancybox.open({
             src: dataPopupLink,
-            type: 'images'
+            type: 'inline'
           });
         }, 1);
       });
