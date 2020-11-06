@@ -145,7 +145,7 @@ block content
         .personal__row
           h2.personal__title.title ЛИЧНЫЙ КАБИНЕТ
           .personal__items
-            a(href="details").personal__item.personal__item--active.personal__item--tab
+            a(href="details").personal__item.personal__item--tab
               .personal__item-icon
                 +icon('user')
               span.personal__item-text МОИ <br> ДАННЫЕ
@@ -161,7 +161,7 @@ block content
               .personal__item-icon
                 +icon('notifications')
               span.personal__item-text УВЕДОМЛЕНИЯ
-          .personal__content.personal__content--active#details
+          .personal__content#details
             h2.personal__title.title МОИ ДАННЫЕ
             form(action="#").personal__form
               .personal__controls
@@ -234,14 +234,20 @@ block content
             form(action="#").personal__form
               .personal__controls.personal__controls--block
                 .personal__control
-                  input(type="radio" name="stock" id="stock").input-radio
-                  label(for="stock").catalog__filter-text Акции и персональные скидки
+                  label.checkbox
+                    span.checkbox__text.checkbox__text--size-small Акции и персональные скидки
+                    input(type="checkbox")
+                    span.checkbox__custom
                 .personal__control
-                  input(type="radio" name="news" id="news").input-radio
-                  label(for="news").catalog__filter-text Новости компании
+                  label.checkbox
+                    span.checkbox__text.checkbox__text--size-small Новости компании
+                    input(type="checkbox")
+                    span.checkbox__custom
                 .personal__control
-                  input(type="radio" name="status" id="status").input-radio
-                  label(for="status").catalog__filter-text Статус заказа
+                  label.checkbox
+                    span.checkbox__text.checkbox__text--size-small Статус заказа
+                    input(type="checkbox")
+                    span.checkbox__custom
               button(type="submit" data-save="СОХРАНИТЬ").personal__btn.btn.btn--color-black.btn--bg-yellow.js-is-disabled РЕДАКТИРОВАТЬ
         .personal__row
           h2.personal__title.title МОИ ЗАКАЗЫ

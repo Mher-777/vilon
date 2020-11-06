@@ -171,7 +171,7 @@
             <div class="personal__inner">
               <div class="personal__row">
                 <h2 class="personal__title title">ЛИЧНЫЙ КАБИНЕТ</h2>
-                <div class="personal__items"><a class="personal__item personal__item--active personal__item--tab" href="details">
+                <div class="personal__items"><a class="personal__item personal__item--tab" href="details">
                     <div class="personal__item-icon">
                       <svg class="icon icon-user ">
                         <use xlink:href="static/images/sprite/symbol/sprite.svg#user"></use>
@@ -192,7 +192,7 @@
                         <use xlink:href="static/images/sprite/symbol/sprite.svg#notifications"></use>
                       </svg>
                     </div><span class="personal__item-text">УВЕДОМЛЕНИЯ</span></a></div>
-                <div class="personal__content personal__content--active" id="details">
+                <div class="personal__content" id="details">
                   <h2 class="personal__title title">МОИ ДАННЫЕ</h2>
                   <form class="personal__form" action="#">
                     <div class="personal__controls">
@@ -278,16 +278,19 @@
                   <form class="personal__form" action="#">
                     <div class="personal__controls personal__controls--block">
                       <div class="personal__control">
-                        <input class="input-radio" type="radio" name="stock" id="stock">
-                        <label class="catalog__filter-text" for="stock">Акции и персональные скидки</label>
+                        <label class="checkbox"><span class="checkbox__text checkbox__text--size-small">Акции и персональные скидки</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
                       </div>
                       <div class="personal__control">
-                        <input class="input-radio" type="radio" name="news" id="news">
-                        <label class="catalog__filter-text" for="news">Новости компании</label>
+                        <label class="checkbox"><span class="checkbox__text checkbox__text--size-small">Новости компании</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
                       </div>
                       <div class="personal__control">
-                        <input class="input-radio" type="radio" name="status" id="status">
-                        <label class="catalog__filter-text" for="status">Статус заказа</label>
+                        <label class="checkbox"><span class="checkbox__text checkbox__text--size-small">Статус заказа</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
                       </div>
                     </div>
                     <button class="personal__btn btn btn--color-black btn--bg-yellow js-is-disabled" type="submit" data-save="СОХРАНИТЬ">РЕДАКТИРОВАТЬ</button>

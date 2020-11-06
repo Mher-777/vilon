@@ -983,6 +983,9 @@ body.compensate-for-scrollbar {
       background: transparent;
       box-shadow: none;
     }
+    .select2-selection__arrow {
+      display: none;
+    }
   }
 }
 .tippy-content {
@@ -1051,6 +1054,12 @@ body.compensate-for-scrollbar {
     font-size: 16px;
     line-height: 16px;
     color: #6f6f6f;
+    &--size {
+      &-small {
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
   }
 }
 .file-upload {
